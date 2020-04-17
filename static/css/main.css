@@ -1,0 +1,80 @@
+html, body {
+  height: 100%; }
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center; }
+
+.tools-menu {
+  padding: 5vh 0;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  transition: .4s linear;
+  position: relative;
+  left: -65px; }
+  .tools-menu .tools-menu-show button {
+    background-color: #383838;
+    height: 100px;
+    color: white;
+    font-size: 26px;
+    border-top-right-radius: 45px;
+    border-bottom-right-radius: 45px;
+    border: none;
+    outline: none;
+    cursor: pointer; }
+  .tools-menu .tools-menu-show .icon-reverse {
+    transform: rotate(180deg);
+    position: relative;
+    right: 3px; }
+  .tools-menu .tools-menu-wrapper {
+    padding: 8px 0;
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    background-color: #383838;
+    width: 65px;
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px; }
+    .tools-menu .tools-menu-wrapper .tools-menu-list {
+      display: flex;
+      flex-flow: column wrap;
+      justify-content: center; }
+      .tools-menu .tools-menu-wrapper .tools-menu-list .tools-list-item {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 35px;
+        width: 35px;
+        margin: 1vh 0;
+        text-align: center; }
+        .tools-menu .tools-menu-wrapper .tools-menu-list .tools-list-item:first-of-type {
+          border-top-right-radius: 15px; }
+        .tools-menu .tools-menu-wrapper .tools-menu-list .tools-list-item:last-of-type {
+          border-bottom-right-radius: 15px; }
+        .tools-menu .tools-menu-wrapper .tools-menu-list .tools-list-item i {
+          font-size: 22px;
+          cursor: pointer; }
+        .tools-menu .tools-menu-wrapper .tools-menu-list .tools-list-item i.fa-square {
+          position: relative;
+          left: 4px; }
+        .tools-menu .tools-menu-wrapper .tools-menu-list .tools-list-item i.fa-caret-right {
+          position: relative;
+          left: 6px;
+          top: 16px;
+          transform: rotate(45deg); }
+      .tools-menu .tools-menu-wrapper .tools-menu-list .yellow {
+        background-color: #F0E267; }
+      .tools-menu .tools-menu-wrapper .tools-menu-list .blue {
+        background-color: #639EB4; }
+      .tools-menu .tools-menu-wrapper .tools-menu-list .red {
+        background-color: #B85253; }
+      .tools-menu .tools-menu-wrapper .tools-menu-list .green {
+        background-color: #9FC48C; }
+
+/*# sourceMappingURL=main.css.map */

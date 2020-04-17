@@ -1,0 +1,98 @@
+html,body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+.tools-menu {
+  padding: 5vh 0;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  transition: .4s linear;
+  position: relative;
+  left: -65px;
+  .tools-menu-show {
+    button {
+      background-color: #383838;
+      height: 100px;
+      color:white;
+      font-size: 26px;
+      border-top-right-radius: 45px;
+      border-bottom-right-radius: 45px;
+      border: none;
+      outline: none;
+      cursor: pointer;
+    }
+    .icon-reverse {
+      transform: rotate(180deg);
+      position: relative;
+      right: 3px;
+    }
+  }
+  .tools-menu-wrapper {
+    padding: 8px 0;
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    background-color: #383838;
+    width: 65px;
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+    .tools-menu-list {
+      display: flex;
+      flex-flow: column wrap;
+      justify-content: center;
+      .tools-list-item {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 35px;
+        width: 35px;
+        margin: 1vh 0;
+        text-align: center;
+
+        &:first-of-type {
+          border-top-right-radius: 15px;
+        }
+        &:last-of-type {
+          border-bottom-right-radius: 15px;
+        }
+        i {
+          font-size: 22px;
+          cursor: pointer;
+        }
+        i.fa-square {
+          position: relative;
+          left: 4px;
+        }
+        i.fa-caret-right {
+          position: relative;
+          left: 6px;
+          top: 16px;
+          transform: rotate(45deg);
+        }
+      }
+
+
+      .yellow {
+        background-color: #F0E267;
+      }
+      .blue {
+        background-color: #639EB4;
+      }
+      .red {
+        background-color: #B85253;
+      }
+      .green {
+        background-color: #9FC48C;
+      }
+    }
+  }
+}
