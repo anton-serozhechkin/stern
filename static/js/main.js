@@ -50,10 +50,17 @@ function mediaChatHide() {
     })
 
 }
-
+function canvasSettings() {
+    let canvas = document.getElementById('canvas')
+    let screenSizeW = screen.width;
+    let screenSizeH = screen.height;
+    canvas.setAttribute('width',screenSizeW);
+    canvas.setAttribute('height',screenSizeH);
+}
 
 
 toolsMenuHide();
 mediaVideoHide();
 mediaMicrophoneHide();
 mediaChatHide();
+canvasSettings();
