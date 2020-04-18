@@ -53,7 +53,8 @@ body {
         height: 35px;
         width: 35px;
         margin: 1vh 0;
-        text-align: center; }
+        text-align: center;
+        overflow: hidden; }
         .tools-menu .tools-menu-wrapper .tools-menu-list .tools-list-item:first-of-type {
           border-top-right-radius: 15px; }
         .tools-menu .tools-menu-wrapper .tools-menu-list .tools-list-item:last-of-type {
@@ -81,73 +82,110 @@ body {
 canvas {
   border: solid 3px black; }
 
-.media-menu .media-video {
+.media-menu {
   display: flex;
-  flex-flow: row wrap;
-  align-items: center;
-  position: relative;
-  transition: .4s linear;
-  right: -350px; }
-  .media-menu .media-video .media-video-show button {
+  flex-flow: column wrap;
+  justify-content: space-between; }
+  .media-menu .media-video, .media-menu .media-microphone {
+    margin: 5vh 0; }
+  .media-menu .media-video {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
     position: relative;
-    top: 72px;
-    width: 70px;
-    left: 35px;
-    text-align: left;
-    background-color: #B25555;
-    height: 100px;
-    color: white;
-    font-size: 26px;
-    border-top-left-radius: 35px;
-    border-bottom-left-radius: 35px;
-    border: none;
-    outline: none;
-    cursor: pointer;
-    z-index: 1; }
-    .media-menu .media-video .media-video-show button i {
-      transform: rotate(-90deg); }
-  .media-menu .media-video .media-video-wrapper {
-    width: 350px;
-    height: 240px; }
-    .media-menu .media-video .media-video-wrapper .media-video-box img {
-      border: solid 1px #B25555;
-      border-radius: 20px;
+    transition: .4s linear;
+    right: -350px; }
+    .media-menu .media-video .media-video-show button {
       position: relative;
-      z-index: 2; }
-    .media-menu .media-video .media-video-wrapper .media-video-tumbler .media-toggle {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-direction: column;
+      top: 72px;
+      width: 70px;
+      left: 35px;
+      text-align: left;
       background-color: #B25555;
-      position: relative;
-      width: 35px;
-      height: 50px; }
-      .media-menu .media-video .media-video-wrapper .media-video-tumbler .media-toggle input {
-        height: 35px;
-        left: 0;
-        margin: 0;
-        opacity: 0;
-        padding: 0;
-        position: absolute;
-        top: -10px;
-        width: 35px;
-        z-index: 2; }
-      .media-menu .media-video .media-video-wrapper .media-video-tumbler .media-toggle input:checked {
-        z-index: 0; }
-        .media-menu .media-video .media-video-wrapper .media-video-tumbler .media-toggle input:checked .media-toggle-switch {
-          top: -1px; }
-      .media-menu .media-video .media-video-wrapper .media-video-tumbler .media-toggle input ~ :checked ~ .media-toggle-switch {
-        top: 13px; }
-      .media-menu .media-video .media-video-wrapper .media-video-tumbler .media-toggle .media-toggle-switch {
-        border-radius: 100%;
-        transition: top .2s ease;
-        background-color: #fff;
-        height: 14px;
-        left: -1px;
+      height: 100px;
+      color: white;
+      font-size: 26px;
+      border-top-left-radius: 35px;
+      border-bottom-left-radius: 35px;
+      border: none;
+      outline: none;
+      cursor: pointer; }
+      .media-menu .media-video .media-video-show button i {
+        transform: rotate(-90deg); }
+    .media-menu .media-video .media-video-wrapper {
+      width: 350px;
+      height: 240px; }
+      .media-menu .media-video .media-video-wrapper .media-video-box img {
+        border: solid 1px #B25555;
+        border-radius: 20px;
         position: relative;
-        top: -4px;
-        width: 14px;
-        z-index: 1; }
+        z-index: 2; }
+  .media-menu .media-microphone {
+    display: flex;
+    right: -385px;
+    position: relative;
+    flex-flow: row wrap;
+    align-items: center;
+    transition: .4s linear; }
+    .media-menu .media-microphone .media-microphone-show button {
+      position: relative;
+      width: 40px;
+      left: 10px;
+      text-align: left;
+      background-color: #9FC48C;
+      height: 50px;
+      color: white;
+      font-size: 26px;
+      border-top-left-radius: 25px;
+      border-bottom-left-radius: 25px;
+      border: none;
+      outline: none;
+      cursor: pointer;
+      z-index: 1; }
+    .media-menu .media-microphone .media-microphone-wrapper {
+      width: 200px;
+      display: flex;
+      position: relative;
+      align-items: center;
+      border-bottom-left-radius: 20px;
+      border-top-left-radius: 20px;
+      z-index: 2; }
+      .media-menu .media-microphone .media-microphone-wrapper .media-microphone-box {
+        z-index: 2;
+        border-bottom-left-radius: 20px;
+        border-top-left-radius: 20px;
+        border: solid 1px #9FC48C;
+        height: 48px;
+        display: flex;
+        align-items: center;
+        position: relative;
+        justify-content: space-between;
+        width: 200px; }
+        .media-menu .media-microphone .media-microphone-wrapper .media-microphone-box .media-microphone-controls {
+          width: 100px; }
+          .media-menu .media-microphone .media-microphone-wrapper .media-microphone-box .media-microphone-controls input[type='range'] {
+            top: -20px;
+            right: 75px;
+            position: relative; }
+          .media-menu .media-microphone .media-microphone-wrapper .media-microphone-box .media-microphone-controls .media-microphone-buttons {
+            display: flex;
+            flex-flow: wrap row;
+            align-items: center;
+            height: 48px;
+            position: relative;
+            bottom: 14px; }
+            .media-menu .media-microphone .media-microphone-wrapper .media-microphone-box .media-microphone-controls .media-microphone-buttons button {
+              font-size: 24px;
+              font-weight: 700;
+              margin: 0 3px;
+              background-color: transparent;
+              border: solid 3px #E4E4E4;
+              border-radius: 10px;
+              height: 35px;
+              width: 35px; }
+              .media-menu .media-microphone .media-microphone-wrapper .media-microphone-box .media-microphone-controls .media-microphone-buttons button:first-of-type {
+                color: #9FC48C; }
+              .media-menu .media-microphone .media-microphone-wrapper .media-microphone-box .media-microphone-controls .media-microphone-buttons button:last-of-type {
+                color: #B25555; }
 
 /*# sourceMappingURL=main.css.map */

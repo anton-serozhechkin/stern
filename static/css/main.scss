@@ -58,7 +58,7 @@ body {
         width: 35px;
         margin: 1vh 0;
         text-align: center;
-
+        overflow: hidden;
         &:first-of-type {
           border-top-right-radius: 15px;
         }
@@ -114,7 +114,12 @@ canvas {
 
 
 .media-menu {
-
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-between;
+  .media-video, .media-microphone {
+    margin: 5vh 0;
+  }
   .media-video {
     display: flex;
     flex-flow: row wrap;
@@ -138,7 +143,6 @@ canvas {
         border: none;
         outline: none;
         cursor: pointer;
-        z-index: 1;
         i {
           transform: rotate(-90deg);
         }
@@ -156,6 +160,88 @@ canvas {
         }
       }
       .media-video-tumbler {
+
+        }
+      }
+    }
+  .media-microphone {
+    display: flex;
+    right: -385px;
+    position: relative;
+    flex-flow: row wrap;
+    align-items: center;
+    transition: .4s linear;
+
+    .media-microphone-show {
+      button {
+        position: relative;
+        width: 40px;
+        left: 10px;
+        text-align: left;
+        background-color: #9FC48C;
+        height: 50px;
+        color:white;
+        font-size: 26px;
+        border-top-left-radius: 25px;
+        border-bottom-left-radius: 25px;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        z-index:1;
+      }
+    }
+
+    .media-microphone-wrapper {
+      width: 200px;
+      display: flex;
+      position: relative;
+      align-items: center;
+      border-bottom-left-radius: 20px;
+      border-top-left-radius: 20px;
+      z-index: 2;
+      .media-microphone-box {
+        z-index: 2;
+        border-bottom-left-radius: 20px;
+        border-top-left-radius: 20px;
+        border: solid 1px #9FC48C;
+        height: 48px;
+        display: flex;
+        align-items: center;
+        position: relative;
+        justify-content: space-between;
+        width: 200px;
+        .media-microphone-controls {
+          width: 100px;
+          input[type='range'] {
+            top: -20px;
+            right: 75px;
+            position: relative;
+          }
+          .media-microphone-buttons {
+            display: flex;
+            flex-flow: wrap row;
+            align-items: center;
+            height: 48px;
+            position: relative;
+            bottom:14px;
+            button {
+              &:first-of-type {
+                color: #9FC48C;
+              }
+              &:last-of-type {
+                color:#B25555;
+              }
+
+              font-size: 24px;
+              font-weight: 700;
+              margin: 0 3px;
+              background-color: transparent;
+              border: solid 3px #E4E4E4;
+              border-radius: 10px;
+              height: 35px;
+              width: 35px;
+            }
+          }
 
         }
       }

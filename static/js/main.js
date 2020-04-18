@@ -26,8 +26,21 @@ function mediaVideoHide() {
 
 }
 
+function mediaMicrophoneHide() {
+    let showButton = document.getElementById('media-microphone-showButton');
+    let microphoneMenu = document.getElementById('mediaMicrophone');
+    showButton.addEventListener('click',function () {
+        microphoneMenu.style.right = '-165px';
+        showButton.addEventListener('click',function () {
+            microphoneMenu.style.right = '-385px';
+            mediaMicrophoneHide();
+        })
+    })
+
+}
+
 
 
 toolsMenuHide();
 mediaVideoHide();
-
+mediaMicrophoneHide();
