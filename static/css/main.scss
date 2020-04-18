@@ -4,11 +4,12 @@ html,body {
 body {
   margin: 0;
   padding: 0;
+  overflow-y: hidden;
   overflow-x: hidden;
   display: flex;
   flex-flow: row wrap;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
 }
 .tools-menu {
   padding: 5vh 0;
@@ -92,6 +93,71 @@ body {
       }
       .green {
         background-color: #9FC48C;
+      }
+    }
+  }
+}
+// TOOLS menu styles
+
+
+
+canvas {
+  border: solid 3px black;
+}
+
+
+
+
+// WORLPLACE styles
+
+
+
+
+.media-menu {
+
+  .media-video {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    position: relative;
+    transition: .4s linear;
+    right: -350px;
+    .media-video-show {
+      button {
+        position: relative;
+        top: 72px;
+        width: 70px;
+        left: 35px;
+        text-align: left;
+        background-color: #B25555;
+        height: 100px;
+        color:white;
+        font-size: 26px;
+        border-top-left-radius: 35px;
+        border-bottom-left-radius: 35px;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        z-index: 1;
+        i {
+          transform: rotate(-90deg);
+        }
+      }
+    }
+    .media-video-wrapper {
+      width: 350px;
+      height: 240px;
+      .media-video-box {
+        img {
+          border: solid 1px #B25555;
+          border-radius: 20px;
+          position: relative;
+          z-index: 2;
+        }
+      }
+      .media-video-tumbler {
+
+        }
       }
     }
   }

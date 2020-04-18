@@ -13,4 +13,21 @@ function toolsMenuHide() {
         })
     })
 }
+function mediaVideoHide() {
+    let showButton = document.getElementById('media-video-showButton');
+    let videoMenu = document.getElementById('mediaVideo');
+    showButton.addEventListener('click',function () {
+        videoMenu.style.right = '0';
+        showButton.addEventListener('click',function () {
+            videoMenu.style.right = '-350px';
+            mediaVideoHide();
+        })
+    })
+
+}
+
+
+
 toolsMenuHide();
+mediaVideoHide();
+
