@@ -83,11 +83,12 @@ canvas {
   border: solid 3px black; }
 
 .media-menu {
+  height: 100%;
   display: flex;
   flex-flow: column wrap;
   justify-content: space-between; }
-  .media-menu .media-video, .media-menu .media-microphone {
-    margin: 5vh 0; }
+  .media-menu .media-video, .media-menu .media-microphone, .media-menu .media-chat {
+    margin: 2vh 0; }
   .media-menu .media-video {
     display: flex;
     flex-flow: row wrap;
@@ -122,7 +123,7 @@ canvas {
         z-index: 2; }
   .media-menu .media-microphone {
     display: flex;
-    right: -385px;
+    right: -380px;
     position: relative;
     flex-flow: row wrap;
     align-items: center;
@@ -142,6 +143,10 @@ canvas {
       outline: none;
       cursor: pointer;
       z-index: 1; }
+      .media-menu .media-microphone .media-microphone-show button i {
+        position: relative;
+        top: 2px;
+        left: 2px; }
     .media-menu .media-microphone .media-microphone-wrapper {
       width: 200px;
       display: flex;
@@ -187,5 +192,95 @@ canvas {
                 color: #9FC48C; }
               .media-menu .media-microphone .media-microphone-wrapper .media-microphone-box .media-microphone-controls .media-microphone-buttons button:last-of-type {
                 color: #B25555; }
+  .media-menu .media-chat {
+    display: flex;
+    flex-flow: row wrap;
+    padding-bottom: 3vh;
+    position: relative;
+    transition: .4s linear;
+    right: -355px; }
+    .media-menu .media-chat .media-chat-show button {
+      background-color: #639EB4;
+      border: none;
+      color: White;
+      cursor: pointer;
+      width: 65px;
+      outline: none;
+      position: relative;
+      left: 30px;
+      z-index: 1;
+      font-size: 22px;
+      height: 75px;
+      border-top-left-radius: 25px;
+      border-bottom-left-radius: 25px; }
+      .media-menu .media-chat .media-chat-show button i {
+        position: relative;
+        right: 10px;
+        transform: rotate(90deg); }
+    .media-menu .media-chat .media-chat-wrapper {
+      position: relative;
+      z-index: 2;
+      display: flex;
+      background-color: #fff;
+      flex-flow: column wrap;
+      border: solid 1px #639EB4;
+      border-radius: 25px; }
+      .media-menu .media-chat .media-chat-wrapper .media-chat-content {
+        padding: 18px 24px;
+        height: 345px;
+        overflow: auto;
+        display: flex;
+        flex-direction: column; }
+        .media-menu .media-chat .media-chat-wrapper .media-chat-content .media-chat-massage-wrapper {
+          display: inline;
+          margin: 1vh 0; }
+          .media-menu .media-chat .media-chat-wrapper .media-chat-content .media-chat-massage-wrapper .media-chat-massage {
+            padding: 8px 12px;
+            font-size: 16px;
+            color: black;
+            display: inline;
+            border-radius: 20px;
+            max-width: 175px; }
+          .media-menu .media-chat .media-chat-wrapper .media-chat-content .media-chat-massage-wrapper .userMassage {
+            background-color: #639EB4;
+            color: White;
+            float: right; }
+          .media-menu .media-chat .media-chat-wrapper .media-chat-content .media-chat-massage-wrapper .massage {
+            background-color: #DCDCDC;
+            float: left; }
+      .media-menu .media-chat .media-chat-wrapper .media-chat-bottom {
+        display: flex;
+        flex-flow: row wrap;
+        align-items: center;
+        justify-content: space-between;
+        background-color: #639EB4;
+        padding: 18px 24px;
+        border-radius: 25px; }
+        .media-menu .media-chat .media-chat-wrapper .media-chat-bottom .media-chat-addButton button {
+          border: none;
+          color: white;
+          background-color: transparent;
+          position: relative;
+          right: 3px;
+          cursor: pointer; }
+        .media-menu .media-chat .media-chat-wrapper .media-chat-bottom .media-chat-text {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          background-color: #fff;
+          border-radius: 25px; }
+          .media-menu .media-chat .media-chat-wrapper .media-chat-bottom .media-chat-text .media-chat-sendButton button {
+            border: none;
+            background-color: transparent;
+            color: #639EB4;
+            font-weight: 300;
+            cursor: pointer;
+            font-size: 18px;
+            outline: none; }
+          .media-menu .media-chat .media-chat-wrapper .media-chat-bottom .media-chat-text input {
+            outline: none;
+            border-radius: 25px;
+            padding: 8px 16px;
+            border: none; }
 
 /*# sourceMappingURL=main.css.map */

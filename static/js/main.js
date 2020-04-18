@@ -32,8 +32,20 @@ function mediaMicrophoneHide() {
     showButton.addEventListener('click',function () {
         microphoneMenu.style.right = '-165px';
         showButton.addEventListener('click',function () {
-            microphoneMenu.style.right = '-385px';
+            microphoneMenu.style.right = '-380px';
             mediaMicrophoneHide();
+        })
+    })
+
+}
+function mediaChatHide() {
+    let showButton = document.getElementById('media-chat-showButton');
+    let chatMenu = document.getElementById('mediaChat');
+    showButton.addEventListener('click',function () {
+        chatMenu.style.right = '0';
+        showButton.addEventListener('click',function () {
+            chatMenu.style.right = '-365px';
+            mediaChatHide();
         })
     })
 
@@ -44,3 +56,4 @@ function mediaMicrophoneHide() {
 toolsMenuHide();
 mediaVideoHide();
 mediaMicrophoneHide();
+mediaChatHide();
