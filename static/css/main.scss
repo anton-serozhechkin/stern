@@ -1,13 +1,16 @@
-html,body {
+html, body {
   height: 100%;
 }
+
 body {
   margin: 0;
   padding: 0;
   overflow-y: hidden;
   overflow-x: hidden;
 }
+
 .wrapper {
+  z-index: 3;
   width: 100%;
   position: absolute;
   display: flex;
@@ -16,20 +19,21 @@ body {
   justify-content: space-between;
 
 }
+
 .tools-menu {
-  width: 420px;
   padding: 5vh 0;
   display: flex;
   flex-flow: row wrap;
   align-items: center;
   transition: .4s linear;
   position: relative;
+  z-index: 2;
   left: -65px;
   .tools-menu-show {
     button {
       background-color: #383838;
       height: 100px;
-      color:white;
+      color: white;
       font-size: 26px;
       border-top-right-radius: 45px;
       border-bottom-right-radius: 45px;
@@ -37,12 +41,14 @@ body {
       outline: none;
       cursor: pointer;
     }
+
     .icon-reverse {
       transform: rotate(180deg);
       position: relative;
       right: 3px;
     }
   }
+
   .tools-menu-wrapper {
     padding: 8px 0;
     display: flex;
@@ -52,10 +58,12 @@ body {
     width: 65px;
     border-top-right-radius: 25px;
     border-bottom-right-radius: 25px;
+
     .tools-menu-list {
       display: flex;
       flex-flow: column wrap;
       justify-content: center;
+
       .tools-list-item {
         display: flex;
         align-items: center;
@@ -65,20 +73,25 @@ body {
         margin: 1vh 0;
         text-align: center;
         overflow: hidden;
+
         &:first-of-type {
           border-top-right-radius: 15px;
         }
+
         &:last-of-type {
           border-bottom-right-radius: 15px;
         }
+
         i {
           font-size: 22px;
           cursor: pointer;
         }
+
         i.fa-square {
           position: relative;
           left: 4px;
         }
+
         i.fa-caret-right {
           position: relative;
           left: 6px;
@@ -91,33 +104,34 @@ body {
       .yellow {
         background-color: #F0E267;
       }
+
       .blue {
         background-color: #639EB4;
       }
+
       .red {
         background-color: #B85253;
       }
+
       .green {
         background-color: #9FC48C;
       }
     }
   }
 }
-// TOOLS menu styles
 
+// TOOLS menu styles
 
 
 canvas {
   width: 100%;
   height: 100%;
+  position: absolute;
+  z-index: 1;
 }
 
 
-
-
 // WORLPLACE styles
-
-
 
 
 .media-menu {
@@ -125,16 +139,20 @@ canvas {
   display: flex;
   flex-flow: column wrap;
   justify-content: space-between;
+
   .media-video, .media-microphone, .media-chat {
     margin: 2vh 0;
   }
+
   .media-video {
     display: flex;
     flex-flow: row wrap;
     align-items: center;
     position: relative;
+    z-index: 2;
     transition: .4s linear;
     right: -350px;
+
     .media-video-show {
       button {
         position: relative;
@@ -144,21 +162,24 @@ canvas {
         text-align: left;
         background-color: #B25555;
         height: 100px;
-        color:white;
+        color: white;
         font-size: 26px;
         border-top-left-radius: 35px;
         border-bottom-left-radius: 35px;
         border: none;
         outline: none;
         cursor: pointer;
+
         i {
           transform: rotate(-90deg);
         }
       }
     }
+
     .media-video-wrapper {
       width: 350px;
       height: 240px;
+
       .media-video-box {
         img {
           border: solid 1px #B25555;
@@ -167,11 +188,13 @@ canvas {
           z-index: 2;
         }
       }
+
       .media-video-tumbler {
 
-        }
       }
     }
+  }
+
   .media-microphone {
     display: flex;
     right: -380px;
@@ -188,14 +211,15 @@ canvas {
         text-align: left;
         background-color: #9FC48C;
         height: 50px;
-        color:white;
+        color: white;
         font-size: 26px;
         border-top-left-radius: 25px;
         border-bottom-left-radius: 25px;
         border: none;
         outline: none;
         cursor: pointer;
-        z-index:1;
+        z-index: 1;
+
         i {
           position: relative;
           top: 2px;
@@ -212,6 +236,7 @@ canvas {
       border-bottom-left-radius: 20px;
       border-top-left-radius: 20px;
       z-index: 2;
+
       .media-microphone-box {
         z-index: 2;
         border-bottom-left-radius: 20px;
@@ -223,26 +248,31 @@ canvas {
         position: relative;
         justify-content: space-between;
         width: 200px;
+
         .media-microphone-controls {
           width: 100px;
+
           input[type='range'] {
             top: -20px;
             right: 75px;
             position: relative;
           }
+
           .media-microphone-buttons {
             display: flex;
             flex-flow: wrap row;
             align-items: center;
             height: 48px;
             position: relative;
-            bottom:14px;
+            bottom: 14px;
+
             button {
               &:first-of-type {
                 color: #9FC48C;
               }
+
               &:last-of-type {
-                color:#B25555;
+                color: #B25555;
               }
 
               font-size: 24px;
@@ -259,6 +289,7 @@ canvas {
       }
     }
   }
+
   .media-chat {
     display: flex;
     flex-flow: row wrap;
@@ -266,11 +297,12 @@ canvas {
     position: relative;
     transition: .4s linear;
     right: -355px;
+
     .media-chat-show {
       button {
-        background-color:#639EB4;
+        background-color: #639EB4;
         border: none;
-        color:White;
+        color: White;
         cursor: pointer;
         width: 65px;
         outline: none;
@@ -281,13 +313,15 @@ canvas {
         height: 75px;
         border-top-left-radius: 25px;
         border-bottom-left-radius: 25px;
+
         i {
           position: relative;
           right: 10px;
-          transform:rotate(90deg);
+          transform: rotate(90deg);
         }
       }
     }
+
     .media-chat-wrapper {
       position: relative;
       z-index: 2;
@@ -296,19 +330,22 @@ canvas {
       flex-flow: column wrap;
       border: solid 1px #639EB4;
       border-radius: 25px;
+
       .media-chat-content {
         padding: 18px 24px;
         height: 345px;
         overflow: auto;
         display: flex;
         flex-direction: column;
+
         .media-chat-massage-wrapper {
           display: inline;
           margin: 1vh 0;
+
           .media-chat-massage {
             padding: 8px 12px;
             font-size: 16px;
-            color:black;
+            color: black;
             display: inline;
             border-radius: 20px;
             max-width: 175px;
@@ -316,15 +353,17 @@ canvas {
 
           .userMassage {
             background-color: #639EB4;
-            color:White;
+            color: White;
             float: right;
           }
+
           .massage {
             background-color: #DCDCDC;
             float: left;
           }
         }
       }
+
       .media-chat-bottom {
         display: flex;
         flex-flow: row wrap;
@@ -337,30 +376,33 @@ canvas {
         .media-chat-addButton {
           button {
             border: none;
-            color:white;
+            color: white;
             background-color: transparent;
             position: relative;
             right: 3px;
             cursor: pointer;
           }
         }
+
         .media-chat-text {
           display: flex;
           flex-direction: row;
           align-items: center;
           background-color: #fff;
           border-radius: 25px;
+
           .media-chat-sendButton {
             button {
               border: none;
               background-color: transparent;
-              color:#639EB4;
+              color: #639EB4;
               font-weight: 300;
               cursor: pointer;
               font-size: 18px;
               outline: none;
             }
           }
+
           input {
             outline: none;
             border-radius: 25px;
@@ -371,4 +413,11 @@ canvas {
       }
     }
   }
+}
+
+
+
+.work-place {
+  position: absolute;
+  z-index: 1;
 }
