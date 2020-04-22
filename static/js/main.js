@@ -85,16 +85,19 @@ function chooseTool() {
 
         },
         1: function () {
-            canvas.onmousedown = function (event) {
-                let x = event.offsetX;
-                let y = event.offsetY;
-                alert(screen.height)
-                alert(x)
-                alert(y)
-            }
+
         },
         2: function eraser () {
-
+            canvas.onmousedown = function (event) {
+                canvas.onmousemove = function (event) {
+                    let x = event.offsetX;
+                    let y = event.offsetY;
+                    ctx.clearRect(x,y+15,5,5);
+                };
+                canvas.onmouseup = function () {
+                    canvas.onmousemove = null;
+                }
+            }
         }
     }
 
