@@ -337,10 +337,11 @@ canvas {
 
 .figure {
   position: absolute;
-  z-index: 5; }
-
-.figure-square {
+  z-index: 5;
   width: 200px;
   height: 200px; }
+
+.textBox {
+  position: absolute; }
 
 /*# sourceMappingURL=main.css.map */

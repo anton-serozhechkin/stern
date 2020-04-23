@@ -473,8 +473,9 @@ canvas {
 .figure {
   position: absolute;
   z-index: 5;
-}
-.figure-square {
   width: 200px;
   height: 200px;
+}
+.textBox {
+  position: absolute;
 }
