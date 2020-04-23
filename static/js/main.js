@@ -98,8 +98,73 @@ function chooseTool() {
                     canvas.onmousemove = null;
                 }
             }
-        }
+        },
+        3: function text() {
+
+        },
+        4: function square() {
+            canvas.onmousedown = function (event) {
+                let x = event.offsetX;
+                let y = event.offsetY;
+                let square = document.createElement('img');
+                square.setAttribute('src','../../square.svg')
+                square.classList.add('figure');
+                square.classList.add('figure-square');
+                square.style.left = (x - 100)+ 'px';
+                square.style.top = (y - 100 ) + 'px';
+                wrapper.appendChild(square);
+            }
+        },
+        6: function () {
+
+        },
+        7: function () {
+
+        },
+        8: function () {
+
+        },
+        9: function fullScreen () {
+            document.documentElement.requestFullscreen();
+                let fullScreenButton = document.getElementById('fullScreenButton');
+                fullScreenButton.addEventListener('click', function () {
+                    document.exitFullscreen();
+                })
+
+        },
+        10: function () {
+
+        },
+        11: function () {
+        },
+        12: function () {
+
+        },
+        13: function () {
+
+        },
+        14: function () {
+
+        },
+        15: function () {
+
+        },
+        16: function () {
+
+        },
+        17: function () {
+
+        },
+        18: function () {
+
+        },
+        19: function () {
+        },
+        20: function () {
+
+        },
     }
+
 
 
     let toolsArray = document.getElementsByClassName('tool');
