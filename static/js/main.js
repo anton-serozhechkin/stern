@@ -2,24 +2,45 @@ let workPlace = document.getElementById('workPlace');
 let wrapper = document.getElementById('wrapper');
 let canvas = document.getElementById('canvas');
 let ctx = canvas.getContext('2d');
+let flag = true;
 
 function canvasSettings() {
     canvas.setAttribute('height',innerHeight)
     canvas.setAttribute('width',innerWidth)
 }
+function moreFigures() {
+    let figuresList = document.getElementById('tools-list-moreFiguresId');
+    let figuresMoreCaret = document.getElementById('tools-list-square-caret');
+    figuresMoreCaret.addEventListener('click',function () {
 
+        figuresList.classList.remove('tools-list-moreFigures-none')
+        figuresList.classList.add('tools-list-moreFigures-block')
+
+        figuresMoreCaret.addEventListener('click',function () {
+            figuresList.classList.remove('tools-list-moreFigures-block')
+            figuresList.classList.add('tools-list-moreFigures-none')
+            moreFigures();
+        })})
+}
 
 function toolsMenuHide() {
     let showButton = document.getElementById('tools-menu-showButton');
     let toolsMenu = document.getElementById('toolsMenu');
     let toolsMenuI = document.getElementById('tools-menu-showButtonI');
+
     showButton.addEventListener('click',function () {
         toolsMenu.style.left = '0';
         toolsMenuI.classList.add('icon-reverse');
         showButton.addEventListener('click',function () {
+            let toolsListMore = document.getElementById('tools-list-moreFiguresId');
+            if(toolsListMore.classList.contains('tools-list-moreFigures-block')) {
+                toolsListMore.classList.remove('tools-list-moreFigures-block');
+                toolsListMore.classList.add('tools-list-moreFigures-none');
+            }
             toolsMenu.style.left = '-65px';
             toolsMenuI.classList.remove('icon-reverse');
             toolsMenuHide();
+
         })
     })
 }
@@ -103,10 +124,15 @@ function chooseTool() {
 
         },
         4: function square() {
+            flag = true;
             canvas.onmousedown = function (event) {
+                if (flag == false) {
+                    return;
+                }
                 let x = event.offsetX;
                 let y = event.offsetY;
                 let square = document.createElement('img');
+                square.setAttribute('draggable','true')
                 square.setAttribute('src','../../square.svg')
                 square.classList.add('figure');
                 square.classList.add('figure-square');
@@ -115,6 +141,9 @@ function chooseTool() {
                 wrapper.appendChild(square);
             }
         },
+        5: function () {
+
+        },
         6: function () {
 
         },
@@ -122,17 +151,18 @@ function chooseTool() {
 
         },
         8: function () {
+            alert('aaa')
 
         },
-        9: function fullScreen () {
+        9: function () {
+
+        },
+        10: function fullScreen () {
             document.documentElement.requestFullscreen();
                 let fullScreenButton = document.getElementById('fullScreenButton');
                 fullScreenButton.addEventListener('click', function () {
                     document.exitFullscreen();
                 })
-
-        },
-        10: function () {
 
         },
         11: function () {
@@ -141,7 +171,6 @@ function chooseTool() {
 
         },
         13: function () {
-
         },
         14: function () {
 
@@ -163,6 +192,31 @@ function chooseTool() {
         20: function () {
 
         },
+        32: function drag() {
+            flag = false;
+            let figuresArray = document.getElementsByClassName('figure')
+            for (let i = 0; i < figuresArray.length; i++) {
+                figuresArray[i].addEventListener('dragend',function (event) {
+                    let itemH = figuresArray[i].clientHeight;
+                    let itemW = figuresArray[i].clientWidth;
+                    figuresArray[i].style.top = (event.pageY - itemH/2) + 'px';
+                    figuresArray[i].style.left = (event.pageX - itemW/2 )+ 'px';
+                })
+            }
+
+        },
+        33: function changeSize() {
+                flag = false;
+                let figuresArray = document.getElementsByClassName('figure')
+                console.log(figuresArray)
+                for (let i = 0; i < figuresArray.length; i++) {
+                    figuresArray[i].addEventListener('click',function () {
+                        figuresArray[i].style.border = 'solid 1px black';
+                        alert(figuresArray[i].clientWidth);
+                        let objectHeight = figuresArray[i]
+                    })
+                }
+            }
     }
 
 
@@ -183,3 +237,4 @@ mediaMicrophoneHide();
 mediaChatHide();
 chooseTool();
 canvasSettings();
+moreFigures();

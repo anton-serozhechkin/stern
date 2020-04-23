@@ -61,6 +61,47 @@ body {
         margin: 1vh 0;
         text-align: center;
         overflow: hidden; }
+        .tools-menu .tools-menu-wrapper .tools-menu-list .tools-list-item #tools-list-square {
+          position: absolute;
+          left: 23px; }
+        .tools-menu .tools-menu-wrapper .tools-menu-list .tools-list-item #tools-list-square-caret {
+          position: relative;
+          left: 16px;
+          top: 16px; }
+        .tools-menu .tools-menu-wrapper .tools-menu-list .tools-list-item .tools-list-moreFigures-block {
+          display: block; }
+        .tools-menu .tools-menu-wrapper .tools-menu-list .tools-list-item .tools-list-moreFigures-none {
+          display: none; }
+        .tools-menu .tools-menu-wrapper .tools-menu-list .tools-list-item .tools-list-moreFigures {
+          position: absolute;
+          z-index: 3;
+          width: 175px;
+          height: 150px;
+          background: #727869;
+          left: 50px;
+          top: 21.5%; }
+          .tools-menu .tools-menu-wrapper .tools-menu-list .tools-list-item .tools-list-moreFigures ul {
+            height: 150px;
+            width: 175px;
+            padding: 0;
+            margin: 0;
+            overflow: auto; }
+            .tools-menu .tools-menu-wrapper .tools-menu-list .tools-list-item .tools-list-moreFigures ul li {
+              padding: 4px 8px;
+              list-style-type: none;
+              margin: 0;
+              border-bottom: solid 1px black;
+              display: flex;
+              align-items: center; }
+              .tools-menu .tools-menu-wrapper .tools-menu-list .tools-list-item .tools-list-moreFigures ul li:last-of-type {
+                border-bottom: none; }
+              .tools-menu .tools-menu-wrapper .tools-menu-list .tools-list-item .tools-list-moreFigures ul li:hover {
+                background-color: #585e4f;
+                cursor: pointer;
+                transition: .3s; }
+              .tools-menu .tools-menu-wrapper .tools-menu-list .tools-list-item .tools-list-moreFigures ul li img {
+                height: 25px;
+                width: 25px; }
         .tools-menu .tools-menu-wrapper .tools-menu-list .tools-list-item:first-of-type {
           border-top-right-radius: 15px; }
         .tools-menu .tools-menu-wrapper .tools-menu-list .tools-list-item:last-of-type {
@@ -72,9 +113,6 @@ body {
           position: relative;
           left: 4px; }
         .tools-menu .tools-menu-wrapper .tools-menu-list .tools-list-item i.fa-caret-right {
-          position: relative;
-          left: 6px;
-          top: 16px;
           transform: rotate(45deg); }
       .tools-menu .tools-menu-wrapper .tools-menu-list .yellow {
         background-color: #F0E267; }
@@ -298,7 +336,8 @@ canvas {
   z-index: 1; }
 
 .figure {
-  position: absolute; }
+  position: absolute;
+  z-index: 5; }
 
 .figure-square {
   width: 200px;
