@@ -15,6 +15,65 @@ body {
   flex-flow: row wrap;
   align-items: center;
   justify-content: space-between; }
+  .wrapper .tools-calculator {
+    position: relative;
+    z-index: 7;
+    top: 68vh;
+    transition: .4s ease-in; }
+    .wrapper .tools-calculator .tools-calculator-show {
+      background-color: #F0E267;
+      border-top-left-radius: 25px;
+      border-top-right-radius: 25px;
+      padding: 4px 24px;
+      cursor: pointer;
+      width: 35px;
+      margin: 0 auto; }
+      .wrapper .tools-calculator .tools-calculator-show .tools-calculator-showButton {
+        border: none;
+        background-color: transparent;
+        font-size: 24px;
+        cursor: pointer;
+        outline: none;
+        color: white; }
+    .wrapper .tools-calculator .calculator-top {
+      border-top-left-radius: 20px;
+      border-top-right-radius: 20px;
+      border: solid 1px #F0E267;
+      padding: 12px 20px;
+      background-color: #4B5761; }
+      .wrapper .tools-calculator .calculator-top p {
+        background-color: white;
+        resize: none;
+        border-radius: 7px;
+        outline: none;
+        cursor: pointer;
+        border: solid 1px #F0E267;
+        padding: 18px 8px; }
+    .wrapper .tools-calculator .calculator-buttons {
+      display: flex;
+      flex-flow: column wrap;
+      padding: 16px 20px;
+      background-color: #4B5761;
+      border-bottom-left-radius: 20px;
+      border-bottom-right-radius: 20px; }
+      .wrapper .tools-calculator .calculator-buttons .calculator-buttons-line {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between; }
+        .wrapper .tools-calculator .calculator-buttons .calculator-buttons-line .calculator-button {
+          width: 40px;
+          height: 36px;
+          font-size: 26px;
+          color: white;
+          background-color: #67747F;
+          border: none;
+          margin: 6px;
+          cursor: pointer;
+          outline: none;
+          border-radius: 7px;
+          font-weight: 700; }
+        .wrapper .tools-calculator .calculator-buttons .calculator-buttons-line .calculator-button#CClear {
+          background-color: #A04944; }
 
 .tools-menu {
   padding: 5vh 0;
@@ -335,13 +394,28 @@ canvas {
   position: absolute;
   z-index: 1; }
 
-.figure {
+.figureBox {
   position: absolute;
-  z-index: 5;
+  z-index: 5; }
+
+.figure {
   width: 200px;
   height: 200px; }
 
 .textBox {
   position: absolute; }
+
+.rotateButton {
+  position: absolute;
+  width: 7px;
+  height: 7px;
+  background-color: red; }
+
+.uploadFile {
+  z-index: -1; }
+
+.labelUploadFile {
+  position: relative;
+  left: -128px; }
 
 /*# sourceMappingURL=main.css.map */

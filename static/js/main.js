@@ -80,22 +80,60 @@ function mediaChatHide() {
     })
 
 }
+function calculatorHide() {
+    let showButton = document.getElementById('tools-calculator-showButton');
+    let calculator = document.getElementById('tools-calculator');
+    showButton.addEventListener('click',function () {
+        calculator.style.top = 31 + 'vh';
+        showButton.addEventListener('click',function () {
+            calculator.style.top = 68 + 'vh'
+            calculatorHide();
+        })
+    })
 
+}
+function calculator() {
+    let display = document.getElementById('calcInput');
+    let displayContent = display.textContent;
+    let buttonArray = {
+        0: document.getElementById('C0'),
+        1: document.getElementById('C1'),
+        2: document.getElementById('C2'),
+        3: document.getElementById('C3'),
+        4: document.getElementById('C4'),
+        5: document.getElementById('C5'),
+        6: document.getElementById('C6'),
+        7: document.getElementById('C7'),
+        8: document.getElementById('C8'),
+        9: document.getElementById('C9'),
+        10: document.getElementById('CPoint'),
+        11: document.getElementById('CEqually'),
+        12: document.getElementById('CPLus'),
+        13: document.getElementById('CMinus'),
+        14: document.getElementById('CClear'),
+        15: document.getElementById('CMultiply'),
+    }
+    buttonArray["0"].addEventListener('click',function () {
+
+    })
+    buttonArray["1"].addEventListener('click',function () {
+        display.textContent = '1';
+    })
+
+}
 function chooseTool() {
     let funcArray = {
         0: function brush() {
-
-            canvas.onmousedown  = function (event) {
+            canvas.onmousedown = function (event) {
                 canvas.onmousemove = function (event) {
                     let x1 = event.offsetX;
                     let y1 = event.offsetY;
                     ctx.beginPath();
-                    ctx.moveTo(x1 - 5,y1 + 10 );
-
+                    ctx.moveTo(x1 - 5, y1 + 10);
                     canvas.onmousemove = function (event) {
                         let x2 = event.offsetX;
                         let y2 = event.offsetY;
-                        ctx.lineTo(x2,y2 + 10);
+                        ctx.lineTo(x2, y2 + 10);
                         ctx.stroke();
                     }
                 };
@@ -108,12 +146,12 @@ function chooseTool() {
         1: function () {
 
         },
-        2: function eraser () {
+        2: function eraser() {
             canvas.onmousedown = function (event) {
                 canvas.onmousemove = function (event) {
                     let x = event.offsetX;
                     let y = event.offsetY;
-                    ctx.clearRect(x,y+15,5,5);
+                    ctx.clearRect(x, y + 15, 5, 5);
                 };
                 canvas.onmouseup = function () {
                     canvas.onmousemove = null;
@@ -133,13 +171,13 @@ function chooseTool() {
                     textBox.style.left = x + 'px';
                     textBox.style.zIndex = '200';
 
-                    textBox.addEventListener('keydown',function (event) {
+                    textBox.addEventListener('keydown', function (event) {
                         if (event.code == 'Enter') {
                             let textBoxContent = textBox.value;
                             let textBoxPar = document.createElement('div');
                             textBoxPar.textContent = textBoxContent;
                             textBoxPar.classList.add('text')
-                            textBoxPar.setAttribute('draggable','true');
+                            textBoxPar.setAttribute('draggable', 'true');
                             textBoxPar.style.position = 'absolute';
                             textBoxPar.style.zIndex = '201';
                             textBoxPar.style.left = x + 'px';
@@ -157,23 +195,27 @@ function chooseTool() {
         },
         4: function square() {
             flag = true;
+
             canvas.onmousedown = function (event) {
                 if (flag == false) {
                     return;
                 }
                 let x = event.offsetX;
                 let y = event.offsetY;
+                let figureBox = document.createElement('div');
                 let square = document.createElement('img');
-                square.setAttribute('draggable','true')
-                square.setAttribute('src','../static/img/square.svg')
+                square.setAttribute('draggable', 'true')
+                square.setAttribute('src', '../static/img/square.svg')
                 square.classList.add('figure');
                 square.classList.add('figure-square');
-                square.style.left = (x - 100)+ 'px';
-                square.style.top = (y - 100 ) + 'px';
-                wrapper.appendChild(square);
+                figureBox.style.left = (x - 100) + 'px';
+                figureBox.style.top = (y - 100) + 'px';
+                figureBox.appendChild(square);
+                figureBox.classList.add('figureBox')
+                wrapper.appendChild(figureBox);
             }
         },
-        5: function rectangle () {
+        5: function rectangle() {
             flag = true;
             canvas.onmousedown = function (event) {
                 if (flag == false) {
@@ -181,16 +223,20 @@ function chooseTool() {
                 }
                 let x = event.offsetX;
                 let y = event.offsetY;
+                let figureBox = document.createElement('div');
+
                 let rectangle = document.createElement('img');
-                rectangle.setAttribute('draggable','true')
-                rectangle.setAttribute('src','../static/img/rectangle.svg')
+                rectangle.setAttribute('draggable', 'true')
+                rectangle.setAttribute('src', '../static/img/rectangle.svg')
                 rectangle.classList.add('figure');
                 rectangle.classList.add('figure-rectangle');
-                rectangle.style.left = (x - 100)+ 'px';
-                rectangle.style.top = (y - 100 ) + 'px';
-                wrapper.appendChild(rectangle);
+                figureBox.style.left = (x - 100) + 'px';
+                figureBox.style.top = (y - 100) + 'px';
+                figureBox.appendChild(rectangle);
+                figureBox.classList.add('figureBox')
+                wrapper.appendChild(figureBox);
             }
-          },
+        },
         6: function cube() {
             flag = true;
             canvas.onmousedown = function (event) {
@@ -200,13 +246,16 @@ function chooseTool() {
                 let x = event.offsetX;
                 let y = event.offsetY;
                 let cube = document.createElement('img');
-                cube.setAttribute('draggable','true')
-                cube.setAttribute('src','../static/img/cube.svg')
+                let figureBox = document.createElement('div');
+                cube.setAttribute('draggable', 'true')
+                cube.setAttribute('src', '../static/img/cube.svg')
                 cube.classList.add('figure');
                 cube.classList.add('figure-cube');
-                cube.style.left = (x - 100)+ 'px';
-                cube.style.top = (y - 100 ) + 'px';
-                wrapper.appendChild(cube);
+                figureBox.style.left = (x - 100) + 'px';
+                figureBox.style.top = (y - 100) + 'px';
+                figureBox.appendChild(cube);
+                figureBox.classList.add('figureBox')
+                wrapper.appendChild(figureBox);
             }
         },
         7: function circle() {
@@ -218,14 +267,16 @@ function chooseTool() {
                 let x = event.offsetX;
                 let y = event.offsetY;
                 let circle = document.createElement('img');
-                circle.setAttribute('draggable','true')
-                circle.setAttribute('src','../static/img/circle.svg')
+                let figureBox = document.createElement('div');
+                circle.setAttribute('draggable', 'true')
+                circle.setAttribute('src', '../static/img/circle.svg')
                 circle.classList.add('figure');
                 circle.classList.add('figure-circle');
-                circle.style.left = (x - 100)+ 'px';
-                circle.style.top = (y - 100 ) + 'px';
-                wrapper.appendChild(circle);
-            }
+                figureBox.style.left = (x - 100) + 'px';
+                figureBox.style.top = (y - 100) + 'px';
+                figureBox.appendChild(circle);
+                figureBox.classList.add('figureBox')
+                wrapper.appendChild(figureBox);            }
         },
         8: function rhubmus() {
             flag = true;
@@ -236,15 +287,17 @@ function chooseTool() {
                 let x = event.offsetX;
                 let y = event.offsetY;
                 let rhombus = document.createElement('img');
-                rhombus.setAttribute('draggable','true')
-                rhombus.setAttribute('src','../static/img/rhombus.svg')
+                let figureBox = document.createElement('div');
+                rhombus.setAttribute('draggable', 'true')
+                rhombus.setAttribute('src', '../static/img/rhombus.svg')
                 rhombus.classList.add('figure');
                 rhombus.classList.add('figure-rhombus');
-                rhombus.style.left = (x - 100)+ 'px';
-                rhombus.style.top = (y - 100 ) + 'px';
-                wrapper.appendChild(rhombus);
-            }
-
+                figureBox.style.left = (x - 100) + 'px';
+                figureBox.style.top = (y - 100) + 'px';
+                figureBox.appendChild(rhombus);
+                figureBox.classList.add('figureBox')
+                wrapper.appendChild(figureBox);
+        }
         },
         9: function prism6Angels() {
             flag = true;
@@ -255,13 +308,16 @@ function chooseTool() {
                 let x = event.offsetX;
                 let y = event.offsetY;
                 let prism = document.createElement('img');
-                prism.setAttribute('draggable','true')
-                prism.setAttribute('src','../static/img/prism6angels.svg')
+                let figureBox = document.createElement('div');
+                prism.setAttribute('draggable', 'true')
+                prism.setAttribute('src', '../static/img/prism6angels.svg')
                 prism.classList.add('figure');
                 prism.classList.add('figure-prism');
-                prism.style.left = (x - 100)+ 'px';
-                prism.style.top = (y - 100 ) + 'px';
-                wrapper.appendChild(prism);
+                figureBox.style.left = (x - 100) + 'px';
+                figureBox.style.top = (y - 100) + 'px';
+                figureBox.appendChild(prism);
+                figureBox.classList.add('figureBox')
+                wrapper.appendChild(figureBox);
             }
 
         },
@@ -274,13 +330,16 @@ function chooseTool() {
                 let x = event.offsetX;
                 let y = event.offsetY;
                 let cylinder = document.createElement('img');
-                cylinder.setAttribute('draggable','true')
-                cylinder.setAttribute('src','../static/img/cylinder.svg')
+                let figureBox = document.createElement('div');
+                cylinder.setAttribute('draggable', 'true')
+                cylinder.setAttribute('src', '../static/img/cylinder.svg')
                 cylinder.classList.add('figure');
                 cylinder.classList.add('figure-cylindepyramidr');
-                cylinder.style.left = (x - 100)+ 'px';
-                cylinder.style.top = (y - 100 ) + 'px';
-                wrapper.appendChild(cylinder);
+                figureBox.style.left = (x - 100) + 'px';
+                figureBox.style.top = (y - 100) + 'px';
+                figureBox.appendChild(cylinder);
+                figureBox.classList.add('figureBox')
+                wrapper.appendChild(figureBox);
             }
         },
         11: function pyramid5Angel() {
@@ -292,13 +351,17 @@ function chooseTool() {
                 let x = event.offsetX;
                 let y = event.offsetY;
                 let pyramid = document.createElement('img');
-                pyramid.setAttribute('draggable','true')
-                pyramid.setAttribute('src','../static/img/pyramid5angel.svg')
+                let figureBox = document.createElement('div');
+                pyramid.setAttribute('draggable', 'true')
+                pyramid.setAttribute('src', '../static/img/pyramid5angel.svg')
                 pyramid.classList.add('figure');
                 pyramid.classList.add('figure-pyramid');
-                pyramid.style.left = (x - 100)+ 'px';
-                pyramid.style.top = (y - 100 ) + 'px';
-                wrapper.appendChild(pyramid);
+                figureBox.style.left = (x - 100) + 'px';
+                figureBox.style.top = (y - 100) + 'px';
+                figureBox.appendChild(pyramid);
+                figureBox.classList.add('figureBox')
+                wrapper.appendChild(figureBox);
+
             }
         },
         12: function scope() {
@@ -310,13 +373,16 @@ function chooseTool() {
                 let x = event.offsetX;
                 let y = event.offsetY;
                 let scope = document.createElement('img');
-                scope.setAttribute('draggable','true')
-                scope.setAttribute('src','../static/img/scope.svg')
+                let figureBox = document.createElement('div');
+                scope.setAttribute('draggable', 'true')
+                scope.setAttribute('src', '../static/img/scope.svg')
                 scope.classList.add('figure');
                 scope.classList.add('figure-scope');
-                scope.style.left = (x - 100)+ 'px';
-                scope.style.top = (y - 100 ) + 'px';
-                wrapper.appendChild(scope);
+                figureBox.style.left = (x - 100) + 'px';
+                figureBox.style.top = (y - 100) + 'px';
+                figureBox.appendChild(scope);
+                figureBox.classList.add('figureBox')
+                wrapper.appendChild(figureBox);
             }
         },
         13: function trapezoid() {
@@ -328,13 +394,16 @@ function chooseTool() {
                 let x = event.offsetX;
                 let y = event.offsetY;
                 let trapezoid = document.createElement('img');
-                trapezoid.setAttribute('draggable','true')
-                trapezoid.setAttribute('src','../static/img/trapezoid.svg')
+                let figureBox = document.createElement('div');
+                trapezoid.setAttribute('draggable', 'true')
+                trapezoid.setAttribute('src', '../static/img/trapezoid.svg')
                 trapezoid.classList.add('figure');
                 trapezoid.classList.add('figure-trapezoid');
-                trapezoid.style.left = (x - 100)+ 'px';
-                trapezoid.style.top = (y - 100 ) + 'px';
-                wrapper.appendChild(trapezoid);
+                figureBox.style.left = (x - 100) + 'px';
+                figureBox.style.top = (y - 100) + 'px';
+                figureBox.appendChild(trapezoid);
+                figureBox.classList.add('figureBox')
+                wrapper.appendChild(figureBox);
             }
         },
         14: function rectangularTrapezoid() {
@@ -346,13 +415,16 @@ function chooseTool() {
                 let x = event.offsetX;
                 let y = event.offsetY;
                 let rTrapezoid = document.createElement('img');
-                rTrapezoid.setAttribute('draggable','true')
-                rTrapezoid.setAttribute('src','../static/img/rTrapezoid.svg')
+                let figureBox = document.createElement('div');
+                rTrapezoid.setAttribute('draggable', 'true')
+                rTrapezoid.setAttribute('src', '../static/img/rTrapezoid.svg')
                 rTrapezoid.classList.add('figure');
                 rTrapezoid.classList.add('figure-rTrapezoid');
-                rTrapezoid.style.left = (x - 100)+ 'px';
-                rTrapezoid.style.top = (y - 100 ) + 'px';
-                wrapper.appendChild(rTrapezoid);
+                figureBox.style.left = (x - 100) + 'px';
+                figureBox.style.top = (y - 100) + 'px';
+                figureBox.appendChild(rTrapezoid);
+                figureBox.classList.add('figureBox')
+                wrapper.appendChild(figureBox);
             }
 
         },
@@ -365,13 +437,16 @@ function chooseTool() {
                 let x = event.offsetX;
                 let y = event.offsetY;
                 let tPrism = document.createElement('img');
-                tPrism.setAttribute('draggable','true')
-                tPrism.setAttribute('src','../static/img/triangularprism%20.svg')
+                let figureBox = document.createElement('div');
+                tPrism.setAttribute('draggable', 'true')
+                tPrism.setAttribute('src', '../static/img/triangularprism%20.svg')
                 tPrism.classList.add('figure');
                 tPrism.classList.add('figure-tPrism');
-                tPrism.style.left = (x - 100)+ 'px';
-                tPrism.style.top = (y - 100 ) + 'px';
-                wrapper.appendChild(tPrism);
+                figureBox.style.left = (x - 100) + 'px';
+                figureBox.style.top = (y - 100) + 'px';
+                figureBox.appendChild(tPrism);
+                figureBox.classList.add('figureBox')
+                wrapper.appendChild(figureBox);
             }
 
         },
@@ -384,13 +459,16 @@ function chooseTool() {
                 let x = event.offsetX;
                 let y = event.offsetY;
                 let parallelepiped = document.createElement('img');
-                parallelepiped.setAttribute('draggable','true')
-                parallelepiped.setAttribute('src','../static/img/parallelepiped.svg')
+                let figureBox = document.createElement('div');
+                parallelepiped.setAttribute('draggable', 'true')
+                parallelepiped.setAttribute('src', '../static/img/parallelepiped.svg')
                 parallelepiped.classList.add('figure');
                 parallelepiped.classList.add('figure-parallelepiped');
-                parallelepiped.style.left = (x - 100)+ 'px';
-                parallelepiped.style.top = (y - 100 ) + 'px';
-                wrapper.appendChild(parallelepiped);
+                figureBox.style.left = (x - 100) + 'px';
+                figureBox.style.top = (y - 100) + 'px';
+                figureBox.appendChild(parallelepiped);
+                figureBox.classList.add('figureBox')
+                wrapper.appendChild(figureBox);
             }
 
         },
@@ -403,17 +481,20 @@ function chooseTool() {
                 let x = event.offsetX;
                 let y = event.offsetY;
                 let cone = document.createElement('img');
-                cone.setAttribute('draggable','true')
-                cone.setAttribute('src','../static/img/cone.svg')
+                let figureBox = document.createElement('div');
+                cone.setAttribute('draggable', 'true')
+                cone.setAttribute('src', '../static/img/cone.svg')
                 cone.classList.add('figure');
                 cone.classList.add('figure-cone');
-                cone.style.left = (x - 100)+ 'px';
-                cone.style.top = (y - 100 ) + 'px';
-                wrapper.appendChild(cone);
+                figureBox.style.left = (x - 100) + 'px';
+                figureBox.style.top = (y - 100) + 'px';
+                figureBox.appendChild(cone);
+                figureBox.classList.add('figureBox')
+                wrapper.appendChild(figureBox);
             }
 
         },
-        18: function parallelogram () {
+        18: function parallelogram() {
             flag = true;
             canvas.onmousedown = function (event) {
                 if (flag == false) {
@@ -422,17 +503,20 @@ function chooseTool() {
                 let x = event.offsetX;
                 let y = event.offsetY;
                 let parallelogram = document.createElement('img');
-                parallelogram.setAttribute('draggable','true')
-                parallelogram.setAttribute('src','../static/img/parallelogram.svg')
+                let figureBox = document.createElement('div');
+                parallelogram.setAttribute('draggable', 'true')
+                parallelogram.setAttribute('src', '../static/img/parallelogram.svg')
                 parallelogram.classList.add('figure');
                 parallelogram.classList.add('figure-parallelogram');
-                parallelogram.style.left = (x - 100)+ 'px';
-                parallelogram.style.top = (y - 100 ) + 'px';
-                wrapper.appendChild(parallelogram);
+                figureBox.style.left = (x - 100) + 'px';
+                figureBox.style.top = (y - 100) + 'px';
+                figureBox.appendChild(parallelogram);
+                figureBox.classList.add('figureBox')
+                wrapper.appendChild(figureBox);
             }
 
         },
-        19: function tetrahedron () {
+        19: function tetrahedron() {
             flag = true;
             canvas.onmousedown = function (event) {
                 if (flag == false) {
@@ -441,17 +525,20 @@ function chooseTool() {
                 let x = event.offsetX;
                 let y = event.offsetY;
                 let parallelogram = document.createElement('img');
-                parallelogram.setAttribute('draggable','true')
-                parallelogram.setAttribute('src','../static/img/tetrahedron.svg')
+                let figureBox = document.createElement('div');
+                parallelogram.setAttribute('draggable', 'true')
+                parallelogram.setAttribute('src', '../static/img/tetrahedron.svg')
                 parallelogram.classList.add('figure');
                 parallelogram.classList.add('figure-tetrahedron');
-                parallelogram.style.left = (x - 100)+ 'px';
-                parallelogram.style.top = (y - 100 ) + 'px';
-                wrapper.appendChild(parallelogram);
+                figureBox.style.left = (x - 100) + 'px';
+                figureBox.style.top = (y - 100) + 'px';
+                figureBox.appendChild(parallelogram);
+                figureBox.classList.add('figureBox')
+                wrapper.appendChild(figureBox);
             }
 
         },
-        20: function pentagon () {
+        20: function pentagon() {
             flag = true;
             canvas.onmousedown = function (event) {
                 if (flag == false) {
@@ -460,13 +547,16 @@ function chooseTool() {
                 let x = event.offsetX;
                 let y = event.offsetY;
                 let pentagon = document.createElement('img');
-                pentagon.setAttribute('draggable','true')
-                pentagon.setAttribute('src','../static/img/pentagon.svg')
+                let figureBox = document.createElement('div');
+                pentagon.setAttribute('draggable', 'true')
+                pentagon.setAttribute('src', '../static/img/pentagon.svg')
                 pentagon.classList.add('figure');
                 pentagon.classList.add('figure-pentagon');
-                pentagon.style.left = (x - 100)+ 'px';
-                pentagon.style.top = (y - 100 ) + 'px';
-                wrapper.appendChild(pentagon);
+                figureBox.style.left = (x - 100) + 'px';
+                figureBox.style.top = (y - 100) + 'px';
+                figureBox.appendChild(pentagon);
+                figureBox.classList.add('figureBox')
+                wrapper.appendChild(figureBox);
             }
 
         },
@@ -479,13 +569,16 @@ function chooseTool() {
                 let x = event.offsetX;
                 let y = event.offsetY;
                 let rightTriangle = document.createElement('img');
-                rightTriangle.setAttribute('draggable','true')
-                rightTriangle.setAttribute('src','../static/img/rightTriangle%20.svg')
+                let figureBox = document.createElement('div');
+                rightTriangle.setAttribute('draggable', 'true')
+                rightTriangle.setAttribute('src', '../static/img/rightTriangle%20.svg')
                 rightTriangle.classList.add('figure');
                 rightTriangle.classList.add('figure-rightTriangle');
-                rightTriangle.style.left = (x - 100)+ 'px';
-                rightTriangle.style.top = (y - 100 ) + 'px';
-                wrapper.appendChild(rightTriangle);
+                figureBox.style.left = (x - 100) + 'px';
+                figureBox.style.top = (y - 100) + 'px';
+                figureBox.appendChild(rightTriangle);
+                figureBox.classList.add('figureBox')
+                wrapper.appendChild(figureBox);
             }
         },
         22: function triangle() {
@@ -497,13 +590,16 @@ function chooseTool() {
                 let x = event.offsetX;
                 let y = event.offsetY;
                 let triangle = document.createElement('img');
-                triangle.setAttribute('draggable','true')
-                triangle.setAttribute('src','../static/img/triangle.svg')
+                let figureBox = document.createElement('div');
+                triangle.setAttribute('draggable', 'true')
+                triangle.setAttribute('src', '../static/img/triangle.svg')
                 triangle.classList.add('figure');
                 triangle.classList.add('figure-triangle');
-                triangle.style.left = (x - 100)+ 'px';
-                triangle.style.top = (y - 100 ) + 'px';
-                wrapper.appendChild(triangle);
+                figureBox.style.left = (x - 100) + 'px';
+                figureBox.style.top = (y - 100) + 'px';
+                figureBox.appendChild(triangle);
+                figureBox.classList.add('figureBox')
+                wrapper.appendChild(figureBox);
             }
         },
         23: function correctTriangle() {
@@ -515,13 +611,16 @@ function chooseTool() {
                 let x = event.offsetX;
                 let y = event.offsetY;
                 let correctTriangle = document.createElement('img');
-                correctTriangle.setAttribute('draggable','true')
-                correctTriangle.setAttribute('src','../static/img/correctTriangle.svg')
+                let figureBox = document.createElement('div');
+                correctTriangle.setAttribute('draggable', 'true')
+                correctTriangle.setAttribute('src', '../static/img/correctTriangle.svg')
                 correctTriangle.classList.add('figure');
                 correctTriangle.classList.add('figure-correctTriangle');
-                correctTriangle.style.left = (x - 100)+ 'px';
-                correctTriangle.style.top = (y - 100 ) + 'px';
-                wrapper.appendChild(correctTriangle);
+                figureBox.style.left = (x - 100) + 'px';
+                figureBox.style.top = (y - 100) + 'px';
+                figureBox.appendChild(correctTriangle);
+                figureBox.classList.add('figureBox')
+                wrapper.appendChild(figureBox);
             }
         },
         24: function pyramid4Angel() {
@@ -533,20 +632,23 @@ function chooseTool() {
                 let x = event.offsetX;
                 let y = event.offsetY;
                 let pyramid4Angel = document.createElement('img');
-                pyramid4Angel.setAttribute('draggable','true')
-                pyramid4Angel.setAttribute('src','../static/img/pyramid4angel.svg')
+                let figureBox = document.createElement('div');
+                pyramid4Angel.setAttribute('draggable', 'true')
+                pyramid4Angel.setAttribute('src', '../static/img/pyramid4angel.svg')
                 pyramid4Angel.classList.add('figure');
                 pyramid4Angel.classList.add('figure-pyramid4Angel');
-                pyramid4Angel.style.left = (x - 100)+ 'px';
-                pyramid4Angel.style.top = (y - 100 ) + 'px';
-                wrapper.appendChild(pyramid4Angel);
+                figureBox.style.left = (x - 100) + 'px';
+                figureBox.style.top = (y - 100) + 'px';
+                figureBox.appendChild(pyramid4Angel);
+                figureBox.classList.add('figureBox')
+                wrapper.appendChild(figureBox);
             }
         },
-        28: function drag() {
+        27: function drag() {
             flag = false;
-            let figuresArray = document.getElementsByClassName('figure')
+            let figuresArray = document.getElementsByClassName('figureBox')
             let textArray = document.getElementsByClassName('text')
-            for (let i =0; i < textArray.length;i++) {
+            for (let i = 0; i < textArray.length; i++) {
                 textArray[i].addEventListener('mousemove', function () {
                     this.style.cursor = 'pointer';
                 })
@@ -558,6 +660,10 @@ function chooseTool() {
                 })
             }
             for (let i = 0; i < figuresArray.length; i++) {
+                figuresArray[i].addEventListener('click',function () {
+                    let itemH = figuresArray[i].clientHeight;
+                    let itemW = figuresArray[i].clientWidth;
+                })
                 figuresArray[i].addEventListener('mousemove', function () {
                     this.style.cursor = 'pointer';
                 })
@@ -569,25 +675,25 @@ function chooseTool() {
                 })
             }
         },
-        29: function fullScreen() {
+        28: function fullScreen() {
             document.documentElement.requestFullscreen();
             let fullScreenButton = document.getElementById('fullScreenButton');
             fullScreenButton.addEventListener('click', function () {
                 document.exitFullscreen();
             })
         },
-        30: function changeSize() {
-                flag = false;
-                let figuresArray = document.getElementsByClassName('figure')
-                console.log(figuresArray)
-                for (let i = 0; i < figuresArray.length; i++) {
-                    figuresArray[i].addEventListener('click',function () {
-                        figuresArray[i].style.border = 'solid 1px black';
-                        alert(figuresArray[i].clientWidth);
-                        let objectHeight = figuresArray[i]
-                    })
-                }
+        29: function uploadImage() {
+            document.getElementById('uploadFile').onchange = function (event) {
+                let file = this.files;
+                let filePath = file.valueOf();
+                console.log(filePath)
+                let uploadImage = document.createElement('img');
+                uploadImage.setAttribute('src','');
+                uploadImage.setAttribute('draggable','true');
+                uploadImage.style.position = 'absolute';
+                wrapper.appendChild(uploadImage)
             }
+        }
     }
 
 
@@ -609,6 +715,6 @@ mediaChatHide();
 chooseTool();
 canvasSettings();
 moreFigures();
-
-
+calculatorHide();
+calculator();
 

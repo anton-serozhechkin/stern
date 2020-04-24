@@ -17,6 +17,74 @@ body {
   flex-flow: row wrap;
   align-items: center;
   justify-content: space-between;
+  .tools-calculator {
+    position: relative;
+    z-index: 7;
+    top: 68vh;
+    transition: .4s ease-in;
+    .tools-calculator-show {
+      background-color: #F0E267;
+      border-top-left-radius: 25px;
+      border-top-right-radius: 25px;
+      padding: 4px 24px;
+      cursor: pointer;
+      width: 35px;
+      margin: 0 auto;
+      .tools-calculator-showButton {
+        border: none;
+        background-color: transparent;
+        font-size: 24px;
+        cursor: pointer;
+        outline: none;
+        color:white;
+      }
+    }
+  .calculator-top {
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border: solid 1px #F0E267;
+    padding: 12px 20px;
+    background-color: #4B5761;
+    p {
+      background-color: white;
+      resize: none;
+      border-radius: 7px;
+      outline: none;
+      cursor: pointer;
+      border: solid 1px #F0E267;
+      padding: 18px 8px;
+    }
+  }
+    .calculator-buttons {
+      display: flex;
+      flex-flow: column wrap;
+      padding: 16px 20px;
+      background-color: #4B5761;
+      border-bottom-left-radius: 20px;
+      border-bottom-right-radius: 20px;
+      .calculator-buttons-line {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+        .calculator-button {
+          width: 40px;
+          height: 36px;
+          font-size: 26px;
+          color:white;
+          background-color: #67747F;
+          border: none;
+          margin: 6px;
+          cursor: pointer;
+          outline: none;
+          border-radius: 7px;
+          font-weight: 700;
+        }
+        .calculator-button#CClear {
+          background-color: #A04944;
+      }
+      }
+    }
+  }
 
 }
 
@@ -470,12 +538,28 @@ canvas {
   position: absolute;
   z-index: 1;
 }
-.figure {
+.figureBox {
   position: absolute;
   z-index: 5;
+
+}
+.figure {
   width: 200px;
   height: 200px;
 }
 .textBox {
   position: absolute;
+}
+.rotateButton {
+  position: absolute;
+  width: 7px;
+  height: 7px;
+  background-color: red;
+}
+.uploadFile {
+  z-index: -1;
+}
+.labelUploadFile {
+  position: relative;
+  left: -128px;
 }

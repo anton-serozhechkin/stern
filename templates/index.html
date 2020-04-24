@@ -117,9 +117,6 @@
                 </div>
             </div>
             <div class="tools-list-item blue">
-                <i class="fa fa-calculator tool" aria-hidden="true" title="Калькулятор" id="tools-calc"></i>
-            </div>
-            <div class="tools-list-item blue">
 
                 <i class="fa fa-caret-right" aria-hidden="true" title="Больше формул"></i>
             </div>
@@ -136,7 +133,9 @@
                 <i class="fa fa-desktop tool" id="fullScreenButton" aria-hidden="true" title="На весь экран"></i>
             </div>
             <div class="tools-list-item green">
-                <i class="fa fa-picture-o tool" aria-hidden="true" title="Загрузить картинку"></i>
+                <input type="file" name="uploadFile" id="uploadFile" class="uploadFile">
+                <label for="uploadFile" class="labelUploadFile"><i class="fa fa-picture-o tool" aria-hidden="true" title="Загрузить картинку"></i>
+                </label>
             </div>
         </div>
     </div>
@@ -147,7 +146,48 @@
         </button>
     </div>
 </div>
+<div class="tools-calculator" id="tools-calculator">
 
+
+    <div class="tools-calculator-show">
+        <button class="tools-calculator-showButton" id="tools-calculator-showButton">
+            <i class="fa fa-calculator" aria-hidden="true"></i>
+        </button>
+    </div>
+    <div class="tools-calculator-wrapper" >
+        <div class="calculator-top">
+            <p id="calcInput"></p>
+        </div>
+        <div class="calculator-buttons">
+                <div class="calculator-buttons-line">
+                    <button id="C7" class="calculator-button">7</button>
+                    <button id="C8" class="calculator-button">8</button>
+                    <button id="C9" class="calculator-button">9</button>
+                    <button id="CClear" class="calculator-button">C</button>
+                </div>
+                <div class="calculator-buttons-line">
+                    <button id="C4" class="calculator-button">4</button>
+                    <button id="C5" class="calculator-button">5</button>
+                    <button id="C6" class="calculator-button">6</button>
+                    <button id="CMultiply" class="calculator-button">X</button>
+                </div>
+                <div class="calculator-buttons-line">
+                    <button id="C1" class="calculator-button">1</button>
+                    <button id="C2" class="calculator-button">2</button>
+                    <button id="C3" class="calculator-button">3</button>
+                    <button id="CMinus" class="calculator-button">-</button>
+                </div>
+                <div class="calculator-buttons-line">
+                    <button id="C0" class="calculator-button">0</button>
+                    <button id="CPoint" class="calculator-button">.</button>
+                    <button id="CEqually" class="calculator-button">=</button>
+                    <button id="CPLus" class="calculator-button">+</button>
+                </div>
+        </div>
+    </div>
+
+
+</div>
 <div class="media-menu" id="mediaMenu">
 
     <div class="media-video" id="mediaVideo">
@@ -255,8 +295,8 @@
                 </div>
         </div>
     </div>
-</div>
-</div>
+</div></div>
+
 <script src="../static/js/main.js"></script>
 </body>
 </html>
