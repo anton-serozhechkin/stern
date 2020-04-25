@@ -48,7 +48,10 @@ body {
         outline: none;
         cursor: pointer;
         border: solid 1px #F0E267;
-        padding: 18px 8px; }
+        padding: 0 8px;
+        height: 45px;
+        display: flex;
+        align-items: center; }
     .wrapper .tools-calculator .calculator-buttons {
       display: flex;
       flex-flow: column wrap;

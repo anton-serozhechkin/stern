@@ -114,10 +114,68 @@ function calculator() {
         15: document.getElementById('CMultiply'),
     }
     buttonArray["0"].addEventListener('click',function () {
-
+        displayContent = display.textContent;
+        display.textContent = displayContent + '0';
     })
     buttonArray["1"].addEventListener('click',function () {
-        display.textContent = '1';
+        displayContent = display.textContent;
+        display.textContent = displayContent + '1';
+    })
+    buttonArray["2"].addEventListener('click',function () {
+        displayContent = display.textContent;
+        display.textContent = displayContent + '2';
+    })
+    buttonArray["3"].addEventListener('click',function () {
+        displayContent = display.textContent;
+        display.textContent = displayContent + '3';
+    })
+    buttonArray["4"].addEventListener('click',function () {
+        displayContent = display.textContent;
+        display.textContent = displayContent + '4';
+    })
+    buttonArray["5"].addEventListener('click',function () {
+        displayContent = display.textContent;
+        display.textContent = displayContent + '5';
+    })
+    buttonArray["6"].addEventListener('click',function () {
+        displayContent = display.textContent;
+        display.textContent = displayContent + '6';
+    })
+    buttonArray["7"].addEventListener('click',function () {
+        displayContent = display.textContent;
+        display.textContent = displayContent + '7';
+    })
+    buttonArray["8"].addEventListener('click',function () {
+        displayContent = display.textContent;
+        display.textContent = displayContent + '8';
+    })
+    buttonArray["9"].addEventListener('click',function () {
+        displayContent = display.textContent;
+        display.textContent = displayContent + '9';
+    })
+    buttonArray["10"].addEventListener('click',function () {
+        displayContent = display.textContent;
+        display.textContent = displayContent + '.';
+    })
+    buttonArray["11"].addEventListener('click',function () {
+        displayContent = display.textContent;
+        display.textContent = eval(displayContent)
+    })
+    buttonArray["12"].addEventListener('click',function () {
+        displayContent = display.textContent;
+        display.textContent = displayContent + '+';
+    })
+    buttonArray["13"].addEventListener('click',function () {
+        displayContent = display.textContent;
+        display.textContent = displayContent + '-';
+    })
+    buttonArray["14"].addEventListener('click',function () {
+        displayContent = display.textContent;
+        display.textContent = ''
+    })
+    buttonArray["15"].addEventListener('click',function () {
+        displayContent = display.textContent;
+        display.textContent = displayContent + '*';
     })
 
 }
