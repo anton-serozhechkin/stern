@@ -4,6 +4,45 @@ let canvas = document.getElementById('canvas');
 let ctx = canvas.getContext('2d');
 let flag = true;
 let textFlag = false;
+let myColor;
+let brushSize;
+
+function settingsGraphical() {
+    let toolsSettings = document.getElementById('tools-settings');
+    toolsSettings.style.left = (innerWidth /2 - 200) + 'px';
+    let blackColor = document.getElementById('colorBoxBlack')
+    let redColor = document.getElementById('colorBoxRed')
+    let greenColor = document.getElementById('colorBoxGreen')
+    let yellowColor = document.getElementById('colorBoxYellow')
+    let xs = document.getElementById('toolsSizeXS')
+    let s = document.getElementById('toolsSizeS')
+    let md = document.getElementById('toolsSizeMD')
+    let lg = document.getElementById('toolsSizeLG')
+    blackColor.addEventListener('click',function () {
+        myColor = 'black';
+    })
+    redColor.addEventListener('click',function () {
+        myColor = 'red';
+    })
+    greenColor.addEventListener('click',function () {
+        myColor = 'green';
+    })
+    yellowColor.addEventListener('click',function () {
+        myColor = 'yellow';
+    })
+    xs.addEventListener('click',function () {
+        brushSize = '1'
+    })
+    s.addEventListener('click',function () {
+        brushSize = '4'
+    })
+    md.addEventListener('click',function () {
+        brushSize = '8'
+    })
+    lg.addEventListener('click',function () {
+        brushSize = '10'
+    })
+}
 function canvasSettings() {
     canvas.setAttribute('height',innerHeight)
     canvas.setAttribute('width',innerWidth)
@@ -83,10 +122,11 @@ function mediaChatHide() {
 function calculatorHide() {
     let showButton = document.getElementById('tools-calculator-showButton');
     let calculator = document.getElementById('tools-calculator');
+    calculator.style.left = (innerWidth / 2) - 200 + 'px';
     showButton.addEventListener('click',function () {
-        calculator.style.top = 31 + 'vh';
+        calculator.style.bottom = 20 + 'px';
         showButton.addEventListener('click',function () {
-            calculator.style.top = 68 + 'vh'
+            calculator.style.bottom = -330 + 'px'
             calculatorHide();
         })
     })
@@ -187,6 +227,8 @@ function chooseTool() {
                     let x1 = event.offsetX;
                     let y1 = event.offsetY;
                     ctx.beginPath();
+                    ctx.strokeStyle = myColor;
+                    ctx.lineWidth = brushSize;
                     ctx.moveTo(x1 - 5, y1 + 10);
                     canvas.onmousemove = function (event) {
                         let x2 = event.offsetX;
@@ -209,7 +251,7 @@ function chooseTool() {
                 canvas.onmousemove = function (event) {
                     let x = event.offsetX;
                     let y = event.offsetY;
-                    ctx.clearRect(x, y + 15, 5, 5);
+                    ctx.clearRect(x, y + 15, brushSize, brushSize);
                 };
                 canvas.onmouseup = function () {
                     canvas.onmousemove = null;
@@ -775,4 +817,4 @@ canvasSettings();
 moreFigures();
 calculatorHide();
 calculator();
-
+settingsGraphical();
