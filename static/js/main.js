@@ -7,6 +7,24 @@ let textFlag = false;
 let myColor;
 let brushSize;
 
+function resizeFigure() {
+    let figureArray = document.getElementsByClassName('figureBox');
+    console.log(figureArray)
+    for (let i = 0; i < figureArray.length;i++) {
+        figureArray[i].addEventListener('mouseover',function () {
+            figureArray[i].setAttribute('id','resizable')
+            $( function() {
+                $( "#resizable" ).resizable({
+                });
+            } );
+            figureArray[i].addEventListener('mouseout',function () {
+                figureArray[i].setAttribute('id','')
+
+            })
+        })
+    }
+}
+
 function settingsGraphical() {
     let toolsSettings = document.getElementById('tools-settings');
     toolsSettings.style.left = (innerWidth /2 - 200) + 'px';
@@ -303,16 +321,19 @@ function chooseTool() {
                 let x = event.offsetX;
                 let y = event.offsetY;
                 let figureBox = document.createElement('div');
-                let square = document.createElement('img');
-                square.setAttribute('draggable', 'true')
-                square.setAttribute('src', '../static/img/square.svg')
-                square.classList.add('figure');
-                square.classList.add('figure-square');
+                // let square = document.createElement('img');
+                figureBox.setAttribute('draggable', 'true')
+                // square.setAttribute('src', '../static/img/square.svg')
+                figureBox.classList.add('figure');
+                figureBox.classList.add('ui-widget-content');
+                // square.classList.add('figure-square');
                 figureBox.style.left = (x - 100) + 'px';
                 figureBox.style.top = (y - 100) + 'px';
-                figureBox.appendChild(square);
+                // figureBox.appendChild(square);
                 figureBox.classList.add('figureBox')
+                figureBox.classList.add('figure-square')
                 wrapper.appendChild(figureBox);
+                resizeFigure();
             }
         },
         5: function rectangle() {
@@ -324,17 +345,19 @@ function chooseTool() {
                 let x = event.offsetX;
                 let y = event.offsetY;
                 let figureBox = document.createElement('div');
-
-                let rectangle = document.createElement('img');
-                rectangle.setAttribute('draggable', 'true')
-                rectangle.setAttribute('src', '../static/img/rectangle.svg')
-                rectangle.classList.add('figure');
-                rectangle.classList.add('figure-rectangle');
+                // let rectangle = document.createElement('img');
+                figureBox.setAttribute('draggable', 'true')
+                // rectangle.setAttribute('src', '../static/img/rectangle.svg')
+                figureBox.classList.add('figure');
+                figureBox.classList.add('figure-rectangle');
                 figureBox.style.left = (x - 100) + 'px';
                 figureBox.style.top = (y - 100) + 'px';
-                figureBox.appendChild(rectangle);
+                // figureBox.appendChild(rectangle);
+                figureBox.classList.add('figure-rectangle')
                 figureBox.classList.add('figureBox')
                 wrapper.appendChild(figureBox);
+                resizeFigure();
+
             }
         },
         6: function cube() {
@@ -345,17 +368,20 @@ function chooseTool() {
                 }
                 let x = event.offsetX;
                 let y = event.offsetY;
-                let cube = document.createElement('img');
+                // let cube = document.createElement('img');
                 let figureBox = document.createElement('div');
-                cube.setAttribute('draggable', 'true')
-                cube.setAttribute('src', '../static/img/cube.svg')
-                cube.classList.add('figure');
-                cube.classList.add('figure-cube');
+                figureBox.setAttribute('draggable', 'true')
+                // cube.setAttribute('src', '../static/img/cube.svg')
+                figureBox.classList.add('figure');
                 figureBox.style.left = (x - 100) + 'px';
                 figureBox.style.top = (y - 100) + 'px';
-                figureBox.appendChild(cube);
+                // figureBox.appendChild(cube);
                 figureBox.classList.add('figureBox')
+                figureBox.classList.add('figure-cube')
+
                 wrapper.appendChild(figureBox);
+                resizeFigure();
+
             }
         },
         7: function circle() {
@@ -366,17 +392,20 @@ function chooseTool() {
                 }
                 let x = event.offsetX;
                 let y = event.offsetY;
-                let circle = document.createElement('img');
+                // let circle = document.createElement('img');
                 let figureBox = document.createElement('div');
-                circle.setAttribute('draggable', 'true')
-                circle.setAttribute('src', '../static/img/circle.svg')
-                circle.classList.add('figure');
-                circle.classList.add('figure-circle');
+                figureBox.setAttribute('draggable', 'true')
+                // circle.setAttribute('src', '../static/img/circle.svg')
+                figureBox.classList.add('figure');
+                figureBox.classList.add('figure-circle');
                 figureBox.style.left = (x - 100) + 'px';
                 figureBox.style.top = (y - 100) + 'px';
-                figureBox.appendChild(circle);
+                // figureBox.appendChild(circle);
                 figureBox.classList.add('figureBox')
-                wrapper.appendChild(figureBox);            }
+                wrapper.appendChild(figureBox);
+                resizeFigure();
+
+            }
         },
         8: function rhubmus() {
             flag = true;
@@ -386,18 +415,20 @@ function chooseTool() {
                 }
                 let x = event.offsetX;
                 let y = event.offsetY;
-                let rhombus = document.createElement('img');
+                // let rhombus = document.createElement('img');
                 let figureBox = document.createElement('div');
-                rhombus.setAttribute('draggable', 'true')
-                rhombus.setAttribute('src', '../static/img/rhombus.svg')
-                rhombus.classList.add('figure');
-                rhombus.classList.add('figure-rhombus');
+                figureBox.setAttribute('draggable', 'true')
+                // rhombus.setAttribute('src', '../static/img/rhombus.svg')
+                figureBox.classList.add('figure');
+                figureBox.classList.add('figure-rhombus');
                 figureBox.style.left = (x - 100) + 'px';
                 figureBox.style.top = (y - 100) + 'px';
-                figureBox.appendChild(rhombus);
+                // figureBox.appendChild(rhombus);
                 figureBox.classList.add('figureBox')
                 wrapper.appendChild(figureBox);
-        }
+                resizeFigure();
+
+            }
         },
         9: function prism6Angels() {
             flag = true;
@@ -407,17 +438,19 @@ function chooseTool() {
                 }
                 let x = event.offsetX;
                 let y = event.offsetY;
-                let prism = document.createElement('img');
+                // let prism = document.createElement('img');
                 let figureBox = document.createElement('div');
-                prism.setAttribute('draggable', 'true')
-                prism.setAttribute('src', '../static/img/prism6angels.svg')
-                prism.classList.add('figure');
-                prism.classList.add('figure-prism');
+                figureBox.setAttribute('draggable', 'true')
+                // prism.setAttribute('src', '../static/img/prism6angels.svg')
+                figureBox.classList.add('figure');
+                figureBox.classList.add('figure-prism6Angels');
                 figureBox.style.left = (x - 100) + 'px';
                 figureBox.style.top = (y - 100) + 'px';
-                figureBox.appendChild(prism);
+                // figureBox.appendChild(prism);
                 figureBox.classList.add('figureBox')
                 wrapper.appendChild(figureBox);
+                resizeFigure();
+
             }
 
         },
@@ -429,17 +462,19 @@ function chooseTool() {
                 }
                 let x = event.offsetX;
                 let y = event.offsetY;
-                let cylinder = document.createElement('img');
+                // let cylinder = document.createElement('img');
                 let figureBox = document.createElement('div');
-                cylinder.setAttribute('draggable', 'true')
-                cylinder.setAttribute('src', '../static/img/cylinder.svg')
-                cylinder.classList.add('figure');
-                cylinder.classList.add('figure-cylindepyramidr');
+                figureBox.setAttribute('draggable', 'true')
+                // cylinder.setAttribute('src', '../static/img/cylinder.svg')
+                figureBox.classList.add('figure');
+                figureBox.classList.add('figure-cylindepyramidr');
                 figureBox.style.left = (x - 100) + 'px';
                 figureBox.style.top = (y - 100) + 'px';
-                figureBox.appendChild(cylinder);
+                // figureBox.appendChild(cylinder);
                 figureBox.classList.add('figureBox')
                 wrapper.appendChild(figureBox);
+                resizeFigure();
+
             }
         },
         11: function pyramid5Angel() {
@@ -450,17 +485,18 @@ function chooseTool() {
                 }
                 let x = event.offsetX;
                 let y = event.offsetY;
-                let pyramid = document.createElement('img');
+                // let pyramid = document.createElement('img');
                 let figureBox = document.createElement('div');
-                pyramid.setAttribute('draggable', 'true')
-                pyramid.setAttribute('src', '../static/img/pyramid5angel.svg')
-                pyramid.classList.add('figure');
-                pyramid.classList.add('figure-pyramid');
+                figureBox.setAttribute('draggable', 'true')
+                // pyramid.setAttribute('src', '../static/img/pyramid5angel.svg')
+                figureBox.classList.add('figure');
+                figureBox.classList.add('figure-pyramid5Angels');
                 figureBox.style.left = (x - 100) + 'px';
                 figureBox.style.top = (y - 100) + 'px';
-                figureBox.appendChild(pyramid);
+                // figureBox.appendChild(pyramid);
                 figureBox.classList.add('figureBox')
                 wrapper.appendChild(figureBox);
+                resizeFigure();
 
             }
         },
@@ -472,17 +508,18 @@ function chooseTool() {
                 }
                 let x = event.offsetX;
                 let y = event.offsetY;
-                let scope = document.createElement('img');
+                // let scope = document.createElement('img');
                 let figureBox = document.createElement('div');
-                scope.setAttribute('draggable', 'true')
-                scope.setAttribute('src', '../static/img/scope.svg')
-                scope.classList.add('figure');
-                scope.classList.add('figure-scope');
+                figureBox.setAttribute('draggable', 'true')
+                // scope.setAttribute('src', '../static/img/scope.svg')
+                figureBox.classList.add('figure');
+                figureBox.classList.add('figure-scope');
                 figureBox.style.left = (x - 100) + 'px';
                 figureBox.style.top = (y - 100) + 'px';
-                figureBox.appendChild(scope);
+                // figureBox.appendChild(scope);
                 figureBox.classList.add('figureBox')
                 wrapper.appendChild(figureBox);
+                resizeFigure();
             }
         },
         13: function trapezoid() {
@@ -493,17 +530,18 @@ function chooseTool() {
                 }
                 let x = event.offsetX;
                 let y = event.offsetY;
-                let trapezoid = document.createElement('img');
+                // let trapezoid = document.createElement('img');
                 let figureBox = document.createElement('div');
-                trapezoid.setAttribute('draggable', 'true')
-                trapezoid.setAttribute('src', '../static/img/trapezoid.svg')
-                trapezoid.classList.add('figure');
-                trapezoid.classList.add('figure-trapezoid');
+                figureBox.setAttribute('draggable', 'true')
+                // trapezoid.setAttribute('src', '../static/img/trapezoid.svg')
+                figureBox.classList.add('figure');
+                figureBox.classList.add('figure-trapezoid');
                 figureBox.style.left = (x - 100) + 'px';
                 figureBox.style.top = (y - 100) + 'px';
-                figureBox.appendChild(trapezoid);
+                // figureBox.appendChild(trapezoid);
                 figureBox.classList.add('figureBox')
                 wrapper.appendChild(figureBox);
+                resizeFigure();
             }
         },
         14: function rectangularTrapezoid() {
@@ -514,17 +552,19 @@ function chooseTool() {
                 }
                 let x = event.offsetX;
                 let y = event.offsetY;
-                let rTrapezoid = document.createElement('img');
+                // let rTrapezoid = document.createElement('img');
                 let figureBox = document.createElement('div');
-                rTrapezoid.setAttribute('draggable', 'true')
-                rTrapezoid.setAttribute('src', '../static/img/rTrapezoid.svg')
-                rTrapezoid.classList.add('figure');
-                rTrapezoid.classList.add('figure-rTrapezoid');
+                figureBox.setAttribute('draggable', 'true')
+                // rTrapezoid.setAttribute('src', '../static/img/rTrapezoid.svg')
+                figureBox.classList.add('figure');
+                figureBox.classList.add('figure-rTrapezoid');
                 figureBox.style.left = (x - 100) + 'px';
                 figureBox.style.top = (y - 100) + 'px';
-                figureBox.appendChild(rTrapezoid);
+                // figureBox.appendChild(rTrapezoid);
                 figureBox.classList.add('figureBox')
                 wrapper.appendChild(figureBox);
+                resizeFigure();
+
             }
 
         },
@@ -536,17 +576,19 @@ function chooseTool() {
                 }
                 let x = event.offsetX;
                 let y = event.offsetY;
-                let tPrism = document.createElement('img');
+                // let tPrism = document.createElement('img');
                 let figureBox = document.createElement('div');
-                tPrism.setAttribute('draggable', 'true')
-                tPrism.setAttribute('src', '../static/img/triangularprism%20.svg')
-                tPrism.classList.add('figure');
-                tPrism.classList.add('figure-tPrism');
+                figureBox.setAttribute('draggable', 'true')
+                // tPrism.setAttribute('src', '../static/img/triangularprism%20.svg')
+                figureBox.classList.add('figure');
+                figureBox.classList.add('figure-tPrism');
                 figureBox.style.left = (x - 100) + 'px';
                 figureBox.style.top = (y - 100) + 'px';
-                figureBox.appendChild(tPrism);
+                // figureBox.appendChild(tPrism);
                 figureBox.classList.add('figureBox')
                 wrapper.appendChild(figureBox);
+                resizeFigure();
+
             }
 
         },
@@ -558,17 +600,18 @@ function chooseTool() {
                 }
                 let x = event.offsetX;
                 let y = event.offsetY;
-                let parallelepiped = document.createElement('img');
+                // let parallelepiped = document.createElement('img');
                 let figureBox = document.createElement('div');
-                parallelepiped.setAttribute('draggable', 'true')
-                parallelepiped.setAttribute('src', '../static/img/parallelepiped.svg')
-                parallelepiped.classList.add('figure');
-                parallelepiped.classList.add('figure-parallelepiped');
+                figureBox.setAttribute('draggable', 'true')
+                // parallelepiped.setAttribute('src', '../static/img/parallelepiped.svg')
+                figureBox.classList.add('figure');
+                figureBox.classList.add('figure-parallelepiped');
                 figureBox.style.left = (x - 100) + 'px';
                 figureBox.style.top = (y - 100) + 'px';
-                figureBox.appendChild(parallelepiped);
+                // figureBox.appendChild(parallelepiped);
                 figureBox.classList.add('figureBox')
                 wrapper.appendChild(figureBox);
+                resizeFigure();
             }
 
         },
@@ -580,17 +623,18 @@ function chooseTool() {
                 }
                 let x = event.offsetX;
                 let y = event.offsetY;
-                let cone = document.createElement('img');
+                // let cone = document.createElement('img');
                 let figureBox = document.createElement('div');
-                cone.setAttribute('draggable', 'true')
-                cone.setAttribute('src', '../static/img/cone.svg')
-                cone.classList.add('figure');
-                cone.classList.add('figure-cone');
+                figureBox.setAttribute('draggable', 'true')
+                // cone.setAttribute('src', '../static/img/cone.svg')
+                figureBox.classList.add('figure');
+                figureBox.classList.add('figure-cone');
                 figureBox.style.left = (x - 100) + 'px';
                 figureBox.style.top = (y - 100) + 'px';
-                figureBox.appendChild(cone);
+                // figureBox.appendChild(cone);
                 figureBox.classList.add('figureBox')
                 wrapper.appendChild(figureBox);
+                resizeFigure();
             }
 
         },
@@ -602,17 +646,19 @@ function chooseTool() {
                 }
                 let x = event.offsetX;
                 let y = event.offsetY;
-                let parallelogram = document.createElement('img');
+                // let parallelogram = document.createElement('img');
                 let figureBox = document.createElement('div');
-                parallelogram.setAttribute('draggable', 'true')
-                parallelogram.setAttribute('src', '../static/img/parallelogram.svg')
-                parallelogram.classList.add('figure');
-                parallelogram.classList.add('figure-parallelogram');
+                figureBox.setAttribute('draggable', 'true')
+                // parallelogram.setAttribute('src', '../static/img/parallelogram.svg')
+                figureBox.classList.add('figure');
+                figureBox.classList.add('figure-parallelogram');
                 figureBox.style.left = (x - 100) + 'px';
                 figureBox.style.top = (y - 100) + 'px';
-                figureBox.appendChild(parallelogram);
+                // figureBox.appendChild(parallelogram);
                 figureBox.classList.add('figureBox')
                 wrapper.appendChild(figureBox);
+                resizeFigure();
+
             }
 
         },
@@ -624,17 +670,19 @@ function chooseTool() {
                 }
                 let x = event.offsetX;
                 let y = event.offsetY;
-                let parallelogram = document.createElement('img');
+                // let parallelogram = document.createElement('img');
                 let figureBox = document.createElement('div');
-                parallelogram.setAttribute('draggable', 'true')
-                parallelogram.setAttribute('src', '../static/img/tetrahedron.svg')
-                parallelogram.classList.add('figure');
-                parallelogram.classList.add('figure-tetrahedron');
+                figureBox.setAttribute('draggable', 'true')
+                // parallelogram.setAttribute('src', '../static/img/tetrahedron.svg')
+                figureBox.classList.add('figure');
+                figureBox.classList.add('figure-tetrahedron');
                 figureBox.style.left = (x - 100) + 'px';
                 figureBox.style.top = (y - 100) + 'px';
-                figureBox.appendChild(parallelogram);
+                // figureBox.appendChild(parallelogram);
                 figureBox.classList.add('figureBox')
                 wrapper.appendChild(figureBox);
+                resizeFigure();
+
             }
 
         },
@@ -646,17 +694,19 @@ function chooseTool() {
                 }
                 let x = event.offsetX;
                 let y = event.offsetY;
-                let pentagon = document.createElement('img');
+                // let pentagon = document.createElement('img');
                 let figureBox = document.createElement('div');
-                pentagon.setAttribute('draggable', 'true')
-                pentagon.setAttribute('src', '../static/img/pentagon.svg')
-                pentagon.classList.add('figure');
-                pentagon.classList.add('figure-pentagon');
+                figureBox.setAttribute('draggable', 'true')
+                // pentagon.setAttribute('src', '../static/img/pentagon.svg')
+                figureBox.classList.add('figure');
+                figureBox.classList.add('figure-pentagon');
                 figureBox.style.left = (x - 100) + 'px';
                 figureBox.style.top = (y - 100) + 'px';
-                figureBox.appendChild(pentagon);
+                // figureBox.appendChild(pentagon);
                 figureBox.classList.add('figureBox')
                 wrapper.appendChild(figureBox);
+                resizeFigure();
+
             }
 
         },
@@ -668,17 +718,19 @@ function chooseTool() {
                 }
                 let x = event.offsetX;
                 let y = event.offsetY;
-                let rightTriangle = document.createElement('img');
+                // let rightTriangle = document.createElement('img');
                 let figureBox = document.createElement('div');
-                rightTriangle.setAttribute('draggable', 'true')
-                rightTriangle.setAttribute('src', '../static/img/rightTriangle%20.svg')
-                rightTriangle.classList.add('figure');
-                rightTriangle.classList.add('figure-rightTriangle');
+                figureBox.setAttribute('draggable', 'true')
+                // rightTriangle.setAttribute('src', '../static/img/rightTriangle%20.svg')
+                figureBox.classList.add('figure');
+                figureBox.classList.add('figure-rightTriangle');
                 figureBox.style.left = (x - 100) + 'px';
                 figureBox.style.top = (y - 100) + 'px';
-                figureBox.appendChild(rightTriangle);
+                // figureBox.appendChild(rightTriangle);
                 figureBox.classList.add('figureBox')
                 wrapper.appendChild(figureBox);
+                resizeFigure();
+
             }
         },
         22: function triangle() {
@@ -689,17 +741,18 @@ function chooseTool() {
                 }
                 let x = event.offsetX;
                 let y = event.offsetY;
-                let triangle = document.createElement('img');
+                // let triangle = document.createElement('img');
                 let figureBox = document.createElement('div');
-                triangle.setAttribute('draggable', 'true')
-                triangle.setAttribute('src', '../static/img/triangle.svg')
-                triangle.classList.add('figure');
-                triangle.classList.add('figure-triangle');
+                figureBox.setAttribute('draggable', 'true')
+                // triangle.setAttribute('src', '../static/img/triangle.svg')
+                figureBox.classList.add('figure');
+                figureBox.classList.add('figure-triangle');
                 figureBox.style.left = (x - 100) + 'px';
                 figureBox.style.top = (y - 100) + 'px';
-                figureBox.appendChild(triangle);
+                // figureBox.appendChild(triangle);
                 figureBox.classList.add('figureBox')
                 wrapper.appendChild(figureBox);
+                resizeFigure();
             }
         },
         23: function correctTriangle() {
@@ -710,17 +763,19 @@ function chooseTool() {
                 }
                 let x = event.offsetX;
                 let y = event.offsetY;
-                let correctTriangle = document.createElement('img');
+                // let correctTriangle = document.createElement('img');
                 let figureBox = document.createElement('div');
-                correctTriangle.setAttribute('draggable', 'true')
-                correctTriangle.setAttribute('src', '../static/img/correctTriangle.svg')
-                correctTriangle.classList.add('figure');
-                correctTriangle.classList.add('figure-correctTriangle');
+                figureBox.setAttribute('draggable', 'true')
+                // correctTriangle.setAttribute('src', '../static/img/correctTriangle.svg')
+                figureBox.classList.add('figure');
+                figureBox.classList.add('figure-correctTriangle');
                 figureBox.style.left = (x - 100) + 'px';
                 figureBox.style.top = (y - 100) + 'px';
-                figureBox.appendChild(correctTriangle);
+                // figureBox.appendChild(correctTriangle);
                 figureBox.classList.add('figureBox')
                 wrapper.appendChild(figureBox);
+                resizeFigure();
+
             }
         },
         24: function pyramid4Angel() {
@@ -731,17 +786,19 @@ function chooseTool() {
                 }
                 let x = event.offsetX;
                 let y = event.offsetY;
-                let pyramid4Angel = document.createElement('img');
+                // let pyramid4Angel = document.createElement('img');
                 let figureBox = document.createElement('div');
-                pyramid4Angel.setAttribute('draggable', 'true')
-                pyramid4Angel.setAttribute('src', '../static/img/pyramid4angel.svg')
-                pyramid4Angel.classList.add('figure');
-                pyramid4Angel.classList.add('figure-pyramid4Angel');
+                figureBox.setAttribute('draggable', 'true')
+                // pyramid4Angel.setAttribute('src', '../static/img/pyramid4angel.svg')
+                figureBox.classList.add('figure');
+                figureBox.classList.add('figure-pyramid4Angel');
                 figureBox.style.left = (x - 100) + 'px';
                 figureBox.style.top = (y - 100) + 'px';
-                figureBox.appendChild(pyramid4Angel);
+                // figureBox.appendChild(pyramid4Angel);
                 figureBox.classList.add('figureBox')
                 wrapper.appendChild(figureBox);
+                resizeFigure();
+
             }
         },
         27: function drag() {
@@ -788,10 +845,7 @@ function chooseTool() {
                 let filePath = file.valueOf();
                 console.log(filePath)
                 let uploadImage = document.createElement('img');
-                uploadImage.setAttribute('src','');
-                uploadImage.setAttribute('draggable','true');
-                uploadImage.style.position = 'absolute';
-                wrapper.appendChild(uploadImage)
+
             }
         }
     }
@@ -806,6 +860,8 @@ function chooseTool() {
         });
     }
 }
+
+
 
 
 toolsMenuHide();
