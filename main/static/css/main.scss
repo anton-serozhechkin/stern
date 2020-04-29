@@ -6,9 +6,103 @@ html,body {
   height: 100%;
   font-family: sans-serif;
 }
+body {
+  background-color: #EDF5F9;
+}
 body::-webkit-scrollbar { width: 0; }
 body { overflow: -moz-scrollbars-none; }
 body::-webkit-scrollbar { width: 0; }
+// nav menu styles
+.navigation-menu {
+  position: fixed;
+  right: 0;
+  // main styles of nav menu block
+  .menu {
+    // ul list styles of nav menu
+    margin-top: 20vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: flex-end;
+    height: 100%;
+    padding-right: 12px;
+    .menu-item {
+      // li item of ul list at nav menu
+      display: flex;
+      align-items: center;
+      margin: 1vh 0;
+      justify-content: space-between;
+      box-sizing: border-box;
+      text-transform: uppercase;
+      font-weight: 500;
+      a {
+        // link styles at nav menu
+        position: relative;
+        top: 1px;
+        padding: 4px 6px;
+        text-decoration: none;
+        color:#000000;
+        font-weight: 500;
+      }
+      div {
+        // decor styles of li item
+        height: 28px;
+        width: 28px;
+        margin-left: 20px;
+      }
+      // color for decor boxes at li
+      &:nth-of-type(2) {
+        border: solid 3px $red;
+        div {
+          background-color: $red;
+        }
+      }
+      &:nth-of-type(3) {
+        border: solid 3px $lightBlue;
+        div {
+          background-color: $lightBlue;
+        }
+      }
+      &:nth-of-type(4) {
+        border: solid 3px $purple;
+        div {
+          background-color: $purple;
+        }
+      }
+      &:nth-of-type(5) {
+        border: solid 3px $green;
+        div {
+          background-color: $green;
+        }
+      }
+      &:nth-of-type(6) {
+        border: solid 3px $turquoise;
+        div {
+          background-color: $turquoise;
+        }
+      }
+      &:nth-of-type(7) {
+        border: solid 3px $darkRed;
+        div {
+          background-color: $darkRed;
+        }
+      }
+      &:nth-of-type(8) {
+        border: solid 3px $darkTurquoise;
+        div {
+          background-color: $darkTurquoise;
+        }
+      }
+      &:nth-of-type(9) {
+        border: solid 3px $yellow;
+        div {
+          background-color: $yellow;
+        }
+      }
+    }
+  }
+}
+// nav menu styles
 
 // main styles
 // header styles
@@ -33,7 +127,6 @@ body::-webkit-scrollbar { width: 0; }
     width: 100px;
     p {
       position: relative;
-      top: 15%;
     }
   }
 // !repeat class
@@ -46,7 +139,9 @@ body::-webkit-scrollbar { width: 0; }
     background-image: url(../img/events-leftSide-bg.svg);
     background-size: contain;
     background-color: $red;
-
+    p {
+      top: 15%;
+    }
   }
   .events-centralBlock {
     width: 100%;
@@ -123,98 +218,7 @@ body::-webkit-scrollbar { width: 0; }
       // content styles at central container
     }
   }
-  // nav menu styles
-  .navigation-menu {
-    position: fixed;
-    right: 0;
-    // main styles of nav menu block
-    .menu {
-      // ul list styles of nav menu
-      margin-top: 20vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: start;
-      align-items: flex-end;
-      height: 100%;
-      padding-right: 12px;
-      .menu-item {
-        // li item of ul list at nav menu
-        display: flex;
-        align-items: center;
-        margin: 1vh 0;
-        justify-content: space-between;
-        box-sizing: border-box;
-        text-transform: uppercase;
-        font-weight: 500;
-        a {
-          // link styles at nav menu
-          position: relative;
-          top: 1px;
-          padding: 4px 6px;
-          text-decoration: none;
-          color:#000000;
-          font-weight: 500;
-        }
-        div {
-          // decor styles of li item
-          height: 28px;
-          width: 28px;
-          margin-left: 20px;
-        }
-        // color for decor boxes at li
-        &:nth-of-type(2) {
-          border: solid 3px $red;
-          div {
-            background-color: $red;
-          }
-        }
-        &:nth-of-type(3) {
-          border: solid 3px $lightBlue;
-          div {
-            background-color: $lightBlue;
-          }
-        }
-        &:nth-of-type(4) {
-          border: solid 3px $purple;
-          div {
-            background-color: $purple;
-          }
-        }
-        &:nth-of-type(5) {
-          border: solid 3px $green;
-          div {
-            background-color: $green;
-          }
-        }
-        &:nth-of-type(6) {
-          border: solid 3px $turquoise;
-          div {
-            background-color: $turquoise;
-          }
-        }
-        &:nth-of-type(7) {
-          border: solid 3px $darkRed;
-          div {
-            background-color: $darkRed;
-          }
-        }
-        &:nth-of-type(8) {
-          border: solid 3px $darkTurquoise;
-          div {
-            background-color: $darkTurquoise;
-          }
-        }
-        &:nth-of-type(9) {
-          border: solid 3px $yellow;
-          div {
-            background-color: $yellow;
-          }
-        }
-      }
-    }
   }
-  // nav menu styles
-}
 //! events section style !
 // news section style
 .news {
@@ -225,6 +229,7 @@ body::-webkit-scrollbar { width: 0; }
     background-image: url(../img/events-leftSide-bg.svg);
     background-size: contain;
     background-color: $lightBlue;
+    top: 5%;
   }
   // news centralBlock styles
   .news-centralBlock {
@@ -285,3 +290,77 @@ body::-webkit-scrollbar { width: 0; }
   }
 }
 // !news section style!
+// reviews section style
+.reviews {
+  background-image: url('../img/reviews-bg.svg');
+  background-size: cover;
+  display: flex;
+  justify-content: space-between;
+  .left-side {
+    background-image: url(../img/events-leftSide-bg.svg);
+    background-size: contain;
+    background-color: $green;
+  }
+
+  .reviews-centralBlock {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 auto;
+    .bottom-flower {
+      top: 20vh;
+      margin: 5vh 0;
+      position: relative;
+      border-bottom: solid 3px black;
+      width: 100%;
+      img {
+        width: 370px;
+        height: 270px;
+        position: absolute;
+        bottom: 0;
+        left: 13vw;
+      }
+    }
+  }
+    .wrapper {
+      padding: 0 2vw;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      .review-prev,.review-next {
+        background-color: transparent;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        img {
+          width: 46px;
+          height: 58px;
+          }
+        }
+      .review-next {
+        img {
+          transform: scale(-1,1);
+        }
+    }
+      .review-component {
+        margin: 0 1vw;
+        border: solid 3px black;
+        padding: 15px;
+        .title {
+          padding: 10px 0;
+        }
+      }
+      .small {
+        font-size: 1rem;
+        width: 225px;
+      }
+      .big {
+        padding-bottom: 35px;
+        width: 425px;
+        font-size: 2rem;
+      }
+      }
+    }
+
+// !reviews section style!
