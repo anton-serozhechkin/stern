@@ -19,13 +19,23 @@ body::-webkit-scrollbar { width: 0; }
   // main styles of nav menu block
   .menu {
     // ul list styles of nav menu
-    margin-top: 20vh;
+    margin-top: 8vh;
     display: flex;
     flex-direction: column;
     justify-content: start;
     align-items: flex-end;
     height: 100%;
     padding-right: 12px;
+    position: relative;
+    .turnOn-arrow {
+      position: absolute;
+      width: 105px;
+      height: 155px;
+      top: -105px;
+      right: 25px;
+      transform: rotate(-15deg);
+    }
+
     .menu-item {
       // li item of ul list at nav menu
       display: flex;
@@ -135,6 +145,9 @@ body::-webkit-scrollbar { width: 0; }
   // main container events section
   display: flex;
   justify-content: space-between;
+  background-image: url('../img/events-bg.svg');
+  background-size: cover;
+  background-repeat: no-repeat;
   .left-side {
     background-image: url(../img/events-leftSide-bg.svg);
     background-size: contain;
