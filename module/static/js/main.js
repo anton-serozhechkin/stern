@@ -791,14 +791,13 @@ function chooseTool() {
                 figureBox.setAttribute('draggable', 'true')
                 // pyramid4Angel.setAttribute('src', '../static/img/pyramid4angel.svg')
                 figureBox.classList.add('figure');
-                figureBox.classList.add('figure-pyramid4Angel');
+                figureBox.classList.add(' ');
                 figureBox.style.left = (x - 100) + 'px';
                 figureBox.style.top = (y - 100) + 'px';
                 // figureBox.appendChild(pyramid4Angel);
                 figureBox.classList.add('figureBox')
                 wrapper.appendChild(figureBox);
                 resizeFigure();
-
             }
         },
         27: function drag() {
