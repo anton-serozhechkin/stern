@@ -1,0 +1,19 @@
+@import "templates";
+// import SCSS file with mixins and variables
+@import "reset";
+//import reset SCSS file
+
+html,body {
+  height: 100%;
+  font-family: sans-serif;
+}
+.header {
+  background-image: url(../img/header-bg.svg);
+  background-size: cover;
+  padding: 46px 0;
+  h1 {
+    text-transform: uppercase;
+    font-size: 100px;
+    text-align: center;
+  }
+}

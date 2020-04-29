@@ -41,17 +41,4 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
-html, body {
-  height: 100%;
-  font-family: sans-serif; }
-
-.header {
-  background-image: url(../img/header-bg.svg);
-  background-size: cover;
-  padding: 46px 0; }
-  .header h1 {
-    text-transform: uppercase;
-    font-size: 100px;
-    text-align: center; }
-
-/*# sourceMappingURL=main.css.map */
+/*# sourceMappingURL=reset.css.map */
