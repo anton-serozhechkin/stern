@@ -33,7 +33,7 @@ body::-webkit-scrollbar { width: 0; }
     width: 100px;
     p {
       position: relative;
-      top: 12%;
+      top: 15%;
     }
   }
 // !repeat class
@@ -148,6 +148,8 @@ body::-webkit-scrollbar { width: 0; }
         font-weight: 500;
         a {
           // link styles at nav menu
+          position: relative;
+          top: 1px;
           padding: 4px 6px;
           text-decoration: none;
           color:#000000;
@@ -214,3 +216,72 @@ body::-webkit-scrollbar { width: 0; }
   // nav menu styles
 }
 //! events section style !
+// news section style
+.news {
+  display: flex;
+  justify-content: space-between;
+  // news main container stylees
+  .left-side {
+    background-image: url(../img/events-leftSide-bg.svg);
+    background-size: contain;
+    background-color: $lightBlue;
+  }
+  // news centralBlock styles
+  .news-centralBlock {
+    margin: 10vh 20vw;
+    border: solid 3px black;
+    padding: 15px;
+    max-height: 920px;
+    overflow-y: auto;
+    // !news centralBlock styles
+    // ! custom scrollbar styles
+    &::-webkit-scrollbar-button {
+      background-repeat:no-repeat;
+      width:5px;
+      height:0;
+    }
+
+    &::-webkit-scrollbar-track {
+      background-color:$lightBlue
+    }
+
+    &::-webkit-scrollbar-thumb {
+      -webkit-border-radius: 0;
+      border-radius: 0;
+      background-color:#6dc0c8;
+    }
+
+    &::-webkit-scrollbar-thumb:hover{
+      background-color:#56999f;
+    }
+
+    &::-webkit-resizer{
+      background-repeat:no-repeat;
+      width:4px;
+      height:0;
+    }
+
+    &::-webkit-scrollbar{
+      width: 25px;
+    }
+    // ! custom scrollbar styles
+    .wrapper {
+      // news main wrapper styles
+      display: grid;
+      grid-gap: 15px;
+      grid-template-columns: repeat(2,1fr);
+      .news-component {
+        // styles a news component markup
+        padding: 15px;
+        border: solid 3px black;
+        .title {
+        // title styles at news post
+        }
+        .content {
+          //  content styles at news post
+        }
+      }
+    }
+  }
+}
+// !news section style!

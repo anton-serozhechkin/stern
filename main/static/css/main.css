@@ -72,7 +72,7 @@ body::-webkit-scrollbar {
   width: 100px; }
   .left-side p {
     position: relative;
-    top: 12%; }
+    top: 15%; }
 
 .events {
   display: flex;
@@ -151,6 +151,8 @@ body::-webkit-scrollbar {
         text-transform: uppercase;
         font-weight: 500; }
         .events .navigation-menu .menu .menu-item a {
+          position: relative;
+          top: 1px;
           padding: 4px 6px;
           text-decoration: none;
           color: #000000;
@@ -191,5 +193,44 @@ body::-webkit-scrollbar {
           border: solid 3px #F7E85C; }
           .events .navigation-menu .menu .menu-item:nth-of-type(9) div {
             background-color: #F7E85C; }
+
+.news {
+  display: flex;
+  justify-content: space-between; }
+  .news .left-side {
+    background-image: url(../img/events-leftSide-bg.svg);
+    background-size: contain;
+    background-color: #C6E8F1; }
+  .news .news-centralBlock {
+    margin: 10vh 20vw;
+    border: solid 3px black;
+    padding: 15px;
+    max-height: 920px;
+    overflow-y: auto; }
+    .news .news-centralBlock::-webkit-scrollbar-button {
+      background-repeat: no-repeat;
+      width: 5px;
+      height: 0; }
+    .news .news-centralBlock::-webkit-scrollbar-track {
+      background-color: #C6E8F1; }
+    .news .news-centralBlock::-webkit-scrollbar-thumb {
+      -webkit-border-radius: 0;
+      border-radius: 0;
+      background-color: #6dc0c8; }
+    .news .news-centralBlock::-webkit-scrollbar-thumb:hover {
+      background-color: #56999f; }
+    .news .news-centralBlock::-webkit-resizer {
+      background-repeat: no-repeat;
+      width: 4px;
+      height: 0; }
+    .news .news-centralBlock::-webkit-scrollbar {
+      width: 25px; }
+    .news .news-centralBlock .wrapper {
+      display: grid;
+      grid-gap: 15px;
+      grid-template-columns: repeat(2, 1fr); }
+      .news .news-centralBlock .wrapper .news-component {
+        padding: 15px;
+        border: solid 3px black; }
 
 /*# sourceMappingURL=main.css.map */
