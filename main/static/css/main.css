@@ -439,4 +439,48 @@ body::-webkit-scrollbar {
       .contacts .contacts-centralBlock .wrapper .knowMore {
         position: absolute; }
 
+.schedule {
+  height: 100vh;
+  display: flex;
+  justify-content: space-between; }
+  .schedule .left-side {
+    background-image: url("../img/events-leftSide-bg.svg");
+    background-size: contain;
+    background-color: #7D2424;
+    font-size: 5rem; }
+    .schedule .left-side p {
+      top: 5%; }
+  .schedule .schedule-centralBlock {
+    margin: auto; }
+    .schedule .schedule-centralBlock .wrapper {
+      position: relative; }
+      .schedule .schedule-centralBlock .wrapper .link {
+        position: absolute;
+        font-size: 2rem;
+        top: -50px; }
+        .schedule .schedule-centralBlock .wrapper .link a {
+          text-decoration: none;
+          font-family: Ponder, sans-serif;
+          color: #7D2424; }
+          .schedule .schedule-centralBlock .wrapper .link a img {
+            transform: rotate(-10deg);
+            position: absolute;
+            height: 75px;
+            width: 65px; }
+      .schedule .schedule-centralBlock .wrapper .schedule-image {
+        bottom: -50px;
+        position: relative; }
+        .schedule .schedule-centralBlock .wrapper .schedule-image .link {
+          position: absolute;
+          top: 30%;
+          left: 17vw;
+          font-size: 6rem;
+          text-transform: uppercase; }
+          .schedule .schedule-centralBlock .wrapper .schedule-image .link a {
+            color: #7D2424;
+            text-decoration: #7D2424 underline; }
+        .schedule .schedule-centralBlock .wrapper .schedule-image img {
+          height: 730px;
+          width: 1300px; }
+
 /*# sourceMappingURL=main.css.map */

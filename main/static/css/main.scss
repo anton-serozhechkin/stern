@@ -12,19 +12,17 @@ body {
   font-family: Ponder-Light, sans-serif;
   background-color: #EDF5F9;
 }
-
+// remove scroll bar of body elem
 body::-webkit-scrollbar {
   width: 0;
 }
-
 body {
   overflow: -moz-scrollbars-none;
 }
-
 body::-webkit-scrollbar {
   width: 0;
 }
-
+//! remove scroll bar of body elem !
 // nav menu styles
 .navigation-menu {
   position: fixed;
@@ -144,9 +142,7 @@ body::-webkit-scrollbar {
     }
   }
 }
-
 // nav menu styles
-
 // main styles
 // header styles
 .header {
@@ -161,7 +157,6 @@ body::-webkit-scrollbar {
     font-weight: 700;
   }
 }
-
 // ! header styles
 // repeat class
 .left-side {
@@ -177,7 +172,6 @@ body::-webkit-scrollbar {
     position: relative;
   }
 }
-
 // !repeat class
 // event section
 .events {
@@ -284,7 +278,6 @@ body::-webkit-scrollbar {
     }
   }
 }
-
 //! events section style !
 // news section style
 .news {
@@ -402,7 +395,6 @@ body::-webkit-scrollbar {
     }
   }
 }
-
 // !news section style!
 // reviews section style
 .reviews {
@@ -502,7 +494,6 @@ body::-webkit-scrollbar {
     }
   }
 }
-
 // !reviews section style!
 // about us section style
 .aboutUs {
@@ -592,7 +583,6 @@ body::-webkit-scrollbar {
     }
   }
 }
-
 //! about us section style!
 // contacts section
 .contacts {
@@ -632,3 +622,60 @@ body::-webkit-scrollbar {
     }
   }
 // !contacts section!
+//schedule section
+.schedule {
+  height: 100vh;
+  display: flex;
+  justify-content: space-between;
+  .left-side {
+    background-image: url('../img/events-leftSide-bg.svg');
+    background-size: contain;
+    background-color: $darkRed;
+    font-size: 5rem;
+    p {
+      top: 5%;
+    }
+  }
+  .schedule-centralBlock {
+    margin: auto;
+    .wrapper {
+      position: relative;
+      .link {
+        position: absolute;
+        font-size: 2rem;
+        top: -50px;
+        a {
+          text-decoration: none;
+          font-family: Ponder, sans-serif;
+          color:$darkRed;
+          img {
+            transform: rotate(-10deg);
+            position: absolute;
+            height: 75px;
+            width: 65px;
+          }
+        }
+      }
+      .schedule-image {
+        bottom: -50px;
+        position: relative;
+        .link {
+          position: absolute;
+          top: 30%;
+          left: 17vw;
+          font-size: 6rem;
+          text-transform: uppercase;
+          a {
+            color:$darkRed;
+            text-decoration: $darkRed underline;
+          }
+        }
+        img {
+          height: 730px;
+          width: 1300px;
+        }
+      }
+    }
+  }
+}
+//!schedule section!
