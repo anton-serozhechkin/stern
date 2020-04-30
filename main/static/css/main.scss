@@ -627,20 +627,25 @@ body::-webkit-scrollbar {
   height: 100vh;
   display: flex;
   justify-content: space-between;
+  // main styles of schedule section
   .left-side {
     background-image: url('../img/events-leftSide-bg.svg');
     background-size: contain;
     background-color: $darkRed;
     font-size: 5rem;
+    // styles left-side of schedule section
     p {
       top: 5%;
     }
   }
   .schedule-centralBlock {
+    // schedule main centralBlock styles
     margin: auto;
     .wrapper {
+      // main wrap styles
       position: relative;
       .link {
+        // styles of khon more link
         position: absolute;
         font-size: 2rem;
         top: -50px;
@@ -653,13 +658,16 @@ body::-webkit-scrollbar {
             position: absolute;
             height: 75px;
             width: 65px;
+            // arrow into link styles
           }
         }
       }
       .schedule-image {
         bottom: -50px;
         position: relative;
+        // main penguin image block at section
         .link {
+          // link styles into image
           position: absolute;
           top: 30%;
           left: 17vw;
@@ -671,6 +679,7 @@ body::-webkit-scrollbar {
           }
         }
         img {
+          // styles of main image
           height: 730px;
           width: 1300px;
         }
@@ -679,3 +688,121 @@ body::-webkit-scrollbar {
   }
 }
 //!schedule section!
+// signUp section
+.signUp {
+  background-color: #F7E85C;
+  height: 100vh;
+  background-image: url('../img/signUp-bg.svg');
+  background-size: cover;
+  // main section styles
+  .wrapper {
+    // section wrapper styles
+    height: 100%;
+    margin: 0 auto;
+    width: 820px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    .signUp_signIn-module {
+      // styles for signup form module
+      .sign-btn {
+        font-size: 3rem;
+        text-transform: uppercase;
+        background: transparent;
+        cursor: pointer;
+        border: none;
+        width: 400px;
+        outline: none;
+        transition: .4s ease-in-out;
+        padding: 1.5vh 0;
+      }
+      .sign-btn:hover {
+        background: #000;
+        color:white;
+        transition: .4s ease-in-out;
+        text-decoration: underline white;
+      }
+    }
+    .signIn-form {
+      // form styles
+      width: 100%;
+      input[type='text'] {
+        display: block;
+        width: 100%;
+        margin: 1.4rem 0;
+        border: none;
+        outline: none;
+        border-bottom: solid 2px black;
+        background: transparent;
+        font-size:2rem;
+        &:focus::-webkit-input-placeholder { color:transparent; }
+        &:focus:-moz-placeholder { color:transparent; } /* FF 4-18 */
+        &:focus::-moz-placeholder { color:transparent; } /* FF 19+ */
+        &:focus:-ms-input-placeholder { color:transparent; } /* IE 10+ */
+      }
+      input[type='text']:nth-of-type(2) {
+        margin-bottom: 0;
+      }
+        .error {
+          // error text box styles
+          margin: 1vh 0;
+          color:$darkRed;
+          font-size: 0.9rem;
+          text-transform: uppercase;
+        }
+        .error-disabled {
+          // disable text box styles/ this class is active when server didn't give negative answe
+          display: none;
+        }
+        .forgot {
+          // forgot pass link styles
+          margin: 1vh 0;
+          font-size: 1.4rem;
+          text-transform: uppercase;
+          text-align: right;
+          a {
+            color:#383838;
+            text-decoration: none;
+          }
+        }
+
+      .submit {
+        margin: 2vh 0;
+        width: 100%;
+        text-align: center;
+        // submit button and wrap styles
+        input[type='submit'] {
+            font-size: 3rem;
+            text-transform: uppercase;
+            background: #000;
+            cursor: pointer;
+            border: none;
+            width: 400px;
+            outline: none;
+            color:white;
+            transition: .4s ease-in-out;
+            padding: 1.5vh 0;
+        }
+      }
+      .personality {
+        // personality box styles
+        font-weight: 700;
+        margin: 0 auto;
+        width: 35%;
+          text-align: center;
+          color:black;
+        font-size: 0.7rem;
+        text-transform: uppercase;
+        span {
+          position: relative;
+          bottom: 4px;
+          a {
+            color:black;
+          }
+        }
+      }
+    }
+  }
+}
+// !signUp section!

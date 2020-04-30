@@ -267,5 +267,36 @@
     </div>
 </section>
 <!--!schedule section!-->
+<!--signUp section-->
+<section class="signUp" id="signUp-anchor">
+    <div class="wrapper">
+        <div class="signUp_signIn-module">
+            <button class="sign-btn">вход</button>
+            <button class="sign-btn">регистрация</button>
+<!--      sign module buttons. onclick a button form was change      -->
+        </div>
+        <div class="signIn-form">
+<!--      block with form      -->
+            <form action="">
+                <input type="text" placeholder="ЛОГИН" required>
+                <input type="text" placeholder="ПАРОЛЬ" required>
+                <p class="error error-disabled">неправильный логин или пароль</p>
+<!--       error text box. active when server give negative answer with ajax         -->
+                <p class="forgot"><a href="">забыли пароль?</a></p>
+<!--        forgot password link        -->
+                <div class="submit">
+<!--         submit button           -->
+                    <input type="submit" value="войти">
+                </div>
+                <div class="personality">
+<!--          personality checkbox. by default is active          -->
+                    <input type="checkbox" checked> <span>даю согласие на обработку своих <a href="">персональных данных</a></span>
+                </div>
+            </form>
+        </div>
+
+    </div>
+</section>
+<!--!signUp section!-->
 </body>
 </html>
