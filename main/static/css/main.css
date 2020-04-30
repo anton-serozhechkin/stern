@@ -229,7 +229,8 @@ body::-webkit-scrollbar {
 
 .news {
   display: flex;
-  justify-content: space-between; }
+  justify-content: space-between;
+  height: 100vh; }
   .news .left-side {
     background-image: url(../img/events-leftSide-bg.svg);
     background-size: contain;
@@ -237,10 +238,9 @@ body::-webkit-scrollbar {
     .news .left-side p {
       top: 15%; }
   .news .news-centralBlock {
-    margin: 10vh 15vw;
+    margin: 10vh auto;
     border: solid 3px black;
     padding: 15px;
-    max-height: 920px;
     overflow-y: auto; }
     .news .news-centralBlock::-webkit-scrollbar-button {
       background-repeat: no-repeat;
@@ -261,11 +261,12 @@ body::-webkit-scrollbar {
     .news .news-centralBlock::-webkit-scrollbar {
       width: 25px; }
     .news .news-centralBlock .wrapper {
+      height: 650px;
       display: grid;
       grid-gap: 15px;
       grid-template-columns: repeat(2, 1fr); }
       .news .news-centralBlock .wrapper .news-component {
-        height: 400px;
+        height: 425px;
         width: 525px;
         border: solid 3px black;
         position: relative; }
@@ -275,7 +276,7 @@ body::-webkit-scrollbar {
           top: 0; }
           .news .news-centralBlock .wrapper .news-component .news-image img {
             width: 100%;
-            height: 400px; }
+            height: 425px; }
         .news .news-centralBlock .wrapper .news-component .content-box {
           position: absolute;
           z-index: 2;

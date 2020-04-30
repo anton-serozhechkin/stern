@@ -12,16 +12,20 @@ body {
   font-family: Ponder-Light, sans-serif;
   background-color: #EDF5F9;
 }
+
 // remove scroll bar of body elem
 body::-webkit-scrollbar {
   width: 0;
 }
+
 body {
   overflow: -moz-scrollbars-none;
 }
+
 body::-webkit-scrollbar {
   width: 0;
 }
+
 //! remove scroll bar of body elem !
 // nav menu styles
 .navigation-menu {
@@ -142,6 +146,7 @@ body::-webkit-scrollbar {
     }
   }
 }
+
 // nav menu styles
 // main styles
 // header styles
@@ -157,6 +162,7 @@ body::-webkit-scrollbar {
     font-weight: 700;
   }
 }
+
 // ! header styles
 // repeat class
 .left-side {
@@ -172,6 +178,7 @@ body::-webkit-scrollbar {
     position: relative;
   }
 }
+
 // !repeat class
 // event section
 .events {
@@ -278,11 +285,13 @@ body::-webkit-scrollbar {
     }
   }
 }
+
 //! events section style !
 // news section style
 .news {
   display: flex;
   justify-content: space-between;
+  height: 100vh;
   // news main container stylees
   .left-side {
     background-image: url(../img/events-leftSide-bg.svg);
@@ -297,10 +306,9 @@ body::-webkit-scrollbar {
 
   // news centralBlock styles
   .news-centralBlock {
-    margin: 10vh 15vw;
+    margin: 10vh auto;
     border: solid 3px black;
     padding: 15px;
-    max-height: 920px;
     overflow-y: auto;
     // !news centralBlock styles
     // ! custom scrollbar styles
@@ -336,6 +344,7 @@ body::-webkit-scrollbar {
 
     // ! custom scrollbar styles
     .wrapper {
+      height: 650px;
       // news main wrapper styles
       display: grid;
       grid-gap: 15px;
@@ -343,7 +352,7 @@ body::-webkit-scrollbar {
 
       .news-component {
         // styles a news component markup
-        height: 400px;
+        height: 425px;
         width: 525px;
         border: solid 3px black;
         position: relative;
@@ -355,7 +364,7 @@ body::-webkit-scrollbar {
 
           img {
             width: 100%;
-            height: 400px;
+            height: 425px;
           }
         }
 
@@ -395,6 +404,7 @@ body::-webkit-scrollbar {
     }
   }
 }
+
 // !news section style!
 // reviews section style
 .reviews {
@@ -408,6 +418,7 @@ body::-webkit-scrollbar {
     background-image: url(../img/events-leftSide-bg.svg);
     background-size: contain;
     background-color: $green;
+
     p {
       top: 15%;
     }
@@ -494,6 +505,7 @@ body::-webkit-scrollbar {
     }
   }
 }
+
 // !reviews section style!
 // about us section style
 .aboutUs {
@@ -583,6 +595,7 @@ body::-webkit-scrollbar {
     }
   }
 }
+
 //! about us section style!
 // contacts section
 .contacts {
@@ -594,6 +607,7 @@ body::-webkit-scrollbar {
     background-image: url('../img/events-leftSide-bg.svg');
     background-size: contain;
     background-color: $turquoise;
+
     p {
       top: 10%;
     }
@@ -613,14 +627,15 @@ body::-webkit-scrollbar {
         background: transparent;
 
 
-        }
+      }
 
-        .knowMore {
-          position: absolute;
-        }
+      .knowMore {
+        position: absolute;
       }
     }
   }
+}
+
 // !contacts section!
 //schedule section
 .schedule {
@@ -638,21 +653,26 @@ body::-webkit-scrollbar {
       top: 5%;
     }
   }
+
   .schedule-centralBlock {
     // schedule main centralBlock styles
     margin: auto;
+
     .wrapper {
       // main wrap styles
       position: relative;
+
       .link {
         // styles of khon more link
         position: absolute;
         font-size: 2rem;
         top: -50px;
+
         a {
           text-decoration: none;
           font-family: Ponder, sans-serif;
-          color:$darkRed;
+          color: $darkRed;
+
           img {
             transform: rotate(-10deg);
             position: absolute;
@@ -662,6 +682,7 @@ body::-webkit-scrollbar {
           }
         }
       }
+
       .schedule-image {
         bottom: -50px;
         position: relative;
@@ -673,11 +694,13 @@ body::-webkit-scrollbar {
           left: 17vw;
           font-size: 6rem;
           text-transform: uppercase;
+
           a {
-            color:$darkRed;
+            color: $darkRed;
             text-decoration: $darkRed underline;
           }
         }
+
         img {
           // styles of main image
           height: 730px;
@@ -687,6 +710,7 @@ body::-webkit-scrollbar {
     }
   }
 }
+
 //!schedule section!
 // signUp section
 .signUp {
@@ -704,6 +728,7 @@ body::-webkit-scrollbar {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+
     .signUp_signIn-module {
       // styles for signup form module
       .sign-btn {
@@ -717,16 +742,19 @@ body::-webkit-scrollbar {
         transition: .4s ease-in-out;
         padding: 1.5vh 0;
       }
+
       .sign-btn:hover {
         background: #000;
-        color:white;
+        color: white;
         transition: .4s ease-in-out;
         text-decoration: underline white;
       }
     }
+
     .signIn-form {
       // form styles
       width: 100%;
+
       input[type='text'] {
         display: block;
         width: 100%;
@@ -735,37 +763,58 @@ body::-webkit-scrollbar {
         outline: none;
         border-bottom: solid 2px black;
         background: transparent;
-        font-size:2rem;
-        &:focus::-webkit-input-placeholder { color:transparent; }
-        &:focus:-moz-placeholder { color:transparent; } /* FF 4-18 */
-        &:focus::-moz-placeholder { color:transparent; } /* FF 19+ */
-        &:focus:-ms-input-placeholder { color:transparent; } /* IE 10+ */
+        font-size: 2rem;
+
+        &:focus::-webkit-input-placeholder {
+          color: transparent;
+        }
+
+        &:focus:-moz-placeholder {
+          color: transparent;
+        }
+
+        /* FF 4-18 */
+        &:focus::-moz-placeholder {
+          color: transparent;
+        }
+
+        /* FF 19+ */
+        &:focus:-ms-input-placeholder {
+          color: transparent;
+        }
+
+        /* IE 10+ */
       }
+
       input[type='text']:nth-of-type(2) {
         margin-bottom: 0;
       }
-        .error {
-          // error text box styles
-          margin: 1vh 0;
-          color:$darkRed;
-          font-size: 0.9rem;
-          text-transform: uppercase;
+
+      .error {
+        // error text box styles
+        margin: 1vh 0;
+        color: $darkRed;
+        font-size: 0.9rem;
+        text-transform: uppercase;
+      }
+
+      .error-disabled {
+        // disable text box styles/ this class is active when server didn't give negative answe
+        display: none;
+      }
+
+      .forgot {
+        // forgot pass link styles
+        margin: 1vh 0;
+        font-size: 1.4rem;
+        text-transform: uppercase;
+        text-align: right;
+
+        a {
+          color: #383838;
+          text-decoration: none;
         }
-        .error-disabled {
-          // disable text box styles/ this class is active when server didn't give negative answe
-          display: none;
-        }
-        .forgot {
-          // forgot pass link styles
-          margin: 1vh 0;
-          font-size: 1.4rem;
-          text-transform: uppercase;
-          text-align: right;
-          a {
-            color:#383838;
-            text-decoration: none;
-          }
-        }
+      }
 
       .submit {
         margin: 2vh 0;
@@ -773,36 +822,40 @@ body::-webkit-scrollbar {
         text-align: center;
         // submit button and wrap styles
         input[type='submit'] {
-            font-size: 3rem;
-            text-transform: uppercase;
-            background: #000;
-            cursor: pointer;
-            border: none;
-            width: 400px;
-            outline: none;
-            color:white;
-            transition: .4s ease-in-out;
-            padding: 1.5vh 0;
+          font-size: 3rem;
+          text-transform: uppercase;
+          background: #000;
+          cursor: pointer;
+          border: none;
+          width: 400px;
+          outline: none;
+          color: white;
+          transition: .4s ease-in-out;
+          padding: 1.5vh 0;
         }
       }
+
       .personality {
         // personality box styles
         font-weight: 700;
         margin: 0 auto;
         width: 35%;
-          text-align: center;
-          color:black;
+        text-align: center;
+        color: black;
         font-size: 0.7rem;
         text-transform: uppercase;
+
         span {
           position: relative;
           bottom: 4px;
+
           a {
-            color:black;
+            color: black;
           }
         }
       }
     }
   }
 }
+
 // !signUp section!
