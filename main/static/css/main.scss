@@ -7,6 +7,7 @@ html,body {
   font-family: sans-serif;
 }
 body {
+  overflow-x: hidden;
   font-family: Ponder-Light,sans-serif;
   background-color: #EDF5F9;
 }
@@ -137,6 +138,7 @@ body::-webkit-scrollbar { width: 0; }
     font-size: 6rem;
     padding: 35px 0;
     width: 100px;
+    text-transform: uppercase;
     p {
       position: relative;
     }
@@ -416,3 +418,83 @@ body::-webkit-scrollbar { width: 0; }
     }
 
 // !reviews section style!
+// about us section style
+.aboutUs {
+
+  display: flex;
+  justify-content: space-between;
+  // about us section
+  .left-side {
+    background-color: $purple;
+    background-image: url(../img/events-leftSide-bg.svg);
+    background-size: contain;
+    p {
+      top: 15%;
+    }
+  }
+  .aboutUs-centralBlock {
+    // about us centralBlock
+    width: 100%;
+    padding: 0 10vw;
+    .wrapper {
+      //main wrapper at aboutUs centralBlock
+      display: flex;
+      justify-content: center;
+      position: relative;
+      //
+      .penguin {
+        img {
+          width: 1200px;
+          height: 830px;
+          opacity: 0.5;
+          // properties of penguin image
+        }
+      }
+      .link-container {
+        display: flex;
+        flex-direction: column;
+        height: 90%;
+        justify-content: space-between;
+        position: absolute;
+        width: 100%;
+        // flex container with pages links
+        a {
+          font-weight: 700;
+          padding: 2vh 1vw;
+          text-align: center;
+          text-transform: uppercase;
+          text-decoration: none;
+          font-size: 3.2rem;
+          border: solid 4px $purple;
+          border-radius:10px;
+        }
+        a:nth-of-type(1) {
+          align-self: flex-end;
+        }
+        a:nth-of-type(2) {
+          align-self: flex-start;
+          position: relative;
+          // position links into block
+        }
+        a:nth-of-type(3) {
+          align-self: flex-end;
+        }
+        // links styles at flex container
+      }
+      .knowMore {
+        position: absolute;
+        right: 5vw;
+        top: 30vh;
+        text-transform: uppercase;
+        color:$purple;
+        font-size: 2rem;
+        text-decoration: none;
+        transform: rotate(10deg);
+        font-family: Ponder,sans-serif;
+      // know more link styles
+      }
+    }
+  }
+}
+//! about us section style!
+
