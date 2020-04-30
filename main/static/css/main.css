@@ -164,6 +164,7 @@ body::-webkit-scrollbar {
     position: relative; }
 
 .events {
+  height: 100vh;
   display: flex;
   justify-content: space-between;
   background-image: url("../img/events-bg.svg");
@@ -174,7 +175,7 @@ body::-webkit-scrollbar {
     background-size: contain;
     background-color: #B95253; }
     .events .left-side p {
-      top: 5%; }
+      top: 10%; }
   .events .events-centralBlock {
     width: 100%;
     margin: 8vh 10vw;
@@ -225,7 +226,7 @@ body::-webkit-scrollbar {
           border: solid 3px black; }
           .events .events-centralBlock .wrapper .content .banner img {
             width: 100%;
-            height: 650px; }
+            height: 450px; }
 
 .news {
   display: flex;
