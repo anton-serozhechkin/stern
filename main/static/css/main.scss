@@ -373,7 +373,15 @@ body::-webkit-scrollbar { width: 0; }
         height: 270px;
         position: absolute;
         bottom: 0;
+      }
+      img:nth-of-type(1) {
         left: 13vw;
+      }
+      img:nth-of-type(2) {
+        left: 22vw;
+      }
+      img:nth-of-type(3) {
+        right: 13vw;
       }
     }
   }

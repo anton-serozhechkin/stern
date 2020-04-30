@@ -321,8 +321,13 @@ body::-webkit-scrollbar {
         width: 370px;
         height: 270px;
         position: absolute;
-        bottom: 0;
+        bottom: 0; }
+      .reviews .reviews-centralBlock .bottom-flower img:nth-of-type(1) {
         left: 13vw; }
+      .reviews .reviews-centralBlock .bottom-flower img:nth-of-type(2) {
+        left: 22vw; }
+      .reviews .reviews-centralBlock .bottom-flower img:nth-of-type(3) {
+        right: 13vw; }
   .reviews .wrapper {
     padding: 0 2vw;
     display: flex;
