@@ -59,7 +59,7 @@ html, body {
 
 body {
   overflow-x: hidden;
-  font-family: Ponder-Light,sans-serif;
+  font-family: Ponder-Light, sans-serif;
   background-color: #EDF5F9; }
 
 body::-webkit-scrollbar {
@@ -297,6 +297,7 @@ body::-webkit-scrollbar {
             padding: 4px 10px; }
 
 .reviews {
+  height: 100vh;
   background-image: url("../img/reviews-bg.svg");
   background-size: cover;
   display: flex;
@@ -305,6 +306,8 @@ body::-webkit-scrollbar {
     background-image: url(../img/events-leftSide-bg.svg);
     background-size: contain;
     background-color: #A3CB8F; }
+    .reviews .left-side p {
+      top: 15%; }
   .reviews .reviews-centralBlock {
     display: flex;
     align-items: center;
@@ -358,6 +361,7 @@ body::-webkit-scrollbar {
       font-size: 2rem; }
 
 .aboutUs {
+  height: 100vh;
   display: flex;
   justify-content: space-between; }
   .aboutUs .left-side {
@@ -381,6 +385,7 @@ body::-webkit-scrollbar {
         display: flex;
         flex-direction: column;
         height: 90%;
+        padding-top: 100px;
         justify-content: space-between;
         position: absolute;
         width: 100%; }
@@ -409,6 +414,29 @@ body::-webkit-scrollbar {
         font-size: 2rem;
         text-decoration: none;
         transform: rotate(10deg);
-        font-family: Ponder,sans-serif; }
+        font-family: Ponder, sans-serif; }
+
+.contacts {
+  height: 100vh;
+  display: flex;
+  justify-content: space-between; }
+  .contacts .left-side {
+    background-image: url("../img/events-leftSide-bg.svg");
+    background-size: contain;
+    background-color: #62A5BC; }
+    .contacts .left-side p {
+      top: 10%; }
+  .contacts .contacts-centralBlock {
+    margin: 0 auto; }
+    .contacts .contacts-centralBlock .wrapper {
+      display: flex; }
+      .contacts .contacts-centralBlock .wrapper .left-side {
+        width: unset;
+        background-image: none;
+        background-size: unset;
+        font-size: 2rem;
+        background: transparent; }
+      .contacts .contacts-centralBlock .wrapper .knowMore {
+        position: absolute; }
 
 /*# sourceMappingURL=main.css.map */

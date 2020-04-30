@@ -2,18 +2,29 @@
 // import SCSS file with mixins,fonts and variables
 @import "reset";
 //import reset SCSS file
-html,body {
+html, body {
   height: 100%;
   font-family: sans-serif;
 }
+
 body {
   overflow-x: hidden;
-  font-family: Ponder-Light,sans-serif;
+  font-family: Ponder-Light, sans-serif;
   background-color: #EDF5F9;
 }
-body::-webkit-scrollbar { width: 0; }
-body { overflow: -moz-scrollbars-none; }
-body::-webkit-scrollbar { width: 0; }
+
+body::-webkit-scrollbar {
+  width: 0;
+}
+
+body {
+  overflow: -moz-scrollbars-none;
+}
+
+body::-webkit-scrollbar {
+  width: 0;
+}
+
 // nav menu styles
 .navigation-menu {
   position: fixed;
@@ -29,6 +40,7 @@ body::-webkit-scrollbar { width: 0; }
     height: 100%;
     padding-right: 12px;
     position: relative;
+
     .turnOn-arrow {
       position: absolute;
       width: 105px;
@@ -47,66 +59,84 @@ body::-webkit-scrollbar { width: 0; }
       box-sizing: border-box;
       text-transform: uppercase;
       font-weight: 500;
+
       a {
         // link styles at nav menu
         position: relative;
         top: 1px;
         padding: 4px 6px;
         text-decoration: none;
-        color:#000000;
+        color: #000000;
         font-weight: 500;
       }
+
       div {
         // decor styles of li item
         height: 28px;
         width: 28px;
         margin-left: 20px;
       }
+
       // color for decor boxes at li
       &:nth-of-type(2) {
         border: solid 3px $red;
+
         div {
           background-color: $red;
         }
       }
+
       &:nth-of-type(3) {
         border: solid 3px $lightBlue;
+
         div {
           background-color: $lightBlue;
         }
       }
+
       &:nth-of-type(4) {
         border: solid 3px $purple;
+
         div {
           background-color: $purple;
         }
       }
+
       &:nth-of-type(5) {
         border: solid 3px $green;
+
         div {
           background-color: $green;
         }
       }
+
       &:nth-of-type(6) {
         border: solid 3px $turquoise;
+
         div {
           background-color: $turquoise;
         }
       }
+
       &:nth-of-type(7) {
         border: solid 3px $darkRed;
+
         div {
           background-color: $darkRed;
         }
       }
+
       &:nth-of-type(8) {
         border: solid 3px $darkTurquoise;
+
         div {
           background-color: $darkTurquoise;
         }
       }
+
       &:nth-of-type(9) {
         border: solid 3px $yellow;
+
         div {
           background-color: $yellow;
         }
@@ -114,6 +144,7 @@ body::-webkit-scrollbar { width: 0; }
     }
   }
 }
+
 // nav menu styles
 
 // main styles
@@ -122,6 +153,7 @@ body::-webkit-scrollbar { width: 0; }
   background-image: url(../img/header-bg.svg);
   background-size: cover;
   padding: 46px 0;
+
   h1 {
     text-transform: uppercase;
     font-size: 7rem;
@@ -129,20 +161,23 @@ body::-webkit-scrollbar { width: 0; }
     font-weight: 700;
   }
 }
+
 // ! header styles
 // repeat class
-  .left-side {
-    font-weight: 700;
-    text-align: center;
-    word-wrap: break-word;
-    font-size: 6rem;
-    padding: 35px 0;
-    width: 100px;
-    text-transform: uppercase;
-    p {
-      position: relative;
-    }
+.left-side {
+  font-weight: 700;
+  text-align: center;
+  word-wrap: break-word;
+  font-size: 6rem;
+  padding: 35px 0;
+  width: 100px;
+  text-transform: uppercase;
+
+  p {
+    position: relative;
   }
+}
+
 // !repeat class
 // event section
 .events {
@@ -152,14 +187,17 @@ body::-webkit-scrollbar { width: 0; }
   background-image: url('../img/events-bg.svg');
   background-size: cover;
   background-repeat: no-repeat;
+
   .left-side {
     background-image: url(../img/events-leftSide-bg.svg);
     background-size: contain;
     background-color: $red;
+
     p {
       top: 5%;
     }
   }
+
   .events-centralBlock {
     width: 100%;
     margin: 8vh 10vw;
@@ -171,19 +209,22 @@ body::-webkit-scrollbar { width: 0; }
       margin: 5vh 0;
       position: relative;
       border-bottom: solid 3px black;
-        img {
-          width: 215px;
-          height: 250px;
-          position: absolute;
-          bottom: 0;
-          left: -20px;
-        }
+
+      img {
+        width: 215px;
+        height: 250px;
+        position: absolute;
+        bottom: 0;
+        left: -20px;
+      }
     }
+
     .wrapper {
       // central container wrap styles
       width: 85%;
       margin: 0 auto;
       border: solid 3px black;
+
       .heading {
         // heading styles at central container
         padding: 20px;
@@ -204,6 +245,7 @@ body::-webkit-scrollbar { width: 0; }
             width: 95px;
           }
         }
+
         .circles {
           i {
             cursor: pointer;
@@ -211,10 +253,12 @@ body::-webkit-scrollbar { width: 0; }
           }
         }
       }
+
       // heading styles at central container
       // content styles at central container
       .content {
         padding: 5vh 2vw;
+
         .title {
           padding-bottom: 4vh;
           text-transform: uppercase;
@@ -223,20 +267,24 @@ body::-webkit-scrollbar { width: 0; }
           font-weight: 700;
           // title of central container styles
         }
+
         .banner {
           // banner markup styles
           box-sizing: border-box;
           border: solid 3px black;
+
           img {
             width: 100%;
             height: 650px;
           }
         }
       }
+
       // content styles at central container
     }
   }
-  }
+}
+
 //! events section style !
 // news section style
 .news {
@@ -247,11 +295,13 @@ body::-webkit-scrollbar { width: 0; }
     background-image: url(../img/events-leftSide-bg.svg);
     background-size: contain;
     background-color: $lightBlue;
+
     p {
       top: 15%;
 
     }
   }
+
   // news centralBlock styles
   .news-centralBlock {
     margin: 10vh 15vw;
@@ -262,78 +312,87 @@ body::-webkit-scrollbar { width: 0; }
     // !news centralBlock styles
     // ! custom scrollbar styles
     &::-webkit-scrollbar-button {
-      background-repeat:no-repeat;
-      width:5px;
-      height:0;
+      background-repeat: no-repeat;
+      width: 5px;
+      height: 0;
     }
 
     &::-webkit-scrollbar-track {
-      background-color:$lightBlue
+      background-color: $lightBlue
     }
 
     &::-webkit-scrollbar-thumb {
       -webkit-border-radius: 0;
       border-radius: 0;
-      background-color:#6dc0c8;
+      background-color: #6dc0c8;
     }
 
-    &::-webkit-scrollbar-thumb:hover{
-      background-color:#56999f;
+    &::-webkit-scrollbar-thumb:hover {
+      background-color: #56999f;
     }
 
-    &::-webkit-resizer{
-      background-repeat:no-repeat;
-      width:4px;
-      height:0;
+    &::-webkit-resizer {
+      background-repeat: no-repeat;
+      width: 4px;
+      height: 0;
     }
 
-    &::-webkit-scrollbar{
+    &::-webkit-scrollbar {
       width: 25px;
     }
+
     // ! custom scrollbar styles
     .wrapper {
       // news main wrapper styles
       display: grid;
       grid-gap: 15px;
-      grid-template-columns: repeat(2,1fr);
+      grid-template-columns: repeat(2, 1fr);
+
       .news-component {
         // styles a news component markup
         height: 400px;
         width: 525px;
         border: solid 3px black;
         position: relative;
+
         .news-image {
           position: absolute;
           z-index: 1;
           top: 0;
+
           img {
             width: 100%;
             height: 400px;
           }
         }
+
         .content-box {
           position: absolute;
           z-index: 2;
           bottom: 0;
-          background-color:rgba(255,255,255,0.5);
+          background-color: rgba(255, 255, 255, 0.5);
           // wrap of content at news - component
           .title {
             padding: 6px 10px;
             font-size: 1.6rem;
+
             a {
               text-decoration: underline #383838;
-              color:black;
+              color: black;
             }
+
             // title styles at news post
           }
+
           .content {
             padding: 10px 10px;
             font-size: 1.1rem;
-            color:$darkTurquoise;
+            color: $darkTurquoise;
             //  content styles at news post
           }
+
           .news-date {
-            color:$darkTurquoise;
+            color: $darkTurquoise;
             font-size: 1.1rem;
             padding: 4px 10px;
             // date styles at news post
@@ -343,17 +402,23 @@ body::-webkit-scrollbar { width: 0; }
     }
   }
 }
+
 // !news section style!
 // reviews section style
 .reviews {
+  height: 100vh;
   background-image: url('../img/reviews-bg.svg');
   background-size: cover;
   display: flex;
   justify-content: space-between;
+
   .left-side {
     background-image: url(../img/events-leftSide-bg.svg);
     background-size: contain;
     background-color: $green;
+    p {
+      top: 15%;
+    }
   }
 
   .reviews-centralBlock {
@@ -362,73 +427,86 @@ body::-webkit-scrollbar { width: 0; }
     flex-direction: column;
     justify-content: center;
     margin: 0 auto;
+
     .bottom-flower {
       top: 20vh;
       margin: 5vh 0;
       position: relative;
       border-bottom: solid 3px black;
       width: 100%;
+
       img {
         width: 370px;
         height: 270px;
         position: absolute;
         bottom: 0;
       }
+
       img:nth-of-type(1) {
         left: 13vw;
       }
+
       img:nth-of-type(2) {
         left: 22vw;
       }
+
       img:nth-of-type(3) {
         right: 13vw;
       }
     }
   }
-    .wrapper {
-      padding: 0 2vw;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      .review-prev,.review-next {
-        background-color: transparent;
-        border: none;
-        outline: none;
-        cursor: pointer;
-        img {
-          width: 46px;
-          height: 58px;
-          }
-        }
-      .review-next {
-        img {
-          transform: scale(-1,1);
-        }
-    }
-      .review-component {
-        margin: 0 1vw;
-        border: solid 3px black;
-        padding: 15px;
-        .title {
-          padding: 10px 0;
-        }
-      }
-      .small {
-        font-size: 1rem;
-        width: 225px;
-      }
-      .big {
-        padding-bottom: 35px;
-        width: 425px;
-        font-size: 2rem;
-      }
+
+  .wrapper {
+    padding: 0 2vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .review-prev, .review-next {
+      background-color: transparent;
+      border: none;
+      outline: none;
+      cursor: pointer;
+
+      img {
+        width: 46px;
+        height: 58px;
       }
     }
+
+    .review-next {
+      img {
+        transform: scale(-1, 1);
+      }
+    }
+
+    .review-component {
+      margin: 0 1vw;
+      border: solid 3px black;
+      padding: 15px;
+
+      .title {
+        padding: 10px 0;
+      }
+    }
+
+    .small {
+      font-size: 1rem;
+      width: 225px;
+    }
+
+    .big {
+      padding-bottom: 35px;
+      width: 425px;
+      font-size: 2rem;
+    }
+  }
+}
 
 // !reviews section style!
 // about us section style
 .aboutUs {
-
+  height: 100vh;
   display: flex;
   justify-content: space-between;
   // about us section
@@ -436,14 +514,17 @@ body::-webkit-scrollbar { width: 0; }
     background-color: $purple;
     background-image: url(../img/events-leftSide-bg.svg);
     background-size: contain;
+
     p {
       top: 15%;
     }
   }
+
   .aboutUs-centralBlock {
     // about us centralBlock
     width: 100%;
     padding: 0 10vw;
+
     .wrapper {
       //main wrapper at aboutUs centralBlock
       display: flex;
@@ -458,10 +539,12 @@ body::-webkit-scrollbar { width: 0; }
           // properties of penguin image
         }
       }
+
       .link-container {
         display: flex;
         flex-direction: column;
         height: 90%;
+        padding-top: 100px;
         justify-content: space-between;
         position: absolute;
         width: 100%;
@@ -474,35 +557,78 @@ body::-webkit-scrollbar { width: 0; }
           text-decoration: none;
           font-size: 3.2rem;
           border: solid 4px $purple;
-          border-radius:10px;
+          border-radius: 10px;
         }
+
         a:nth-of-type(1) {
           align-self: flex-end;
         }
+
         a:nth-of-type(2) {
           align-self: flex-start;
           position: relative;
           // position links into block
         }
+
         a:nth-of-type(3) {
           align-self: flex-end;
         }
+
         // links styles at flex container
       }
+
       .knowMore {
         position: absolute;
         right: 5vw;
         top: 30vh;
         text-transform: uppercase;
-        color:$purple;
+        color: $purple;
         font-size: 2rem;
         text-decoration: none;
         transform: rotate(10deg);
-        font-family: Ponder,sans-serif;
-      // know more link styles
+        font-family: Ponder, sans-serif;
+        // know more link styles
       }
     }
   }
 }
-//! about us section style!
 
+//! about us section style!
+// contacts section
+.contacts {
+  height: 100vh;
+  display: flex;
+  justify-content: space-between;
+
+  .left-side {
+    background-image: url('../img/events-leftSide-bg.svg');
+    background-size: contain;
+    background-color: $turquoise;
+    p {
+      top: 10%;
+    }
+  }
+
+  .contacts-centralBlock {
+    margin: 0 auto;
+
+    .wrapper {
+      display: flex;
+
+      .left-side {
+        width: unset;
+        background-image: none;
+        background-size: unset;
+        font-size: 2rem;
+        background: transparent;
+
+
+        }
+
+        .knowMore {
+          position: absolute;
+        }
+      }
+    }
+  }
+// !contacts section!
