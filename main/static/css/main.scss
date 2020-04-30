@@ -1,5 +1,5 @@
 @import "templates";
-// import SCSS file with mixins and variables
+// import SCSS file with mixins,fonts and variables
 @import "reset";
 //import reset SCSS file
 html,body {
@@ -7,7 +7,12 @@ html,body {
   font-family: sans-serif;
 }
 body {
+  font-family: Pinkment,sans-serif;
   background-color: #EDF5F9;
+  @font-face {
+    font-family: "Bitstream Vera Serif Bold";
+    src: url("https://mdn.mozillademos.org/files/2468/VeraSeBd.ttf");
+  }
 }
 body::-webkit-scrollbar { width: 0; }
 body { overflow: -moz-scrollbars-none; }
@@ -132,7 +137,7 @@ body::-webkit-scrollbar { width: 0; }
   .left-side {
     text-align: center;
     word-wrap: break-word;
-    font-size: 7rem;
+    font-size: 9rem;
     padding: 35px 0;
     width: 100px;
     p {
@@ -153,7 +158,7 @@ body::-webkit-scrollbar { width: 0; }
     background-size: contain;
     background-color: $red;
     p {
-      top: 15%;
+      top: 5%;
     }
   }
   .events-centralBlock {
