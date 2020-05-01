@@ -615,18 +615,81 @@ body::-webkit-scrollbar {
   }
 
   .contacts-centralBlock {
-    margin: 0 auto;
+    margin:auto;
 
     .wrapper {
       display: flex;
-
+      justify-content: space-between;
       .left-side {
+        margin: 0 2vw;
         width: unset;
+        padding: 0;
         background-image: none;
         background-size: unset;
-        font-size: 2rem;
+        font-size: 7rem;
         background: transparent;
-
+        .menu {
+          text-align: left;
+          .item {
+            text-align: left;
+            display: inline-block;
+            font-size: 1rem;
+            padding: 35px;
+            margin: 1vh 0;
+            background: $turquoise;
+            a {
+              text-decoration: none;
+            }
+            span {
+              font-size: 2rem;
+              bottom: 12px;
+              margin-left: 12px;
+              position: relative;
+              color:white;
+            }
+            img {
+              width: 65px;
+              height: 65px;
+            }
+          }
+          .item:nth-of-type(3){
+            border-bottom-right-radius: 100px;
+            border-top-right-radius: 100px;
+          }
+          .item:nth-of-type(4){
+            border-bottom-right-radius: 100px;
+            border-top-right-radius: 100px;
+          }
+        }
+        }
+      .right-side {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin: 0 2vw;
+        .location-box {
+          background-color: $turquoise;
+          text-align: center;
+          color:white;
+          margin: 1vh 0;
+          padding: 1.5vh 1vw;
+          width: 275px;
+          p {
+            font-size: 1.4rem;
+            padding: 3vh 0;
+          }
+          .map-btn {
+            outline:none;
+            font-size: 1.6rem;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+            margin: 2vh 0;
+            text-transform: uppercase;
+          }
+        }
+      }
 
       }
 
@@ -635,7 +698,7 @@ body::-webkit-scrollbar {
       }
     }
   }
-}
+
 
 // !contacts section!
 //schedule section

@@ -429,17 +429,70 @@ body::-webkit-scrollbar {
     .contacts .left-side p {
       top: 10%; }
   .contacts .contacts-centralBlock {
-    margin: 0 auto; }
+    margin: auto; }
     .contacts .contacts-centralBlock .wrapper {
-      display: flex; }
+      display: flex;
+      justify-content: space-between; }
       .contacts .contacts-centralBlock .wrapper .left-side {
+        margin: 0 2vw;
         width: unset;
+        padding: 0;
         background-image: none;
         background-size: unset;
-        font-size: 2rem;
+        font-size: 7rem;
         background: transparent; }
-      .contacts .contacts-centralBlock .wrapper .knowMore {
-        position: absolute; }
+        .contacts .contacts-centralBlock .wrapper .left-side .menu {
+          text-align: left; }
+          .contacts .contacts-centralBlock .wrapper .left-side .menu .item {
+            text-align: left;
+            display: inline-block;
+            font-size: 1rem;
+            padding: 35px;
+            margin: 1vh 0;
+            background: #62A5BC; }
+            .contacts .contacts-centralBlock .wrapper .left-side .menu .item a {
+              text-decoration: none; }
+            .contacts .contacts-centralBlock .wrapper .left-side .menu .item span {
+              font-size: 2rem;
+              bottom: 12px;
+              margin-left: 12px;
+              position: relative;
+              color: white; }
+            .contacts .contacts-centralBlock .wrapper .left-side .menu .item img {
+              width: 65px;
+              height: 65px; }
+          .contacts .contacts-centralBlock .wrapper .left-side .menu .item:nth-of-type(3) {
+            border-bottom-right-radius: 100px;
+            border-top-right-radius: 100px; }
+          .contacts .contacts-centralBlock .wrapper .left-side .menu .item:nth-of-type(4) {
+            border-bottom-right-radius: 100px;
+            border-top-right-radius: 100px; }
+      .contacts .contacts-centralBlock .wrapper .right-side {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin: 0 2vw; }
+        .contacts .contacts-centralBlock .wrapper .right-side .location-box {
+          background-color: #62A5BC;
+          text-align: center;
+          color: white;
+          margin: 1vh 0;
+          padding: 1.5vh 1vw;
+          width: 275px; }
+          .contacts .contacts-centralBlock .wrapper .right-side .location-box p {
+            font-size: 1.4rem;
+            padding: 3vh 0; }
+          .contacts .contacts-centralBlock .wrapper .right-side .location-box .map-btn {
+            outline: none;
+            font-size: 1.6rem;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+            margin: 2vh 0;
+            text-transform: uppercase; }
+    .contacts .contacts-centralBlock .knowMore {
+      position: absolute; }
 
 .schedule {
   height: 100vh;
