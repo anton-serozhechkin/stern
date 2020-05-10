@@ -124,6 +124,11 @@ body {
         margin: 1vh 0;
         text-align: center;
         overflow: hidden; }
+        .tools-menu .tools-menu-wrapper .tools-menu-list .tools-list-item img {
+          height: 25px;
+          width: 25px; }
+          .tools-menu .tools-menu-wrapper .tools-menu-list .tools-list-item img:hover {
+            cursor: pointer; }
         .tools-menu .tools-menu-wrapper .tools-menu-list .tools-list-item #tools-list-square {
           position: absolute;
           left: 23px; }
