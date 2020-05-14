@@ -3,7 +3,14 @@ body {
   font-family: Anvyl;
   overflow-x: hidden;
 }
+/* хром, сафари */
+body::-webkit-scrollbar { width: 0; }
 
+/* ie 10+ */
+body { -ms-overflow-style: none; }
+
+/* фф (свойство больше не работает, других способов тоже нет)*/
+body { overflow: -moz-scrollbars-none; }
 .error {
   min-height: 100vh;
   background-color: $turquoise;
@@ -212,6 +219,46 @@ header {
      .box{
        background-color: $yellow;
      }
+    }
+  }
+}
+.news {
+  height: 100vh;
+  .section-heading {
+    background-color: $turquoise;
+  }
+  .news-heading {
+    overflow-x: hidden;
+    padding-top: 34px;
+      border-bottom: solid 4px $turquoise;
+    padding-bottom: 10px;
+    -webkit-box-shadow: 0 3px 10px 1px #707070;
+    box-shadow: 0 3px 10px 1px #707070;
+      a {
+        &:hover {
+          padding-bottom: 11px;
+          text-decoration: none;
+          border-bottom: solid 5px $red;
+        }
+      }
+    }
+  .card-wrapper {
+    text-decoration: none;
+    &:hover{
+      text-decoration: none;
+    }
+  }
+  .card {
+    .card-description {
+      color:#383838;
+    }
+  }
+  .news-link {
+    margin-top: 15vh;
+    font-size: 5rem;
+    border: solid 4px $red;
+    &:hover {
+      text-decoration: none;
     }
   }
 }

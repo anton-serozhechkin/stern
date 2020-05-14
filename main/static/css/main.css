@@ -8,6 +8,18 @@ body {
   font-family: Anvyl;
   overflow-x: hidden; }
 
+/* хром, сафари */
+body::-webkit-scrollbar {
+  width: 0; }
+
+/* ie 10+ */
+body {
+  -ms-overflow-style: none; }
+
+/* фф (свойство больше не работает, других способов тоже нет)*/
+body {
+  overflow: -moz-scrollbars-none; }
+
 .error {
   min-height: 100vh;
   background-color: #4A8C92; }
@@ -150,5 +162,33 @@ header {
       background-color: #5DF4AB; }
     .navigation .middle .navigation-elem:nth-of-type(11) .box {
       background-color: #E7E36A; }
+
+.news {
+  height: 100vh; }
+  .news .section-heading {
+    background-color: #4A8C92; }
+  .news .news-heading {
+    overflow-x: hidden;
+    padding-top: 34px;
+    border-bottom: solid 4px #4A8C92;
+    padding-bottom: 10px;
+    -webkit-box-shadow: 0 3px 10px 1px #707070;
+    box-shadow: 0 3px 10px 1px #707070; }
+    .news .news-heading a:hover {
+      padding-bottom: 11px;
+      text-decoration: none;
+      border-bottom: solid 5px #B95253; }
+  .news .card-wrapper {
+    text-decoration: none; }
+    .news .card-wrapper:hover {
+      text-decoration: none; }
+  .news .card .card-description {
+    color: #383838; }
+  .news .news-link {
+    margin-top: 15vh;
+    font-size: 5rem;
+    border: solid 4px #B95253; }
+    .news .news-link:hover {
+      text-decoration: none; }
 
 /*# sourceMappingURL=main.css.map */
