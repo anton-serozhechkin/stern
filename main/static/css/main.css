@@ -273,13 +273,17 @@ header {
       color: #4A8C92;
       font-size: 1.8rem; }
     .contacts .contact-form input:focus::-webkit-input-placeholder {
-      color: transparent; }
+      color: transparent;
+      transition: .2s ease-in-out; }
     .contacts .contact-form input:focus:-moz-placeholder {
-      color: transparent; }
+      color: transparent;
+      transition: .2s ease-in-out; }
     .contacts .contact-form input:focus::-moz-placeholder {
-      color: transparent; }
+      color: transparent;
+      transition: .2s ease-in-out; }
     .contacts .contact-form input:focus:-ms-input-placeholder {
-      color: transparent; }
+      color: transparent;
+      transition: .2s ease-in-out; }
   .contacts .contact-form-info {
     top: 130%;
     z-index: 1501; }
@@ -288,7 +292,8 @@ header {
   width: 35% !important; }
 
 .prices {
-  height: 100vh; }
+  height: 100vh;
+  background-color: #143449; }
   .prices .section-heading {
     background: #143449; }
   .prices .nav {
@@ -300,7 +305,7 @@ header {
         padding: 1rem 1.6rem;
         margin: 0 0.5vw;
         border-radius: 40px;
-        background-color: rgba(56, 56, 56, 0.5); }
+        background-color: rgba(204, 204, 204, 0.5); }
         .prices .nav .nav-item a:hover {
           text-decoration: none; }
   .prices .nav-item-active a {
@@ -318,5 +323,100 @@ header {
     margin-top: 15%; }
     .prices .prices-link a:hover {
       text-decoration: none; }
+
+.directions {
+  height: 100vh;
+  background-color: #7D2424; }
+  .directions .section-heading {
+    background-color: #7D2424;
+    font-size: 3.4rem; }
+  .directions .directions-link {
+    margin-top: 35%;
+    margin-bottom: 10%;
+    font-size: 2rem; }
+    .directions .directions-link a {
+      color: white;
+      padding: 18px 40px;
+      background-color: #B95253;
+      border-radius: 10px;
+      -webkit-box-shadow: 0 5px 10px .1px #363636;
+      box-shadow: 0 5px 10px .1px #363636; }
+      .directions .directions-link a:hover {
+        text-decoration: none; }
+  .directions .content-box {
+    margin-left: 3%;
+    margin-top: 10vh; }
+    .directions .content-box .counter-list a {
+      color: white;
+      margin: 0 1rem; }
+      .directions .content-box .counter-list a:hover {
+        color: #E7E36A;
+        text-decoration: none; }
+  .directions .counter-item-active {
+    color: #E7E36A; }
+
+.sign {
+  background-color: #E7E36A;
+  height: 100vh; }
+  .sign .sign-header {
+    padding-top: 10vh; }
+    .sign .sign-header a {
+      letter-spacing: 3px;
+      border: solid 2px black;
+      padding: 2vh 0;
+      font-size: 3rem;
+      color: black;
+      transition: .3s ease-in-out; }
+      .sign .sign-header a:hover {
+        text-decoration: none;
+        background-color: black;
+        color: white;
+        transition: .3s ease-in-out; }
+  .sign .sign-form {
+    margin: 0 auto;
+    margin-top: 5vh;
+    /* FF 4-18 */
+    /* FF 19+ */ }
+    .sign .sign-form input {
+      display: block;
+      border: none;
+      border-bottom: solid 1px black;
+      background-color: transparent;
+      margin: 1.2vh 0;
+      outline: none;
+      font-size: 2rem; }
+    .sign .sign-form input:focus::-webkit-input-placeholder {
+      color: transparent;
+      transition: .2s ease-in-out; }
+    .sign .sign-form input:focus:-moz-placeholder {
+      color: transparent;
+      transition: .2s ease-in-out; }
+    .sign .sign-form input:focus::-moz-placeholder {
+      color: transparent;
+      transition: .2s ease-in-out; }
+    .sign .sign-form input:focus:-ms-input-placeholder {
+      color: transparent;
+      transition: .2s ease-in-out; }
+    .sign .sign-form input[type="submit"] {
+      background-color: black;
+      color: white;
+      padding-top: 8px;
+      padding-bottom: 8px;
+      transition: .3s ease-in-out;
+      border: solid 2px black;
+      box-sizing: border-box; }
+      .sign .sign-form input[type="submit"]:hover {
+        transition: .3s ease-in-out;
+        background-color: transparent;
+        color: black;
+        border: solid 2px black; }
+    .sign .sign-form .rules {
+      font-size: 1.2rem; }
+      .sign .sign-form .rules p {
+        position: relative;
+        top: 3px;
+        user-select: none; }
+  .sign .nActive {
+    display: none; }
 
 /*# sourceMappingURL=main.css.map */
