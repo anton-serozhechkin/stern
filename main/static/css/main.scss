@@ -26,6 +26,9 @@ body {
 }
 
 header {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url('../img/sign-bg.svg');
   height: 25vh;
   background: $yellow;
 
@@ -270,7 +273,9 @@ header {
 
 .news {
   height: 100vh;
-
+  background-image: url('../img/news-bg.svg');
+  background-size: cover;
+  background-repeat: no-repeat;
   .section-heading {
     background-color: $turquoise;
   }
@@ -373,7 +378,7 @@ header {
 
 .contacts {
   height: 100vh;
-  //background-image: url('../img/contacts-bg.svg');
+  background-image: url('../img/contacts-bg.png');
   background-size: cover;
   background-repeat: no-repeat;
 
@@ -396,7 +401,9 @@ header {
       padding: 10px;
     }
   }
-
+  .map-content {
+    letter-spacing: 4px;
+  }
   .btn-map {
     -webkit-box-shadow: 1px 6px 10px 1px #6B6B6B;
     box-shadow: 1px 6px 10px 1px #6B6B6B;
@@ -473,7 +480,7 @@ header {
   }
 
   .contact-form-info {
-    top: 130%;
+    top: 115%;
     z-index: 1501;
   }
 }
@@ -484,6 +491,9 @@ header {
 
 .prices {
   height: 100vh;
+  background-image: url('../img/prices-bg.png');
+  background-size: cover;
+  background-repeat: no-repeat;
   background-color: $darkBlue;
   .section-heading {
     background: $darkBlue;
@@ -494,13 +504,14 @@ header {
 
     .nav-item {
       margin: 2vh 0;
+      border-radius: 40px;
+
+      background-color: rgba(204, 204, 204, .5);
 
       a {
         color: white;
         padding: 1rem 1.6rem;
         margin: 0 0.5vw;
-        border-radius: 40px;
-        background-color: rgba(204, 204, 204, .5);
 
         &:hover {
           text-decoration: none;
@@ -587,6 +598,9 @@ header {
 .sign {
   background-color: $yellow;
   height: 100vh;
+  background-image: url('../img/sign-bg.svg');
+  background-size: cover;
+  background-repeat: no-repeat;
   .sign-header {
     padding-top: 10vh;
     a {

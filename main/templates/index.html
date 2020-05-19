@@ -14,15 +14,20 @@
 <body>
 
 <header class="">
-    <div class="h-100  container-fluid">
+    <div class="h-100 container-fluid">
         <div class="row h-100 align-items-center position-relative">
-            <div class="col-sm-10">
+            <div class="col-sm-9">
                 <p class="header-title text-center">
                     школа точных наук
                 </p>
             </div>
             <div class="col-sm-2 position-absolute header-logo">
                 <img src="../static/img/header-penguin-logo.svg" class="img-fluid h-75" alt="">
+            </div>
+            <div class="col-sm-1 d-none ">
+                <a href="">
+                    <i class="fa fa-bars"></i>
+                </a>
             </div>
         </div>
     </div>
@@ -92,7 +97,7 @@
                                 там все про математику и ещё про математику</p>
                         </div>
                         <div class="row position-absolute events-link text-center w-100 justify-content-center d-block mr-5">
-                            <div class="link">
+                            <div class="link link-more">
                                 <a href="" class="w-25 text-uppercase">подробнее</a>
                             </div>
                             <div class="link mt-5">
@@ -228,7 +233,7 @@
 </section>
 <section class="contacts" id="contacts-anchor">
     <div class="container-fluid h-100 p-0">
-        <div class="row h-100">
+        <div class="row wrapper h-100">
             <div class="col-sm-1 pr-0 text-center text-light h-100">
                 <div class="section-heading d-flex h-100">
                     к <br> о <br> н <br> т <br> а <br> к <br> т <br> ы
@@ -244,8 +249,8 @@
                     </div>
                     <div class="social-icon">
                         <a href=""><img src="../static/img/telegram.svg" alt="" class="img-fluid"></a>
+                    </div>
                 </div>
-            </div>
                 <div class="row ">
                     <div class="col-sm-7 position-relative">
                         <form action="" method="" class="position-absolute w-100 h-100 contact-form">
@@ -259,15 +264,14 @@
                             <p>schoolofexactsciences@gmail.com</p>
                             <p>+7 (985) 971 00 21</p>
                         </div>
-
                     </div>
-                    <div class="col-sm-5 ">
+                    <div class="col-sm-5 maps-wrapper">
                         <div class="row w-35">
-                            <p class="text-light font-weight-bold h1 text-uppercase">основное помещение: бауманская улица 6, стр.2</p>
+                            <p class="text-light font-weight-bold h1 text-uppercase map-content">основное помещение: бауманская улица 6, стр.2</p>
                             <button class="btn btn-map btn-warning w-100" id="map-1">карта</button>
                         </div>
                         <div class="row mt-5 w-35">
-                            <p class="text-light font-weight-bold h1 text-uppercase">филиал:мосфильмовская улица,35</p>
+                            <p class="text-light font-weight-bold h1 text-uppercase map-content">филиал:мосфильмовская улица,35</p>
                             <button class="btn btn-map btn-warning w-100" id="map-2">карта</button>
                         </div>
                     </div>
@@ -324,10 +328,10 @@
             <div class="col-sm-11">
                 <div class="row">
                     <div class="col-sm-7 content-box">
-                        <p class="display-2 text-light">биология</p>
+                        <p class="display-2 text-light title">биология</p>
                         <hr class="w-50 float-left" color="white">
                         <div class="clearfix"></div>
-                        <p class="h3 w-75 text-light">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet architecto beatae debitis eveniet fugiat harum laudantium, neque nesciunt nihil non, reprehenderit sapiente similique unde vero.</p>
+                        <p class="h3 w-75 text-light content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet architecto beatae debitis eveniet fugiat harum laudantium, neque nesciunt nihil non, reprehenderit sapiente similique unde vero.</p>
                         <div class="directions-link">
                             <a href="#" class="">получить консультацию</a>
                         </div>
@@ -358,7 +362,7 @@
                 <div class="w-100 text-right">
                     <a href="" class="text-dark">забыл пароль</a>
                 </div>
-                <div class="w-100 justify-content-center row">
+                <div class="w-100 justify-content-center row submit">
                     <input type="submit" class="w-35" value="войти">
                 </div>
                 <div class="rules row justify-content-center">

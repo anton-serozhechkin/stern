@@ -25,6 +25,9 @@ body {
   background-color: #4A8C92; }
 
 header {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url("../img/sign-bg.svg");
   height: 25vh;
   background: #E7E36A; }
   header .header-title {
@@ -164,7 +167,10 @@ header {
       background-color: #E7E36A; }
 
 .news {
-  height: 100vh; }
+  height: 100vh;
+  background-image: url("../img/news-bg.svg");
+  background-size: cover;
+  background-repeat: no-repeat; }
   .news .section-heading {
     background-color: #4A8C92; }
   .news .news-heading {
@@ -223,6 +229,7 @@ header {
 
 .contacts {
   height: 100vh;
+  background-image: url("../img/contacts-bg.png");
   background-size: cover;
   background-repeat: no-repeat; }
   .contacts .section-heading {
@@ -236,6 +243,8 @@ header {
     margin: 4px 4px;
     height: 125px;
     padding: 10px; }
+  .contacts .map-content {
+    letter-spacing: 4px; }
   .contacts .btn-map {
     -webkit-box-shadow: 1px 6px 10px 1px #6B6B6B;
     box-shadow: 1px 6px 10px 1px #6B6B6B;
@@ -285,7 +294,7 @@ header {
       color: transparent;
       transition: .2s ease-in-out; }
   .contacts .contact-form-info {
-    top: 130%;
+    top: 115%;
     z-index: 1501; }
 
 .w-35 {
@@ -293,19 +302,22 @@ header {
 
 .prices {
   height: 100vh;
+  background-image: url("../img/prices-bg.png");
+  background-size: cover;
+  background-repeat: no-repeat;
   background-color: #143449; }
   .prices .section-heading {
     background: #143449; }
   .prices .nav {
     margin-top: 2vh; }
     .prices .nav .nav-item {
-      margin: 2vh 0; }
+      margin: 2vh 0;
+      border-radius: 40px;
+      background-color: rgba(204, 204, 204, 0.5); }
       .prices .nav .nav-item a {
         color: white;
         padding: 1rem 1.6rem;
-        margin: 0 0.5vw;
-        border-radius: 40px;
-        background-color: rgba(204, 204, 204, 0.5); }
+        margin: 0 0.5vw; }
         .prices .nav .nav-item a:hover {
           text-decoration: none; }
   .prices .nav-item-active a {
@@ -357,7 +369,10 @@ header {
 
 .sign {
   background-color: #E7E36A;
-  height: 100vh; }
+  height: 100vh;
+  background-image: url("../img/sign-bg.svg");
+  background-size: cover;
+  background-repeat: no-repeat; }
   .sign .sign-header {
     padding-top: 10vh; }
     .sign .sign-header a {
