@@ -434,4 +434,50 @@ header {
   .sign .nActive {
     display: none; }
 
+.contact-modal-overlay {
+  background-color: rgba(0, 0, 0, 0.5);
+  transition: .3s all;
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 2000;
+  opacity: 0;
+  visibility: hidden; }
+
+.contacts-maps-modal {
+  opacity: 0;
+  visibility: hidden;
+  width: 100%;
+  max-width: 50%;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2001;
+  box-shadow: 0 3px 10px -0.5px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  padding: 30px;
+  border-radius: 3px;
+  background-color: #fff;
+  transition: 0.3s all; }
+
+.contact-modal-overlay.active {
+  opacity: 1;
+  visibility: visible; }
+
+.contacts-maps-modal.active {
+  opacity: 1;
+  visibility: visible; }
+
+.modal__cross {
+  width: 15px;
+  height: 15px;
+  position: absolute;
+  top: 12px;
+  right: 16px;
+  fill: #444;
+  cursor: pointer; }
+
 /*# sourceMappingURL=main.css.map */
