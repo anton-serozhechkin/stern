@@ -4,6 +4,11 @@
   /* Имя шрифта */
   src: url("../assets/fonts/ANVYL.otf");
   /* Путь к файлу со шрифтом */ }
+@media (max-width: 1600px) and (max-height: 900px) {
+  .prices .content-box {
+    width: 50% !important; }
+  .prices .prices-link {
+    margin-top: 12% !important; } }
 @media (max-width: 1440px) and (max-height: 900px) {
   .prices .content-box {
     width: 50% !important; } }
