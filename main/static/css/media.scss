@@ -2,8 +2,12 @@
 @media (max-width: 1600px) and (max-height: 900px) {
 
 }
-@media (max-width: 1440px) and (max-height: 900px){
-
+@media (max-width: 1440px) and (max-height: 900px) {
+  .prices {
+    .content-box {
+      width: 50% !important;
+    }
+  }
 }
 @media (max-width: 1366px) and (max-height: 768px){
   .section-heading {
