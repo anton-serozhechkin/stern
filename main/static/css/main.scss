@@ -738,16 +738,32 @@ header {
     border-radius: 15px;
     width: 85px;
     height: 85px;
+    transition: .3s linear;
     a {
       color:$darkGray;
       position: relative;
       top: -3px;
       padding-bottom: 6px;
-      background-color: $yellow;
       left: 25px;
+      background-color: $yellow;
       font-size: 3rem;
+      transition: .3s ease-in-out;
       &:hover {
         text-decoration: none;
+      }
+
+    }
+    &:hover {
+      width: 165px;
+      background-color: $turquoise;
+      transition: .3s ease-in-out;
+      a {
+        background-color: transparent;
+      transition: none;
+      }
+      a {
+        color:white;
+        transition: .3s ease-in-out;
       }
     }
   }
@@ -899,4 +915,144 @@ header {
     }
   }
 }
+.highschool-main {
+  background-image: url(../img/21high-school-bg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  .start-test {
+    .test-box {
+      padding-top: 80px;
+      input {
+        border: 2px solid #54b5be;
+        border-radius: 10px;
+        font-size: 32px;
+        width: 83%;
+        outline: none;
+        margin-bottom: 20px;
+        padding: 8px 10px;
+        margin-left: 17%;
+        &::placeholder {
+          color:#3668AD;
+        }
+      }
+      a {
+        color:White;
+        float: right;
+        //margin-right: 17%;
+        background-color: $turquoise;
+        padding: 8px 40px;
+        border-radius: 10px;
+        font-size: 32px;
+        &:hover {
+          text-decoration: none;
+        }
+      }
+    }
+    .test-image {
+      img {
+        margin-top: 40px;
+        width: 280px;
+        height: 325px;
+      }
+    }
+  }
+  .info {
+    .description {
+      .title {
+        color:$darkGray;
+        font-size: 62px;
+        font-weight: 500;
+        letter-spacing: 3px;
+      }
+      .info-box {
+        margin: 16px 0;
+        font-size: 24px;
+        font-weight: 300;
+        color:#7C7A6A;
+        &:first-of-type {
+          margin-top: 32px;
+        }
+        &:last-of-type {
+          margin-bottom: 32px;
+        }
+      }
+      .link {
+        border: solid #D55B61 4px;
+        text-align: center;
+        box-sizing: border-box;
+        a {
+          padding: 18px 40px;
+          color:black;
+          font-size: 42px;
+          letter-spacing: 4px;
+          &:hover {
+            text-decoration: none;
+          }
+        }
+      }
+    }
+  }
+  .advices {
+    padding: 150px 0;
+    padding-bottom: 50px;
+    .card-wrapper {
+      &:hover {
+        text-decoration: none;
+      }
+      .card-description {
+        color:#383838;
+      }
+    }
 
+    .link {
+      border: solid #D55B61 4px;
+      text-align: center;
+      box-sizing: border-box;
+      width: 35%;
+      margin: 0 auto;
+
+      a {
+        padding: 18px 40px;
+        color:black;
+        font-size: 42px;
+        letter-spacing: 4px;
+        &:hover {
+          text-decoration: none;
+        }
+      }
+    }
+  }
+  .video {
+    padding: 50px 0;
+    .title {
+      text-align: right;
+      font-size: 42px;
+      text-shadow: 1px 1px 5px #666666;
+      border-bottom: solid 3px $turquoise;
+    }
+    .content {
+      display: flex;
+      flex-wrap: wrap;
+      iframe {
+        margin: 25px;
+      }
+    }
+  }
+  .link {
+    border: solid #D55B61 4px;
+    text-align: center;
+    box-sizing: border-box;
+    width: 20%;
+    margin: 0 auto;
+
+    a {
+      padding: 18px 40px;
+      color:black;
+      font-size: 42px;
+      letter-spacing: 4px;
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+}

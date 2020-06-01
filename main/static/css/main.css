@@ -484,17 +484,29 @@ header {
   border: solid #4A8C92 6px;
   border-radius: 15px;
   width: 85px;
-  height: 85px; }
+  height: 85px;
+  transition: .3s linear; }
   .pag-back-button .wrapper a {
     color: #48443E;
     position: relative;
     top: -3px;
     padding-bottom: 6px;
-    background-color: #E7E36A;
     left: 25px;
-    font-size: 3rem; }
+    background-color: #E7E36A;
+    font-size: 3rem;
+    transition: .3s ease-in-out; }
     .pag-back-button .wrapper a:hover {
       text-decoration: none; }
+  .pag-back-button .wrapper:hover {
+    width: 165px;
+    background-color: #4A8C92;
+    transition: .3s ease-in-out; }
+    .pag-back-button .wrapper:hover a {
+      background-color: transparent;
+      transition: none; }
+    .pag-back-button .wrapper:hover a {
+      color: white;
+      transition: .3s ease-in-out; }
 
 .page-header-img {
   width: 265px;
@@ -607,6 +619,107 @@ header {
     .footer .footer-bottom a {
       color: #48443E; }
       .footer .footer-bottom a:hover {
+        text-decoration: none; }
+
+.highschool-main {
+  background-image: url(../img/21high-school-bg.png);
+  background-repeat: no-repeat;
+  background-size: cover; }
+  .highschool-main .start-test .test-box {
+    padding-top: 80px; }
+    .highschool-main .start-test .test-box input {
+      border: 2px solid #54b5be;
+      border-radius: 10px;
+      font-size: 32px;
+      width: 83%;
+      outline: none;
+      margin-bottom: 20px;
+      padding: 8px 10px;
+      margin-left: 17%; }
+      .highschool-main .start-test .test-box input::placeholder {
+        color: #3668AD; }
+    .highschool-main .start-test .test-box a {
+      color: White;
+      float: right;
+      background-color: #4A8C92;
+      padding: 8px 40px;
+      border-radius: 10px;
+      font-size: 32px; }
+      .highschool-main .start-test .test-box a:hover {
+        text-decoration: none; }
+  .highschool-main .start-test .test-image img {
+    margin-top: 40px;
+    width: 280px;
+    height: 325px; }
+  .highschool-main .info .description .title {
+    color: #48443E;
+    font-size: 62px;
+    font-weight: 500;
+    letter-spacing: 3px; }
+  .highschool-main .info .description .info-box {
+    margin: 16px 0;
+    font-size: 24px;
+    font-weight: 300;
+    color: #7C7A6A; }
+    .highschool-main .info .description .info-box:first-of-type {
+      margin-top: 32px; }
+    .highschool-main .info .description .info-box:last-of-type {
+      margin-bottom: 32px; }
+  .highschool-main .info .description .link {
+    border: solid #D55B61 4px;
+    text-align: center;
+    box-sizing: border-box; }
+    .highschool-main .info .description .link a {
+      padding: 18px 40px;
+      color: black;
+      font-size: 42px;
+      letter-spacing: 4px; }
+      .highschool-main .info .description .link a:hover {
+        text-decoration: none; }
+  .highschool-main .advices {
+    padding: 150px 0;
+    padding-bottom: 50px; }
+    .highschool-main .advices .card-wrapper:hover {
+      text-decoration: none; }
+    .highschool-main .advices .card-wrapper .card-description {
+      color: #383838; }
+    .highschool-main .advices .link {
+      border: solid #D55B61 4px;
+      text-align: center;
+      box-sizing: border-box;
+      width: 35%;
+      margin: 0 auto; }
+      .highschool-main .advices .link a {
+        padding: 18px 40px;
+        color: black;
+        font-size: 42px;
+        letter-spacing: 4px; }
+        .highschool-main .advices .link a:hover {
+          text-decoration: none; }
+  .highschool-main .video {
+    padding: 50px 0; }
+    .highschool-main .video .title {
+      text-align: right;
+      font-size: 42px;
+      text-shadow: 1px 1px 5px #666666;
+      border-bottom: solid 3px #4A8C92; }
+    .highschool-main .video .content {
+      display: flex;
+      flex-wrap: wrap; }
+      .highschool-main .video .content iframe {
+        margin: 25px; }
+  .highschool-main .link {
+    border: solid #D55B61 4px;
+    text-align: center;
+    box-sizing: border-box;
+    width: 20%;
+    margin: 0 auto; }
+    .highschool-main .link a {
+      padding: 18px 40px;
+      color: black;
+      font-size: 42px;
+      letter-spacing: 4px; }
+      .highschool-main .link a:hover {
         text-decoration: none; }
 
 /*# sourceMappingURL=main.css.map */
