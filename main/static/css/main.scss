@@ -917,8 +917,8 @@ header {
 }
 .highschool-main {
   background-image: url(../img/21high-school-bg.png);
-  background-repeat: no-repeat;
   background-size: cover;
+  background-repeat: no-repeat;
   .start-test {
     .test-box {
       padding-top: 80px;
@@ -1026,8 +1026,8 @@ header {
     padding: 50px 0;
     .title {
       text-align: right;
-      font-size: 42px;
-      text-shadow: 1px 1px 5px #666666;
+      font-size: 52px;
+      text-shadow: 1px 1px 5px  #666666;
       border-bottom: solid 3px $turquoise;
     }
     .content {
@@ -1037,21 +1037,93 @@ header {
         margin: 25px;
       }
     }
-  }
-  .link {
-    border: solid #D55B61 4px;
-    text-align: center;
-    box-sizing: border-box;
-    width: 20%;
-    margin: 0 auto;
+    .link {
+      border: solid #D55B61 4px;
+      text-align: center;
+      box-sizing: border-box;
+      width: 20%;
+      margin: 0 auto;
 
-    a {
-      padding: 18px 40px;
-      color:black;
-      font-size: 42px;
-      letter-spacing: 4px;
-      &:hover {
-        text-decoration: none;
+      a {
+        padding: 18px 40px;
+        color:black;
+        font-size: 42px;
+        letter-spacing: 4px;
+        &:hover {
+          text-decoration: none;
+        }
+      }
+    }
+  }
+  .metodics {
+    .heading {
+      .title {
+        text-shadow: 1px 1px 5px  #666666;
+        font-size: 62px;
+        border-bottom: solid 3px $turquoise;
+      }
+    }
+    .content {
+      padding-bottom: 75px;
+      .list {
+        padding: 15px 40px;
+        margin-top: 24px;
+        background-color: #FFF292;
+        border: dashed 3px #383838;
+        height: 475px;
+        overflow: auto;
+
+        &::-webkit-scrollbar { /* 1 - скроллбар */
+          width: 10px;
+          height: 4px;
+          background-color: #FFFFFF;
+        }
+
+        &::-webkit-scrollbar-button { /* 2 - кнопка */
+        }
+
+        &::-webkit-scrollbar-track { /* 3 - трек */
+          background-color: rgba(74,140,146,.5);
+          border-radius: 8px;
+        }
+
+        &::-webkit-scrollbar-track-piece { /* 4 - видимая часть трека */
+        }
+
+        &::-webkit-scrollbar-thumb { /* 5 - ползунок */
+          border-radius: 4px;
+          background-color: $turquoise;
+        }
+
+        &::-webkit-scrollbar-corner { /* 6 - уголок */
+        }
+
+        &::-webkit-resizer { /* 7 - изменение размеров */
+        }
+
+        ul {
+          margin: 0;
+          padding-left: 0;
+          li {
+            list-style-type: none;
+            padding: 4px 0;
+            font-size: 26px;
+            border-bottom: dashed 3px #383838;
+            img {
+              height: 28px;
+              width: 18px;
+              position: relative;
+              bottom: 4px;
+            }
+            a {
+              color:#383838;
+              text-decoration: none;
+              &:hover {
+                text-decoration: none;
+              }
+            }
+          }
+        }
       }
     }
   }

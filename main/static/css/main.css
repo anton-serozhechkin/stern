@@ -623,8 +623,8 @@ header {
 
 .highschool-main {
   background-image: url(../img/21high-school-bg.png);
-  background-repeat: no-repeat;
-  background-size: cover; }
+  background-size: cover;
+  background-repeat: no-repeat; }
   .highschool-main .start-test .test-box {
     padding-top: 80px; }
     .highschool-main .start-test .test-box input {
@@ -700,26 +700,78 @@ header {
     padding: 50px 0; }
     .highschool-main .video .title {
       text-align: right;
-      font-size: 42px;
-      text-shadow: 1px 1px 5px #666666;
+      font-size: 52px;
+      text-shadow: 1px 1px 5px  #666666;
       border-bottom: solid 3px #4A8C92; }
     .highschool-main .video .content {
       display: flex;
       flex-wrap: wrap; }
       .highschool-main .video .content iframe {
         margin: 25px; }
-  .highschool-main .link {
-    border: solid #D55B61 4px;
-    text-align: center;
-    box-sizing: border-box;
-    width: 20%;
-    margin: 0 auto; }
-    .highschool-main .link a {
-      padding: 18px 40px;
-      color: black;
-      font-size: 42px;
-      letter-spacing: 4px; }
-      .highschool-main .link a:hover {
-        text-decoration: none; }
+    .highschool-main .video .link {
+      border: solid #D55B61 4px;
+      text-align: center;
+      box-sizing: border-box;
+      width: 20%;
+      margin: 0 auto; }
+      .highschool-main .video .link a {
+        padding: 18px 40px;
+        color: black;
+        font-size: 42px;
+        letter-spacing: 4px; }
+        .highschool-main .video .link a:hover {
+          text-decoration: none; }
+  .highschool-main .metodics .heading .title {
+    text-shadow: 1px 1px 5px  #666666;
+    font-size: 62px;
+    border-bottom: solid 3px #4A8C92; }
+  .highschool-main .metodics .content {
+    padding-bottom: 75px; }
+    .highschool-main .metodics .content .list {
+      padding: 15px 40px;
+      margin-top: 24px;
+      background-color: #FFF292;
+      border: dashed 3px #383838;
+      height: 475px;
+      overflow: auto; }
+      .highschool-main .metodics .content .list::-webkit-scrollbar {
+        /* 1 - скроллбар */
+        width: 10px;
+        height: 4px;
+        background-color: #FFFFFF; }
+      .highschool-main .metodics .content .list::-webkit-scrollbar-button {
+        /* 2 - кнопка */ }
+      .highschool-main .metodics .content .list::-webkit-scrollbar-track {
+        /* 3 - трек */
+        background-color: rgba(74, 140, 146, 0.5);
+        border-radius: 8px; }
+      .highschool-main .metodics .content .list::-webkit-scrollbar-track-piece {
+        /* 4 - видимая часть трека */ }
+      .highschool-main .metodics .content .list::-webkit-scrollbar-thumb {
+        /* 5 - ползунок */
+        border-radius: 4px;
+        background-color: #4A8C92; }
+      .highschool-main .metodics .content .list::-webkit-scrollbar-corner {
+        /* 6 - уголок */ }
+      .highschool-main .metodics .content .list::-webkit-resizer {
+        /* 7 - изменение размеров */ }
+      .highschool-main .metodics .content .list ul {
+        margin: 0;
+        padding-left: 0; }
+        .highschool-main .metodics .content .list ul li {
+          list-style-type: none;
+          padding: 4px 0;
+          font-size: 26px;
+          border-bottom: dashed 3px #383838; }
+          .highschool-main .metodics .content .list ul li img {
+            height: 28px;
+            width: 18px;
+            position: relative;
+            bottom: 4px; }
+          .highschool-main .metodics .content .list ul li a {
+            color: #383838;
+            text-decoration: none; }
+            .highschool-main .metodics .content .list ul li a:hover {
+              text-decoration: none; }
 
 /*# sourceMappingURL=main.css.map */
