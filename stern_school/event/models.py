@@ -7,10 +7,18 @@ class Category_Event(models.Model):
     title = models.CharField(verbose_name='Название', primary_key=True, max_length=30)
     slug = models.SlugField(verbose_name='Ссылка')
 
+    class Meta:
+        verbose_name = 'Категория'
+        verbose_name_plural = 'Категории'
+    
+    def __str__(self):
+        return self.title
+
+
 class Event(models.Model):
     title = models.CharField(verbose_name='Название', primary_key=True, max_length=50)
     slug = models.SlugField(verbose_name='Ссылка')
-    main_image = models.ImageField(verbose_name='Заставка', upload_to='events/%Y/%m/%h/')
+    main_image = models.ImageField(verbose_name='Заставка', upload_to='events/%Y/%m/%h/', blank=True, null=True)
     content = HTMLField(verbose_name='Контент', blank=True, null=True)
     short_description = HTMLField(verbose_name='Краткое описание', blank=True, null=True)
     data_created = models.DateTimeField(verbose_name='Дата создания', auto_now_add=True)
@@ -37,7 +45,7 @@ class Event(models.Model):
 class News(models.Model):
     title = models.CharField(verbose_name='Название', primary_key=True, max_length=50)
     slug = models.SlugField(verbose_name='Ссылка')
-    main_image = models.ImageField(verbose_name='Заставка', upload_to='events/%Y/%m/%h/')
+    main_image = models.ImageField(verbose_name='Заставка', upload_to='events/%Y/%m/%h/', blank=True, null=True )
     content = HTMLField(verbose_name='Контент', blank=True, null=True)
     short_description = HTMLField(verbose_name='Краткое описание', blank=True, null=True)
     data_created = models.DateTimeField(verbose_name='Дата создания', auto_now_add=True)
