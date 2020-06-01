@@ -96,6 +96,5 @@ function teachersSlider() {
 }
 
 
-
 showMap();
 teachersSlider();

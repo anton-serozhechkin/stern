@@ -1137,6 +1137,7 @@ header {
         text-decoration: none;
         border-bottom: solid 5px $red;
         padding-bottom: 11px;
+        cursor: pointer;
       }
     }
 
@@ -1148,6 +1149,7 @@ header {
     .box {
       flex: 25%;
       margin: 4.1%;
+      max-width: 25%;
       a {
         &:hover{
           text-decoration: none;
@@ -1156,7 +1158,6 @@ header {
           color:#383838;
         }
       }
-
     }
   }
 }

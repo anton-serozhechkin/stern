@@ -41,13 +41,13 @@
     <div class="heading">
         <div class="container-fluid">
             <div class="row">
-                <div class="col-sm-5 text-right "><a href="" class="link">новости</a></div>
+                <div class="col-sm-5 text-right "><a  class="link" id="newsButton">новости</a></div>
                 <div class="col-sm-2 text-center">|</div>
-                <div class="col-sm-5 " ><a href="" class="link">события</a></div>
+                <div class="col-sm-5 " ><a  class="link" id="eventsButton">события</a></div>
             </div>
         </div>
     </div>
-    <div class="container">
+    <div class="container news-block" id="newsBlock">
         <div class="content">
             <div class="box">
                 <a href="" class="card-wrapper">
@@ -56,6 +56,8 @@
                             <img src="https://images.unsplash.com/photo-1589451907336-7531424d8d34?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80" class="img-fluid" alt="">
                         </div>
                         <div class="card-info pt-2 pb-2">
+                            <span class="text-danger">Новость</span>
+                            <span>|</span>
                             <span class="text-dark">11.11.2222</span>
                         </div>
                         <div class="card-title h4 text-dark">
@@ -74,6 +76,8 @@
                             <img src="https://images.unsplash.com/photo-1589451907336-7531424d8d34?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80" class="img-fluid" alt="">
                         </div>
                         <div class="card-info pt-2 pb-2">
+                            <span class="text-danger">Новость</span>
+                            <span>|</span>
                             <span class="text-dark">11.11.2222</span>
                         </div>
                         <div class="card-title h4 text-dark">
@@ -92,6 +96,8 @@
                             <img src="https://images.unsplash.com/photo-1589451907336-7531424d8d34?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80" class="img-fluid" alt="">
                         </div>
                         <div class="card-info pt-2 pb-2">
+                            <span class="text-danger">Новость</span>
+                            <span>|</span>
                             <span class="text-dark">11.11.2222</span>
                         </div>
                         <div class="card-title h4 text-dark">
@@ -103,10 +109,109 @@
                     </div>
                 </a>
             </div>
-
+        </div>
+    </div>
+    <div class="container events-block" style="display: none" id="eventsBlock">
+        <div class="content">
+            <div class="box">
+                <a href="" class="card-wrapper">
+                    <div class="card p-1">
+                        <div class="card-img-top">
+                            <img src="https://images.unsplash.com/photo-1589451907336-7531424d8d34?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80" class="img-fluid" alt="">
+                        </div>
+                        <div class="card-info pt-2 pb-2">
+                            <span class="text-danger">События</span>
+                            <span>|</span>
+                            <span class="text-dark">11.11.2222</span>
+                        </div>
+                        <div class="card-title h4 text-dark">
+                            новый набор в школу по математике
+                        </div>
+                        <div class="card-description h6 pb-2">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi atque blanditiis consequatur doloremque doloribus expedita iusto laborum nostrum possimus sunt.
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="box">
+                <a href="" class="card-wrapper">
+                    <div class="card p-1">
+                        <div class="card-img-top">
+                            <img src="https://images.unsplash.com/photo-1589451907336-7531424d8d34?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80" class="img-fluid" alt="">
+                        </div>
+                        <div class="card-info pt-2 pb-2">
+                            <span class="text-danger">События</span>
+                            <span>|</span>
+                            <span class="text-dark">11.11.2222</span>
+                        </div>
+                        <div class="card-title h4 text-dark">
+                            новый набор в школу по математике
+                        </div>
+                        <div class="card-description h6 pb-2">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi atque blanditiis consequatur doloremque doloribus expedita iusto laborum nostrum possimus sunt.
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="box">
+                <a href="" class="card-wrapper">
+                    <div class="card p-1">
+                        <div class="card-img-top">
+                            <img src="https://images.unsplash.com/photo-1589451907336-7531424d8d34?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80" class="img-fluid" alt="">
+                        </div>
+                        <div class="card-info pt-2 pb-2">
+                            <span class="text-danger">События</span>
+                            <span>|</span>
+                            <span class="text-dark">11.11.2222</span>
+                        </div>
+                        <div class="card-title h4 text-dark">
+                            новый набор в школу по математике
+                        </div>
+                        <div class="card-description h6 pb-2">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi atque blanditiis consequatur doloremque doloribus expedita iusto laborum nostrum possimus sunt.
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="box">
+                <a href="" class="card-wrapper">
+                    <div class="card p-1">
+                        <div class="card-img-top">
+                            <img src="https://images.unsplash.com/photo-1589451907336-7531424d8d34?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80" class="img-fluid" alt="">
+                        </div>
+                        <div class="card-info pt-2 pb-2">
+                            <span class="text-danger">События</span>
+                            <span>|</span>
+                            <span class="text-dark">11.11.2222</span>
+                        </div>
+                        <div class="card-title h4 text-dark">
+                            новый набор в школу по математике
+                        </div>
+                        <div class="card-description h6 pb-2">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi atque blanditiis consequatur doloremque doloribus expedita iusto laborum nostrum possimus sunt.
+                        </div>
+                    </div>
+                </a>
+            </div>
         </div>
     </div>
 </div>
+
+<script>
+    let newsButton = document.getElementById('newsButton'),
+        eventsButton = document.getElementById('eventsButton'),
+        newsBlock = document.getElementById('newsBlock'),
+        eventsBlock = document.getElementById('eventsBlock');
+    newsButton.addEventListener('click',()=> {
+        newsBlock.style.display = 'block';
+        eventsBlock.style.display = 'none';
+    })
+    eventsButton.addEventListener('click',()=> {
+        eventsBlock.style.display = 'block';
+        newsBlock.style.display = 'none';  })
+
+</script>
+
 
 <footer class="footer" id="footer-anchor">
     <div class="container">
@@ -145,6 +250,8 @@
         </div>
     </div>
 </footer>
+
+
 
 
 
