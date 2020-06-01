@@ -1131,6 +1131,8 @@ header {
 .news-content {
   .heading {
     font-size: 48px;
+    -webkit-box-shadow: 0 3px 10px 1px #707070;
+    box-shadow: 0 3px 10px 1px #707070;
     .link {
       color:black;
       &:hover {
@@ -1160,4 +1162,15 @@ header {
       }
     }
   }
+}
+
+
+.nav-title-hidden {
+  position: relative;
+  right: -200px;
+  transition: all .4s linear;
+}
+.nav-title-active {
+  right: 0;
+
 }

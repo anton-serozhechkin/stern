@@ -94,7 +94,36 @@ function teachersSlider() {
         }
     }
 }
+function navMenu() {
+    let linksArray = document.querySelectorAll('.nav-title');
+    if (linksArray) {
+        let squareArray = document.querySelectorAll('.nav-title-square')
+        for (let i = 0; i < squareArray.length;i++) {
+            squareArray[i].addEventListener('mousemove',()=> {
+                linksArray[i].classList.add('nav-title-active');
+                squareArray[i].addEventListener('click',()=> {
+                    linksArray[i].classList.remove('nav-title-active');
+                })
+            })
+        }
+        let navToggle = document.getElementById('nav-toggle');
+        navToggle.addEventListener('click',()=> {
+            for (let i = 0; i < linksArray.length;i++) {
+                if (linksArray[i].classList.contains('nav-title-active')) {
+                    for (let j = 0; j < linksArray.length;j++) {
+                        linksArray[j].classList.remove('nav-title-active')
+                    }
+                } else {
+                    for (let j = 0; j < linksArray.length;j++) {
+                        linksArray[j].classList.add('nav-title-active')
+                    }
+                }
+            }
 
+        })
+    }
 
+}
+navMenu();
 showMap();
 teachersSlider();
