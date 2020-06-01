@@ -774,4 +774,24 @@ header {
             .highschool-main .metodics .content .list ul li a:hover {
               text-decoration: none; }
 
+.news-content .heading {
+  font-size: 48px;
+  border-bottom: solid 5px #4A8C92; }
+  .news-content .heading .link {
+    color: black; }
+    .news-content .heading .link:hover {
+      text-decoration: none;
+      border-bottom: solid 5px #B95253;
+      padding-bottom: 11px; }
+.news-content .content {
+  display: flex;
+  flex-wrap: wrap; }
+  .news-content .content .box {
+    flex: 25%;
+    margin: 4.1%; }
+    .news-content .content .box a:hover {
+      text-decoration: none; }
+    .news-content .content .box a .card-description {
+      color: #383838; }
+
 /*# sourceMappingURL=main.css.map */

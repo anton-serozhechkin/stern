@@ -1128,3 +1128,35 @@ header {
     }
   }
 }
+.news-content {
+  .heading {
+    font-size: 48px;
+    .link {
+      color:black;
+      &:hover {
+        text-decoration: none;
+        border-bottom: solid 5px $red;
+        padding-bottom: 11px;
+      }
+    }
+
+    border-bottom: solid 5px $turquoise;
+  }
+  .content {
+    display: flex;
+    flex-wrap: wrap;
+    .box {
+      flex: 25%;
+      margin: 4.1%;
+      a {
+        &:hover{
+          text-decoration: none;
+        }
+        .card-description {
+          color:#383838;
+        }
+      }
+
+    }
+  }
+}
