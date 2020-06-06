@@ -1,15 +1,27 @@
 from django.db import models
-from django.contrib.auth.models import User
+from django.contrib.auth.models import AbstractUser
 
-class StudentParent(models.Model):
-    #user = models.OneToOneField(settings.AUTH_USER_MODEL, on_delete=models.CASCADE, verbose_name='Пользователь')
-    telephone_number = models.CharField('Телефонный номер', max_length=12)
-    #class_number = models.ForeignKey(ClassNumber, on_delete=models.CASCADE, verbose_name='Номер класса')
-    name_school = models.CharField('Название школы', max_length=50)
+class ClassNumber(models.Model):
+    name = models.CharField('Номер класса', max_length=8, default=' класс')
 
-    #def __str__(self):
-    #    return self.user.username
+    def __str__(self):
+        return self.name
         
     class Meta:
-        verbose_name = 'Школьник или Родитель'
-        verbose_name_plural = 'Школьники или Родители'
+        verbose_name = 'Номер класса'
+        verbose_name_plural = 'Номера классов'
+
+
+class User(AbstractUser):
+    middle_name = models.CharField('Отчество', max_length=50)
+    telephone_number = models.CharField('Телефонный номер', max_length=12)
+    class_number = models.ForeignKey(ClassNumber, on_delete=models.CASCADE, verbose_name='Номер класса')
+    name_school = models.CharField('Название школы', max_length=50)
+    date_birthday = models.DateField(verbose_name='День рождения')
+    telephone_number = models.CharField('Телефонный номер', max_length=12)
+    is_parent = models.BooleanField('Родитель', default=False, blank=True, null=True)
+    children_telephone_number = models.CharField('Телефонный номер', max_length=12, blank=True, null=True)
+        
+    class Meta:
+        verbose_name = 'Пользователь'
+        verbose_name_plural = 'Пользователи'

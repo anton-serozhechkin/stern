@@ -1,9 +1,10 @@
 from django.db import models
 from tinymce.models import HTMLField
 from django.urls import reverse
+from django.conf import settings
 
 
-class Category_Event(models.Model):
+class CategoryEvent(models.Model):
     title = models.CharField(verbose_name='Название', primary_key=True, max_length=30)
     slug = models.SlugField(verbose_name='Ссылка')
 
@@ -27,8 +28,8 @@ class Event(models.Model):
     #classes = models.ManyToManyField(Classes, verbose_name='Принимающие участие классы')
     is_active = models.BooleanField(default=True, verbose_name='Активность мероприятия')
     price = models.FloatField(verbose_name='Цены', blank=True, null=True, default=0)
-    #teachers = models.ManyToManyField(Teachers, verbose_name='Преподаватели')
-    category = models.ForeignKey(Category_Event, on_delete=models.DO_NOTHING, verbose_name='Категория')
+    teachers = models.ManyToManyField(settings.AUTH_USER_MODEL, verbose_name='Преподаватели')
+    category = models.ForeignKey(CategoryEvent, on_delete=models.DO_NOTHING, verbose_name='Категория')
 
     class Meta:
         verbose_name = 'Мероприятие'
@@ -51,7 +52,7 @@ class News(models.Model):
     data_created = models.DateTimeField(verbose_name='Дата создания', auto_now_add=True)
     data_modifed = models.DateTimeField(verbose_name='Дата изменения', auto_now=True)
     is_active = models.BooleanField(default=True, verbose_name='Активность мероприятия')
-    #teachers = models.ManyToManyField(Teachers, verbose_name='Преподаватели')
+    teachers = models.ManyToManyField(settings.AUTH_USER_MODEL, verbose_name='Преподаватели')
 
     class Meta:
         verbose_name = 'Новость'

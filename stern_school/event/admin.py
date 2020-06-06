@@ -46,10 +46,10 @@ class NewsAdmin(admin.ModelAdmin):
     )
 
 
-class Category_EventAdmin(admin.ModelAdmin):
+class CategoryEventAdmin(admin.ModelAdmin):
     prepopulated_fields = {'slug': ('title', )}
 
 
-admin.site.register(Category_Event, Category_EventAdmin)
+admin.site.register(CategoryEvent, CategoryEventAdmin)
 admin.site.register(News, NewsAdmin)
 admin.site.register(Event, EventAdmin)

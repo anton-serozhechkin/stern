@@ -1,7 +1,7 @@
 from django.db import models
 from tinymce.models import HTMLField
 from django.urls import reverse
-
+from django.conf import settings
 
 class FrequentQuestion(models.Model):
     ask = models.CharField(verbose_name='Вопрос', primary_key=True, max_length=100)
@@ -22,13 +22,13 @@ class FrequentQuestion(models.Model):
 
 class Test(models.Model):
     title = models.CharField(verbose_name='Название', primary_key=True, max_length=50)
-    #teachers = models.ManyToManyField(Teachers, verbose_name='Преподаватели')
+    teachers = models.ManyToManyField(settings.AUTH_USER_MODEL, verbose_name='Преподаватели')
     data_created = models.DateTimeField(verbose_name='Дата создания', auto_now_add=True)
     is_active = models.BooleanField(default=True, verbose_name='Активность вопроса')
     #classes = models.ManyToManyField(Classes, verbose_name='Принимающие участие классы')
 
     def __str__(self):
-        return self.ешеду
+        return self.title
 
     def get_absolute_url(self):
         return reverse('frequent_question', kwargs={'id': self.id})
@@ -67,7 +67,7 @@ class Answer(models.Model):
 class UserAnswer(models.Model):
     question = models.ForeignKey(Question, on_delete=models.CASCADE, verbose_name='Вопрос')
     answer = models.CharField(verbose_name='Ответ', max_length=1000)
-    #student = models.ForeignKey(Student, on_delete=models.CASCADE, verbose_name='Школьник')
+    student = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE, verbose_name='Школьник')
 
     class Meta:
         verbose_name = 'Ответ пользователя'
