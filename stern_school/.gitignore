@@ -1,0 +1,8 @@
+# caches
+__pycache__
+
+# collectstatic files
+/static/admin
+
+# migration files
+/**/migrations/*.py
