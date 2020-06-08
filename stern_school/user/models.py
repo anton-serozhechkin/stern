@@ -21,7 +21,10 @@ class User(AbstractUser):
     telephone_number = models.CharField('Телефонный номер', max_length=12)
     is_parent = models.BooleanField('Родитель', default=False, blank=True, null=True)
     children_telephone_number = models.CharField('Телефонный номер', max_length=12, blank=True, null=True)
-        
+    short_info = models.CharField('Краткая информация', max_length=100, blank=True, null=True)
+    full_info = models.CharField('Полная информация', max_length=2000, blank=True, null=True)
+    image = models.ImageField('Фото преподавателя', upload_to='pictures/teachers/', blank=True, null=True)
+
     class Meta:
         verbose_name = 'Пользователь'
         verbose_name_plural = 'Пользователи'
