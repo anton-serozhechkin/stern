@@ -72,3 +72,15 @@ class UserAnswer(models.Model):
     class Meta:
         verbose_name = 'Ответ пользователя'
         verbose_name_plural = 'Ответы пользователей'
+
+
+class Contact(models.Model):
+    title = models.CharField(verbose_name='Название', max_length=50)
+    link = models.CharField(verbose_name='Ссылка', max_length=100)
+
+    def __str__(self):
+        return 'Ссылка на социальную сеть {}'.format(self.title)
+
+    class Meta:
+        verbose_name = 'Ответ пользователя'
+        verbose_name_plural = 'Ответы пользователей'
