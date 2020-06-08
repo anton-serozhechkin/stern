@@ -24,3 +24,8 @@ urlpatterns = [
     path('tinymce/', include('tinymce.urls')),
 
 ]
+
+handler404 = 'user.views.not_found_view'
+handler500 = 'user.views.error_view'
+handler403 = 'user.views.permission_denied_view'
+handler400 = 'user.views.bad_request_view'
