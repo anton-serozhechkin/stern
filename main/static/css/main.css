@@ -806,4 +806,25 @@ header {
 .nav-title-active {
   right: 0; }
 
+.reviews-caret {
+  color: #143449;
+  font-size: 136px; }
+  .reviews-caret:hover {
+    cursor: pointer; }
+
+.reviews-slider-wrapper {
+  background-color: #A3CB8F;
+  padding: 35px 0;
+  margin-top: 150px; }
+  .reviews-slider-wrapper .review-title {
+    color: #E7E36A; }
+  .reviews-slider-wrapper .review-text {
+    color: #595959; }
+
+.h-30 {
+  height: 30% !important; }
+
+.h-10 {
+  height: 10% !important; }
+
 /*# sourceMappingURL=main.css.map */

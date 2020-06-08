@@ -1174,3 +1174,27 @@ header {
   right: 0;
 
 }
+.reviews-caret {
+  color:#143449;
+  font-size: 136px;
+  &:hover {
+    cursor: pointer;
+  }
+}
+.reviews-slider-wrapper {
+  background-color: $lime;
+  padding: 35px 0;
+  margin-top: 150px;
+  .review-title {
+    color:$yellow;
+  }
+  .review-text {
+    color:#595959;
+  }
+}
+.h-30 {
+  height: 30% !important;
+}
+.h-10 {
+  height: 10% !important;
+}

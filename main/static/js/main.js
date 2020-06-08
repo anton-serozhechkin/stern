@@ -1,3 +1,11 @@
+function reviews() {
+    jQuery('.reviews-slider').slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        prevArrow: $('.fa-caret-left'),
+        nextArrow: $('.fa-caret-right'),
+    });
+}
 function showMap() {
     let overlay = document.getElementById('contact-modal-overlay');
    if(overlay) {
@@ -124,6 +132,8 @@ function navMenu() {
     }
 
 }
+
+reviews();
 navMenu();
 showMap();
 teachersSlider();
