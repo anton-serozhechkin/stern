@@ -1,4 +1,6 @@
 from django.urls import path
 from .views import *
 
-urlpatterns = []
+urlpatterns = [
+    path('', news_events, name='news_events')
+]

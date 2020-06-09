@@ -15,6 +15,8 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from django.conf import settings
+from django.conf.urls.static import static
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -24,7 +26,10 @@ urlpatterns = [
     path('tinymce/', include('tinymce.urls')),
 
 ]
+urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
+# handlers with path to views which catch error
 handler404 = 'user.views.not_found_view'
 handler500 = 'user.views.error_view'
 handler403 = 'user.views.permission_denied_view'

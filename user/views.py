@@ -1,6 +1,6 @@
 from django.shortcuts import render
 
-def signin(request):
+""""def signin(request):
     if request.method == 'POST':
         username = request.POST.get('username')
         password = request.POST.get('password')
@@ -11,15 +11,16 @@ def signin(request):
     else:
         return render(request, 'signin.html')
     return render(request, 'signin.html')
+"""
 
 def not_found_view(request, exception):
-    return render(request, 'errors/404.html')
+    return render(request, 'main/templates/errors/404.html')
     
 def error_view(request):
-    return render(request, 'errors/500.html')
+    return render(request, 'main/templates/errors/500.html')
     
 def permission_denied_view(request, exception):
-    return render(request, 'errors/403.html')
+    return render(request, 'main/templates/errors/403.html')
     
 def bad_request_view(request, exception):
-    return render(request, 'errors/400.html')
+    return render(request, 'main/templates/errors/400.html')
