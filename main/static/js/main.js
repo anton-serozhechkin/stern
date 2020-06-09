@@ -6,6 +6,20 @@ function reviews() {
         nextArrow: $('.fa-caret-right'),
     });
 }
+function signForm() {
+    let signIn_form = document.getElementById('signIn-form'),
+        signUp_form = document.getElementById('signUp-form'),
+        signIn_btn = document.getElementById('signIn'),
+        signUp_btn = document.getElementById('signUp')
+    signUp_btn.addEventListener('click',function () {
+        signUp_form.classList.remove('d-none')
+        signIn_form.classList.add('d-none')
+    })
+    signIn_btn.addEventListener('click',function () {
+        signIn_form.classList.remove('d-none')
+        signUp_form.classList.add('d-none')
+    })
+}
 function showMap() {
     let overlay = document.getElementById('contact-modal-overlay');
    if(overlay) {
@@ -132,8 +146,8 @@ function navMenu() {
     }
 
 }
-
 reviews();
+signForm();
 navMenu();
 showMap();
 teachersSlider();
