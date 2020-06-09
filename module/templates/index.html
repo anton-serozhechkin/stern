@@ -1,0 +1,324 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="/resources/demos/style.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="https://use.fontawesome.com/44959e12e1.js"></script>
+    <link rel="stylesheet" href="../static/css/main.css">
+    <link rel="stylesheet" href="../static/css/media.css">
+    <title>Document</title>
+</head>
+<body>
+
+<div class="tools-settings" id="tools-settings">
+    <div class="tools-settings-wrapper">
+        <div class="tools-setting-colors">
+            <div class="tools-setting-box colorBox" id="colorBoxBlack"></div>
+            <div class="tools-setting-box colorBox" id="colorBoxRed"></div>
+            <div class="tools-setting-box colorBox" id="colorBoxGreen"></div>
+            <div class="tools-setting-box colorBox" id="colorBoxYellow"></div>
+        </div>
+        <div class="tools-setting-sizes">
+            <div class="tools-setting-box" id="toolsSizeXS"><i class="fa fa-circle" aria-hidden="true"></i></div>
+            <div class="tools-setting-box" id="toolsSizeS"><i class="fa fa-circle" aria-hidden="true"></i></div>
+            <div class="tools-setting-box" id="toolsSizeMD"><i class="fa fa-circle" aria-hidden="true"></i></div>
+            <div class="tools-setting-box" id="toolsSizeLG"><i class="fa fa-circle" aria-hidden="true"></i></div>
+        </div>
+    </div>
+</div>
+
+<div class="tools-calculator" id="tools-calculator">
+
+
+    <div class="tools-calculator-show">
+        <button class="tools-calculator-showButton" id="tools-calculator-showButton">
+            <i class="fa fa-calculator" aria-hidden="true"></i>
+        </button>
+    </div>
+    <div class="tools-calculator-wrapper" >
+        <div class="calculator-top">
+            <p id="calcInput"></p>
+        </div>
+        <div class="calculator-buttons">
+            <div class="calculator-buttons-line">
+                <button id="C7" class="calculator-button">7</button>
+                <button id="C8" class="calculator-button">8</button>
+                <button id="C9" class="calculator-button">9</button>
+                <button id="CClear" class="calculator-button">C</button>
+            </div>
+            <div class="calculator-buttons-line">
+                <button id="C4" class="calculator-button">4</button>
+                <button id="C5" class="calculator-button">5</button>
+                <button id="C6" class="calculator-button">6</button>
+                <button id="CMultiply" class="calculator-button">X</button>
+            </div>
+            <div class="calculator-buttons-line">
+                <button id="C1" class="calculator-button">1</button>
+                <button id="C2" class="calculator-button">2</button>
+                <button id="C3" class="calculator-button">3</button>
+                <button id="CMinus" class="calculator-button">-</button>
+            </div>
+            <div class="calculator-buttons-line">
+                <button id="C0" class="calculator-button">0</button>
+                <button id="CPoint" class="calculator-button">.</button>
+                <button id="CEqually" class="calculator-button">=</button>
+                <button id="CPLus" class="calculator-button">+</button>
+            </div>
+        </div>
+    </div>
+
+
+</div>
+
+<div class="wrapper" id="wrapper">
+    <canvas id="canvas" width="500" height="1000"></canvas>
+    <div class="tools-menu" id="toolsMenu">
+
+    <div class="tools-menu-wrapper" >
+        <div class="tools-menu-list">
+            <div class="tools-list-item yellow">
+                <i class="fa fa-pencil tool" aria-hidden="true" title="Кисть" id="tools-brush" ></i>
+            </div>
+            <div class="tools-list-item yellow"><i class="fa fa-circle tool"></i></div>
+            <div class="tools-list-item yellow">
+                <img class="tool" title="Ластик" id="tools-eraser" src="../static/img/erasure-icon.svg">
+            </div>
+            <div class="tools-list-item yellow">
+                <i class="fa fa-text-width tool" aria-hidden="true" title="Текст" id="tools-text"></i>
+            </div>
+            <div class="tools-list-item yellow">
+                <i class="fa fa-square tool" id="tools-list-square" aria-hidden="true" title="Квадрат" ></i>
+                <i class="fa fa-caret-right" id="tools-list-square-caret" aria-hidden="true" title="Большие фигур"></i>
+                <div class="tools-list-moreFigures tools-list-moreFigures-none" id="tools-list-moreFiguresId">
+                    <ul>
+                        <li class="tools-list-moreFigures-item tool">
+                            <img src="../static/img/rectangle.svg" alt="">
+                            <span>Прямоугольник</span>
+                            </li>
+                        <li class="tools-list-moreFigures-item tool">
+                            <img src="../static/img/cube.svg" alt="">
+                            <span>Куб</span>
+                        </li>
+                        <li class="tools-list-moreFigures-item tool">
+                            <img src="../static/img/circle.svg" alt="">
+                            <span>Круг</span>
+                        </li>
+                        <li class="tools-list-moreFigures-item tool">
+                            <img src="../static/img/rhombus.svg" alt="">
+                            <span>Ромб</span>
+                        </li>
+                        <li class="tools-list-moreFigures-item tool">
+                            <img src="../static/img/prism6angels.svg" alt="">
+                            <span>Призма 6-угл.</span>
+                        </li>
+                        <li class="tools-list-moreFigures-item tool">
+                            <img src="../static/img/cylinder.svg" alt="">
+                            <span>Цилиндр</span>
+                        </li>
+                        <li class="tools-list-moreFigures-item tool">
+                            <img src="../static/img/pyramid5angel.svg" alt="">
+                            <span>Пирамида 5-угл.</span>
+                        </li>
+                        <li class="tools-list-moreFigures-item tool">
+                            <img src="../static/img/scope.svg" alt="">
+                            <span>Сфера</span>
+                        </li>
+                        <li class="tools-list-moreFigures-item tool">
+                            <img src="../static/img/trapezoid.svg" alt="">
+                            <span>Трапеция</span>
+                        </li>
+                        <li class="tools-list-moreFigures-item tool">
+                            <img src="../static/img/rTrapezoid.svg" alt="">
+                            <span>Прямоуг трапеция</span>
+                        </li>
+                        <li class="tools-list-moreFigures-item tool">
+                            <img src="../static/img/triangularprism.svg" alt="">
+                            <span>Треугольная призма</span>
+                        </li>
+                        <li class="tools-list-moreFigures-item tool">
+                            <img src="../static/img/parallelepiped.svg" alt="">
+                            <span>Паралеллипипед</span>
+                        </li>
+                        <li class="tools-list-moreFigures-item tool">
+                            <img src="../static/img/cone.svg" alt="">
+                            <span>Конус</span>
+                        </li>
+                        <li class="tools-list-moreFigures-item tool">
+                            <img src="../static/img/parallelogram.svg" alt="">
+                            <span>Параллелограмм</span>
+                        </li>
+                        <li class="tools-list-moreFigures-item tool">
+                            <img src="../static/img/tetrahedron.svg" alt="">
+                            <span>Тетраэдр</span>
+                        </li>
+                        <li class="tools-list-moreFigures-item tool">
+                            <img src="../static/img/pentagon.svg" alt="">
+                            <span>Пентагон</span>
+
+                        </li>
+                        <li class="tools-list-moreFigures-item tool">
+                            <img src="../static/img/rightTriangle.svg" alt="">
+                            <span>Прямоугольный треугольник</span>
+                        </li>
+                        <li class="tools-list-moreFigures-item tool">
+                            <img src="../static/img/triangle.svg" alt="">
+                            <span>Треугольник</span>
+                        </li>
+                        <li class="tools-list-moreFigures-item tool">
+                            <img src="../static/img/correctTriangle.svg" alt="">
+                            <span>Правильный треугольник</span>
+                        </li>
+                        <li class="tools-list-moreFigures-item tool">
+                            <img src="../static/img/pyramid4angel.svg" alt="">
+                            <span>Четырехугольная пирамида</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="tools-list-item blue">
+
+                <i class="fa fa-caret-right" aria-hidden="true" title="Больше формул"></i>
+            </div>
+            <div class="tools-list-item red">
+                <i class="fa fa-search-plus tool" aria-hidden="true" title="Увеличить изображение" id="tools-zoomPLus"></i>
+            </div>
+            <div class="tools-list-item red">
+                <i class="fa fa-search-minus tool" aria-hidden="true" title="Уменьшить изоббражение"></i>
+            </div>
+            <div class="tools-list-item red">
+                <i class="fa fa-hand-rock-o tool" aria-hidden="true" title="Перемещение"></i>
+            </div>
+            <div class="tools-list-item red">
+                <i class="fa fa-desktop tool" id="fullScreenButton" aria-hidden="true" title="На весь экран"></i>
+            </div>
+            <div class="tools-list-item green">
+                <input type="file" name="uploadFile" id="uploadFile" class="uploadFile">
+                <label for="uploadFile" class="labelUploadFile"><i class="fa fa-picture-o tool" aria-hidden="true" title="Загрузить картинку"></i>
+                </label>
+            </div>
+        </div>
+    </div>
+
+    <div class="tools-menu-show">
+        <button id="tools-menu-showButton">
+            <i class="fa fa-caret-right" aria-hidden="true" id="tools-menu-showButtonI"></i>
+        </button>
+    </div>
+</div>
+<div class="media-menu" id="mediaMenu">
+
+    <div class="media-video" id="mediaVideo">
+
+        <div class="media-video-show">
+            <button id="media-video-showButton">
+                <i class="fa fa-video-camera" aria-hidden="true"></i>
+            </button>
+        </div>
+        <div class="media-video-wrapper">
+            <div class="media-video-box">
+                <img src="http://via.placeholder.com/350x240" alt="">
+            </div>
+            <div class="media-video-tumbler">
+            </div>
+        </div>
+    </div>
+    <div class="media-microphone" id="mediaMicrophone">
+        <div class="media-microphone-show">
+            <button id="media-microphone-showButton">
+                <i class="fa fa-microphone" aria-hidden="true"></i>
+            </button>
+        </div>
+        <div class="media-microphone-wrapper">
+            <div class="media-microphone-box">
+                <div class="media-microphone-tumbler"></div>
+                <div class="media-microphone-controls">
+                    <input type="range">
+                    <div class="media-microphone-buttons">
+                        <button class="media-microphone-btn"><i class="fa fa-plus"></i></button>
+                        <button class="media-microphone-btn"><i class="fa fa-minus"></i></button>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="media-chat" id="mediaChat">
+        <div class="media-chat-show">
+            <button id="media-chat-showButton">
+                <i class="fa fa-commenting" aria-hidden="true"></i>
+            </button>
+        </div>
+        <div class="media-chat-wrapper">
+            <div class="media-chat-content">
+                <div class="media-chat-massage-wrapper">
+                <span class="media-chat-massage userMassage">
+                    massage
+                    massage
+                    massage
+                    massage
+                    massage
+                </span>
+                </div>
+                <div class="media-chat-massage-wrapper">
+                <span class="media-chat-massage massage">
+                    massage
+                    massageasd as aa a aa
+                    massageasdasdads
+                    massage
+                    massage
+                    massage
+                </span>
+                </div>
+                <div class="media-chat-massage-wrapper">
+                <span class="media-chat-massage massage">
+                    massage
+                    massageasd as aa a aa
+                    massageasdasdads
+                    massage
+                    massage
+                    massage
+                </span>
+                </div>
+                <div class="media-chat-massage-wrapper">
+                <span class="media-chat-massage massage">
+                    massage
+                    massageasd as aa a aa
+                    massageasdasdads
+                    massage
+                    massage
+                    massage
+                </span>
+                </div>
+                <div class="media-chat-massage-wrapper">
+                <span class="media-chat-massage massage">
+                    massage
+                    massageasd as aa a aa
+                    massageasdasdads
+                    massage
+                    massage
+                    massage
+                </span>
+                </div>
+                <div class="" style="clear: both"></div>
+            </div>
+            <div class="media-chat-bottom">
+                <div class="media-chat-addButton">
+                    <button><i class="fa fa-plus" aria-hidden="true"></i></button>
+                </div>
+                <div class="media-chat-text"><input type="text" placeholder="Aa">
+                    <div class="media-chat-sendButton">
+                        <button><i class="fa fa-arrow-right"></i></button></div>
+                </div>
+                </div>
+        </div>
+    </div>
+</div></div>
+
+<script src="../static/js/main.js"></script>
+</body>
+</html>
