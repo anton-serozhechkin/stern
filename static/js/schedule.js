@@ -5,10 +5,10 @@
 		this.timelineItems = this.element.getElementsByClassName('cd-schedule__timeline')[0].getElementsByTagName('li');
 		this.timelineStart = getScheduleTimestamp(this.timelineItems[0].textContent);
 		this.timelineUnitDuration = getScheduleTimestamp(this.timelineItems[1].textContent) - getScheduleTimestamp(this.timelineItems[0].textContent);
-		
+
 		this.topInfoElement = this.element.getElementsByClassName('cd-schedule__top-info')[0];
 		this.singleEvents = this.element.getElementsByClassName('cd-schedule__event');
-		
+
 		this.modal = this.element.getElementsByClassName('cd-schedule-modal')[0];
 		this.modalHeader = this.element.getElementsByClassName('cd-schedule-modal__header')[0];
 		this.modalHeaderBg = this.element.getElementsByClassName('cd-schedule-modal__header-bg')[0];
@@ -115,7 +115,7 @@
 		this.loadEventContent(target.getAttribute('data-content'));
 
 		Util.addClass(this.modal, 'cd-schedule-modal--open');
-		
+
 		setTimeout(function(){
 			//fixes a flash when an event is selected - desktop version only
 			Util.addClass(target.closest('li'), 'cd-schedule__event--selected');
@@ -141,7 +141,7 @@
 
 			var modalTranslateX = parseInt((windowWidth - modalWidth)/2 - eventLeft),
 				modalTranslateY = parseInt((windowHeight - modalHeight)/2 - eventTop);
-			
+
 			var HeaderBgScaleY = modalHeight/eventHeight,
 				BodyBgScaleX = (modalWidth - eventWidth);
 
@@ -155,7 +155,7 @@
 			self.modalBodyBg.setAttribute('style', 'height:'+eventHeight+'px; width: 1px; transform: scaleY('+HeaderBgScaleY+') scaleX('+BodyBgScaleX+')');
 			//change modal modalHeaderBg height/width and scale it
 			self.modalHeaderBg.setAttribute('style', 'height: '+eventHeight+'px; width: '+eventWidth+'px; transform: scaleY('+HeaderBgScaleY+')');
-			
+
 			self.modalHeaderBg.addEventListener('transitionend', function cb(){
 				//wait for the  end of the modalHeaderBg transformation and show the modal content
 				self.animating = false;
@@ -246,7 +246,7 @@
 			self.modalHeaderBg.removeAttribute('style');
 			self.modalBodyBg.removeAttribute('style');
 			Util.removeClass(self.modal, 'cd-schedule-modal--no-transition');
-			self.animating = false;	
+			self.animating = false;
 		} else if( mq == 'desktop' && modalOpen) {
 			Util.addClass(self.modal, 'cd-schedule-modal--no-transition cd-schedule-modal--animation-completed');
 			var item = self.element.getElementsByClassName('cd-schedule__event--selected')[0],
@@ -282,7 +282,7 @@
 
 			setTimeout(function(){
 				Util.removeClass(self.modal, 'cd-schedule-modal--no-transition');
-				self.animating = false;	
+				self.animating = false;
 			}, 20);
 
 		}
@@ -296,7 +296,7 @@
 		httpRequest.onreadystatechange = function() {
 			if (httpRequest.readyState === XMLHttpRequest.DONE) {
 	      if (httpRequest.status === 200) {
-	      	self.modal.getElementsByClassName('cd-schedule-modal__event-info')[0].innerHTML = self.getEventContent(httpRequest.responseText); 
+	      	self.modal.getElementsByClassName('cd-schedule-modal__event-info')[0].innerHTML = self.getEventContent(httpRequest.responseText);
 	      	Util.addClass(self.modal, 'cd-schedule-modal--content-loaded');
 	      }
 	    }
@@ -321,7 +321,7 @@
 	};
 
 	ScheduleTemplate.prototype.mq = function(){
-		//get MQ value ('desktop' or 'mobile') 
+		//get MQ value ('desktop' or 'mobile')
 		var self = this;
 		return window.getComputedStyle(this.element, '::before').getPropertyValue('content').replace(/'|"/g, "");
 	};
@@ -334,7 +334,7 @@
 		return timeStamp;
 	};
 
-	var scheduleTemplate = document.getElementsByClassName('js-cd-schedule'),	
+	var scheduleTemplate = document.getElementsByClassName('js-cd-schedule'),
 		scheduleTemplateArray = [],
 		resizing = false;
 	if( scheduleTemplate.length > 0 ) { // init ScheduleTemplate objects
@@ -344,7 +344,7 @@
 			})(i);
 		}
 
-		window.addEventListener('resize', function(event) { 
+		window.addEventListener('resize', function(event) {
 			// on resize - update events position and modal position (if open)
 			if( !resizing ) {
 				resizing = true;

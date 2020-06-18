@@ -4,3 +4,30 @@
     color:white;
     font-size: 16px;
 }
+.schedule-update-date {
+    text-align: right;
+    color:#4A8C92;
+    font-size: 24px;
+}
+.schedule-time-item {
+    font-size: 36px;
+}
+.cd-schedule__top-info {
+    font-size: 32px;
+}
+.schedule-description {
+    font-size: 26px;
+}
+.schedule-selector {
+    text-align: center;
+}
+.schedule-selector a{
+    font-size: 42px;
+    color:#4A8C92;
+    padding: 14px 12px;
+}
+.schedule-selector a:hover {
+    text-decoration: none;
+    color:white;
+    background-color: #4A8C92;
+}

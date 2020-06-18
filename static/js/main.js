@@ -144,7 +144,6 @@ function navMenu() {
 
         })
     }
-
 }
 reviews();
 signForm();
