@@ -27,7 +27,7 @@ body {
 header {
   background-size: cover;
   background-repeat: no-repeat;
-  background-image: url("../img/sign-bg.svg");
+  background-image: url("../main/static/img/sign-bg.svg");
   height: 25vh;
   background: #E7E36A; }
   header .header-title {
@@ -44,7 +44,7 @@ header {
   .events .section-heading {
     background-color: #B95253; }
   .events .wrapper {
-    background-image: url("../img/events-bh-2.svg");
+    background-image: url("../main/static/img/events-bh-2.svg");
     background-size: cover;
     background-repeat: no-repeat;
     position: relative; }
@@ -168,7 +168,7 @@ header {
 
 .news {
   height: 100vh;
-  background-image: url("../img/news-bg.svg");
+  background-image: url("../main/static/img/news-bg.svg");
   background-size: cover;
   background-repeat: no-repeat; }
   .news .section-heading {
@@ -229,7 +229,7 @@ header {
 
 .contacts {
   height: 100vh;
-  background-image: url("../img/contacts-bg.png");
+  background-image: url("../main/static/img/contacts-bg.png");
   background-size: cover;
   background-repeat: no-repeat; }
   .contacts .section-heading {
@@ -302,7 +302,7 @@ header {
 
 .prices {
   height: 100vh;
-  background-image: url("../img/prices-bg.png");
+  background-image: url("../main/static/img/prices-bg.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-color: #143449; }
@@ -370,7 +370,7 @@ header {
 .sign {
   background-color: #E7E36A;
   height: 100vh;
-  background-image: url("../img/sign-bg.svg");
+  background-image: url("../main/static/img/sign-bg.svg");
   background-size: cover;
   background-repeat: no-repeat; }
   .sign .sign-header {
@@ -522,7 +522,7 @@ header {
 .header-teachers {
   background-size: cover;
   background-repeat: no-repeat;
-  background-image: url("../img/sign-bg.svg");
+  background-image: url("../main/static/img/sign-bg.svg");
   background: #E7E36A; }
 
 .teachers-slider .buttons {
@@ -622,7 +622,7 @@ header {
         text-decoration: none; }
 
 .highschool-main {
-  background-image: url(../img/21high-school-bg.png);
+  background-image: url(../main/static/img/21high-school-bg.png);
   background-size: cover;
   background-repeat: no-repeat; }
   .highschool-main .start-test .test-box {
@@ -827,4 +827,4 @@ header {
 .h-10 {
   height: 10% !important; }
 
-/*# sourceMappingURL=main.css.map */
+/*# sourceMappingURL=schedule.css.map */

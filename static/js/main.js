@@ -144,8 +144,26 @@ function navMenu() {
 
         })
     }
-
 }
+function schedule() {
+    let bSelector = document.getElementById('schedule-selector-baum'),
+        mSelector = document.getElementById('schedule-selector-mosf');
+    bSelector.addEventListener('click',function () {
+        bSelector.style.backgroundColor = '#4A8C92'
+        bSelector.style.color = 'white'
+        mSelector.style.color = '#4A8C92'
+        mSelector.style.backgroundColor = 'unset'
+    })
+
+    mSelector.addEventListener('click',function () {
+        mSelector.style.backgroundColor = '#4A8C92'
+        mSelector.style.color = 'white'
+        bSelector.style.color = '#4A8C92'
+        bSelector.style.backgroundColor = 'unset'
+
+    })
+}
+schedule();
 reviews();
 signForm();
 navMenu();

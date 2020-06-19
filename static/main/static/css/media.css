@@ -2,7 +2,7 @@
 @font-face {
   font-family: Anvyl;
   /* Имя шрифта */
-  src: url("../assets/fonts/ANVYL.otf");
+  src: url("../../../assets/fonts/ANVYL.otf");
   /* Путь к файлу со шрифтом */ }
 @media (max-width: 1600px) and (max-height: 900px) {
   .prices .content-box {
