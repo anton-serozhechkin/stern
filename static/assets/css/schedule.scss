@@ -558,3 +558,21 @@ a {
     opacity: 0.8;
   }
 }
+
+.schedult-update-time {
+  text-align: right;
+  text-transform: uppercase;
+}
+.schedule-remark {
+  margin-top: 35px;
+  margin-left: 30px;
+}
+.schedule-buttons-wrapper {
+  display: flex;
+  justify-content: center;
+  a {
+    margin: 0 10px;
+    text-transform: uppercase;
+    font-size: 40px;
+  }
+}

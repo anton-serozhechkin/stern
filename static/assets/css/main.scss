@@ -1,3 +1,9 @@
 @import "../../../node_modules/codyhouse-framework/main/assets/css/base";
 @import "../../../node_modules/codyhouse-framework/main/assets/css/style";
 @import "schedule";
+
+
+.container {
+  max-width: 1170px;
+  margin: 0 auto;
+}
