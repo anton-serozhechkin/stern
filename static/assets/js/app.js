@@ -7,4 +7,14 @@ function indexNav() {
             $('.nav-link').toggleClass('active')
     })
 }
+
+function reviewsSlider() {
+    jQuery('.reviews-slider').slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        prevArrow: $('.reviews-slider-left'),
+        nextArrow: $('.reviews-slider-right'),
+    });
+}
+reviewsSlider();
 indexNav();

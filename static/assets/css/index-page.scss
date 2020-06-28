@@ -504,7 +504,8 @@
   .reviews-block {
     display: flex;
     height: 100vh;
-
+    background-image: url('../images/reviews-bg.svg');
+    background-size: cover;
     .left-title {
       background-image: url('../images/left.svg');
       background-size: cover;
@@ -525,7 +526,91 @@
       }
     }
     .content {
+      width: 100%;
+      .top {
+        align-items: center;
+        margin: 0 auto;
+        margin-top: 35px;
+        width: 100%;
+        max-width: 90%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        img {
+          &:first-of-type {
+            height: 250px;
+            width: 275px;
+            position: relative;
+            top: 55px;
+            }
+          &:last-of-type {
+            height: 385px;
+            width: 385px;
+          }
+        }
+      }
+      .middle {
+        margin-top: 100px;
+        position: relative;
+        width: 100%;
+        background-color: $lime;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-image: url('../images/reviews-slider-bg.svg');
+        .logo {
+          width: 100%;
+          display: flex;
+          justify-content: center;
+          img {
+            position: absolute;
+            height: 150px;
+            width: 150px;
+            top: -75px;
+          }
+        }
+        .wrapper {
+          width: 100%;
+          display: flex;
+          align-items: center;
+          height: 300px;
+          margin: 0 auto;
+          max-width: 50%;
+          justify-content: space-between;
+          .left,.right{
+            img {
+              cursor: pointer;
+              height: 75px;
+              width: 45px;
+            }
+          }
+          .right {
+            img {
+              transform: rotate(180deg);
+            }
+          }
+          .reviews-slider {
+            width: 100%;
+            max-width: 425px;
+            .review {
+              text-align: center;
+              .author {
+                margin: 16px 0;
+                text-transform: uppercase;
+                font-size: 2rem;
+                color:$yellow;
 
+              }
+            }
+          }
+        }
+      }
+      .bottom {
+        text-align: right;
+        font-size: .9rem;
+        font-weight: 700;
+        padding-right: 75px;
+        text-transform: uppercase;
+      }
     }
   }
 
