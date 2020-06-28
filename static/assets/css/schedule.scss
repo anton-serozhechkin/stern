@@ -1,11 +1,14 @@
 @import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600'); // custom font
-
+@import "../../../node_modules/codyhouse-framework/main/assets/css/style";
+@import "../../../node_modules/codyhouse-framework/main/assets/css/base/mixins";
 // --------------------------------
 
 // Schedule Template - by CodyHouse.co
 
 // --------------------------------
-
+body:before {
+  display: none;
+}
 :root {
   // colors
   @include defineColorHSL(--cd-color-event-1, 199, 25%, 46%);   // Smalt Blue
@@ -574,5 +577,11 @@ a {
     margin: 0 10px;
     text-transform: uppercase;
     font-size: 40px;
+  }
+}
+.cd-schedule__timeline {
+  li {
+    font-size: 32px;
+    font-weight: 700;
   }
 }

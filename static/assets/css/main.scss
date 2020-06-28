@@ -1,9 +1,26 @@
-@import "../../../node_modules/codyhouse-framework/main/assets/css/base";
-@import "../../../node_modules/codyhouse-framework/main/assets/css/style";
-@import "schedule";
-
+body {
+  font-size: 16px;
+  overflow-x: hidden;
+  &::-webkit-scrollbar { width: 0; }
+  -ms-overflow-style: none;
+  overflow: -moz-scrollbars-none;
+}
 
 .container {
   max-width: 1170px;
   margin: 0 auto;
 }
+
+@import "../../../node_modules/codyhouse-framework/main/assets/css/base";
+@import "../../../node_modules/codyhouse-framework/main/assets/css/style";
+@import "schedule";
+@import "index-page";
+@import "templates";
+
+
+
+
+
+
+
+@import "media";
