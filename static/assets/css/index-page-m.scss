@@ -72,6 +72,8 @@
               text-align: center;
               font-size: 1rem;
               margin-top: 125px!important;
+              position: static;
+
               a {
                 color: white;
                 padding: 25px 100px;
@@ -83,7 +85,9 @@
               display: flex;
               justify-content: center;
               margin-top: 75px;
+
               img {
+                position: static;
                 height: 40px;
                 width: 30px;
                 transition: all .2s linear;
@@ -207,11 +211,14 @@
               font-size: 1rem;
               margin-top: 20px!important;
               text-align: center;
+
             }
             .banner-link {
               text-align: center;
               font-size: 1rem;
               margin-top: 75px!important;
+              position: static;
+
               a {
                 color: white;
                 padding: 25px 100px;
@@ -223,7 +230,10 @@
               display: flex;
               justify-content: center;
               margin-top: 75px;
+
               img {
+                position: static;
+
                 height: 40px;
                 width: 30px;
                 transition: all .2s linear;
@@ -291,6 +301,46 @@
       }
 
     }
+    .video-block {
+      .left-title {
+        display: none;
+      }
+      .content {
+        .video {
+
+        }
+        .text {
+          text-align: center;
+          .top {
+            padding-top: 30px;
+            a {
+              transform: rotate(0);
+              font-size: 1.4rem;
+              left: 0;
+              position: static;
+            }
+          }
+          .bottom {
+            .links-list {
+              top: 65%;
+              ul {
+                padding-left: 0;
+                text-align: center;
+                li {
+                  margin: 10px 0;
+                  text-align: center;
+                  width: 100%;
+                  a {
+                    font-weight: 700;
+                    font-size: 1.7rem;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
 
   }
 }
@@ -349,6 +399,8 @@
               text-align: center;
             }
             .banner-link {
+              position: static;
+
               text-align: center;
               font-size: 1rem;
               margin-top: 75px!important;
@@ -363,7 +415,9 @@
               display: flex;
               justify-content: center;
               margin-top: 75px;
+
               img {
+                position: static;
                 height: 40px;
                 width: 30px;
                 transition: all .2s linear;
@@ -431,6 +485,46 @@
       }
 
     }
+    .video-block {
+      .left-title {
+        display: none;
+      }
+      .content {
+        .video {
+
+        }
+        .text {
+          text-align: center;
+          .top {
+            padding-top: 30px;
+            a {
+              transform: rotate(0);
+              font-size: 1.4rem;
+              left: 0;
+              position: static;
+            }
+          }
+          .bottom {
+            .links-list {
+              top: 65%;
+              ul {
+                padding-left: 0;
+                text-align: center;
+                li {
+                  margin: 10px 0;
+                  text-align: center;
+                  width: 100%;
+                  a {
+                    font-weight: 700;
+                    font-size: 1.7rem;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
 
   }
 }
@@ -492,6 +586,8 @@
               text-align: center;
               font-size: 1rem;
               margin-top: 75px!important;
+              position: static;
+
               a {
                 color: white;
                 padding: 25px 100px;
@@ -504,6 +600,8 @@
               justify-content: center;
               margin-top: 75px;
               img {
+                position: static;
+
                 height: 40px;
                 width: 30px;
                 transition: all .2s linear;
@@ -572,6 +670,46 @@
       }
 
     }
+    .video-block {
+      .left-title {
+        display: none;
+      }
+      .content {
+        .video {
+
+        }
+        .text {
+          text-align: center;
+          .top {
+            padding-top: 30px;
+            a {
+              transform: rotate(0);
+              font-size: 1.4rem;
+              left: 0;
+              position: static;
+            }
+          }
+          .bottom {
+            .links-list {
+              top: 65%;
+              ul {
+                padding-left: 0;
+                text-align: center;
+                li {
+                  margin: 10px 0;
+                  text-align: center;
+                  width: 100%;
+                  a {
+                    font-weight: 700;
+                    font-size: 1.7rem;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
 
   }
 }
@@ -632,6 +770,8 @@
             .banner-link {
               text-align: center;
               font-size: 1rem;
+              position: static;
+
               margin-top: 75px!important;
               a {
                 color: white;
@@ -647,6 +787,8 @@
               img {
                 height: 40px;
                 width: 30px;
+                position: static;
+
                 transition: all .2s linear;
                 &:hover {
                   transition: all .2s linear;
@@ -714,6 +856,46 @@
         }
       }
 
+    }
+    .video-block {
+      .left-title {
+        display: none;
+      }
+      .content {
+        .video {
+
+        }
+        .text {
+          text-align: center;
+          .top {
+            padding-top: 30px;
+            a {
+              transform: rotate(0);
+              font-size: 1.4rem;
+              left: 0;
+              position: static;
+            }
+          }
+          .bottom {
+            .links-list {
+              top: 65%;
+              ul {
+                padding-left: 0;
+                text-align: center;
+                li {
+                  margin: 10px 0;
+                  text-align: center;
+                  width: 100%;
+                  a {
+                    font-weight: 700;
+                    font-size: 1.7rem;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
     }
 
   }
@@ -854,6 +1036,46 @@
       }
 
     }
+    .video-block {
+      .left-title {
+        display: none;
+      }
+      .content {
+        .video {
+
+        }
+        .text {
+          text-align: center;
+          .top {
+            padding-top: 30px;
+            a {
+              transform: rotate(0);
+              font-size: 1.4rem;
+              left: 0;
+              position: static;
+            }
+          }
+          .bottom {
+            .links-list {
+              top: 65%;
+              ul {
+                padding-left: 0;
+                text-align: center;
+                li {
+                  margin: 10px 0;
+                  text-align: center;
+                  width: 100%;
+                  a {
+                    font-weight: 700;
+                    font-size: 1.7rem;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
 
   }
 }
@@ -912,6 +1134,7 @@
             .banner-link {
               text-align: center;
               font-size: 1rem;
+              position: static;
               margin-top: 75px!important;
               a {
                 color: white;
@@ -927,6 +1150,7 @@
               img {
                 height: 40px;
                 width: 30px;
+                position: static;
                 transition: all .2s linear;
                 &:hover {
                   transition: all .2s linear;
@@ -991,6 +1215,46 @@
         }
       }
 
+    }
+    .video-block {
+      .left-title {
+        display: none;
+      }
+      .content {
+        .video {
+
+        }
+        .text {
+          text-align: center;
+          .top {
+            padding-top: 30px;
+            a {
+              transform: rotate(0);
+              font-size: 1.4rem;
+              left: 0;
+              position: static;
+            }
+          }
+          .bottom {
+            .links-list {
+              top: 65%;
+              ul {
+                padding-left: 0;
+                text-align: center;
+                li {
+                  margin: 10px 0;
+                  text-align: center;
+                  width: 100%;
+                  a {
+                    font-weight: 700;
+                    font-size: 1.7rem;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
     }
   }
 }

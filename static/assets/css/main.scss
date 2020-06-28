@@ -2,6 +2,8 @@
 body {
   font-size: 16px;
   overflow-x: hidden;
+  margin: 0;
+  padding: 0;
 }
 body::-webkit-scrollbar {
   width: 0;
@@ -21,9 +23,9 @@ body {
   margin: 0 auto;
 }
 
-@import "../../../node_modules/codyhouse-framework/main/assets/css/base";
-@import "../../../node_modules/codyhouse-framework/main/assets/css/style";
-@import "schedule";
+//@import "../../../node_modules/codyhouse-framework/main/assets/css/base";
+//@import "../../../node_modules/codyhouse-framework/main/assets/css/style";
+//@import "schedule";
 @import "index-page";
 
 
