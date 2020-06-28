@@ -1,10 +1,20 @@
+@import "templates";
 body {
   font-size: 16px;
   overflow-x: hidden;
-  &::-webkit-scrollbar { width: 0; }
+}
+body::-webkit-scrollbar {
+  width: 0;
+}
+
+body {
   -ms-overflow-style: none;
+}
+
+body {
   overflow: -moz-scrollbars-none;
 }
+
 
 .container {
   max-width: 1170px;
@@ -15,8 +25,6 @@ body {
 @import "../../../node_modules/codyhouse-framework/main/assets/css/style";
 @import "schedule";
 @import "index-page";
-@import "templates";
-
 
 
 
@@ -24,3 +32,9 @@ body {
 
 
 @import "media";
+
+
+
+
+
+
