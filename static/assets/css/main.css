@@ -535,7 +535,19 @@ body {
     .index .news-block .content .bottom .news-link a {
       font-size: 1.4rem;
       padding: 8px 125px;
-      border: solid 4px #B95253; } }
+      border: solid 4px #B95253; }
+  .index .reviews-block .top {
+    justify-content: center !important; }
+    .index .reviews-block .top img:first-of-type {
+      display: none; }
+    .index .reviews-block .top img:last-of-type {
+      display: none; }
+    .index .reviews-block .top iframe {
+      height: 300px;
+      width: 100%;
+      max-width: 600px; }
+  .index .reviews-block .middle {
+    margin-top: 100px !important; } }
 @media screen and (max-width: 1024px) {
   .index .navigation {
     display: none; }
