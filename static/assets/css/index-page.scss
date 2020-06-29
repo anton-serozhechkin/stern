@@ -859,4 +859,134 @@
     cursor: pointer;
 
   }
+
+  .prices-block {
+    height: 100vh;
+    display: flex;
+    background-color: $darkBlue;
+    .left-title {
+      background-image: url('../images/left.svg');
+      background-size: cover;
+      background-repeat: no-repeat;
+      font-size: 4.5rem;
+      height: 100vh;
+      width: 110px;
+      color: white;
+      background-color: $darkBlue;
+      text-align: center;
+
+      .text {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        margin: auto 0;
+      }
+    }
+    .content {
+      width: 100%;
+      position: relative;
+      .top {
+        .prices-list {
+          ul {
+            display: flex;
+            list-style-type: none;
+            flex-wrap: wrap;
+            li {
+              background-color: #616E79;
+              margin: 14px;
+              padding: 13px 20px;
+              border-radius: 35px;
+              font-size: 1.4rem;
+              transition: .2s linear;
+              &:hover {
+                transition: .2s linear;
+                background-color: #E8505B;
+              }
+              a {
+                text-transform: uppercase;
+                text-decoration: none;
+                color:white;
+                font-weight: 700;
+              }
+            }
+          }
+        }
+      }
+      .middle {
+        margin: 0 auto;
+        max-width: 825px;
+        width: 100%;
+        .content-box {
+          margin-top: 50px;
+          .wrapper {
+            border: solid 10px white;
+            padding: 25px 75px;
+            position: relative;
+            height: 225px;
+            .title {
+              font-size: 2rem;
+              text-align: center;
+              text-transform: uppercase;
+              color:white;
+              font-weight: 700;
+            }
+            hr {
+              width: 35%;
+            }
+            .description {
+              font-size: 1.6rem;
+              color:white;
+              text-transform: uppercase;
+              font-weight: 700;
+            }
+            .price {
+              margin-top: 15%;
+              text-align: right;
+              color:#E8505B;
+              text-transform: uppercase;
+              font-size: 2.4rem;
+              position: absolute;
+              right: 10px;
+              bottom: 10px;
+              font-weight: 700;
+            }
+          }
+          .remark {
+            text-align: right;
+            font-size: 1rem;
+            text-transform: uppercase;
+            font-weight: 700;
+            color:rgba(255,255,255,.5);
+          }
+        }
+      }
+      .bottom {
+        position: absolute;
+        bottom: 50px;
+        width: 100%;
+        .link {
+          text-align: center;
+          a {
+            font-size: 3rem;
+            color:white;
+            font-weight: 700;
+            text-transform: uppercase;
+            text-decoration: none;
+            position: relative;
+            z-index: 2;
+          }
+          .line {
+            background-color:#E8505B;
+            height: 25px;
+            margin: 0 auto;
+            z-index: 1;
+            position: relative;
+            width: 36%;
+            bottom: 30px;
+          }
+        }
+      }
+    }
+  }
 }
