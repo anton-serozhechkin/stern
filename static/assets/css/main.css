@@ -747,6 +747,92 @@ body {
           position: relative;
           width: 36%;
           bottom: 30px; }
+.index .directions-block {
+  height: 100vh;
+  position: relative;
+  display: flex;
+  background-color: #7D2424; }
+  .index .directions-block .left-title {
+    background-image: url("../images/left.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-size: 4.5rem;
+    height: 100vh;
+    width: 110px;
+    color: white;
+    background-color: #7D2424;
+    text-align: center; }
+    .index .directions-block .left-title .text {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+      margin: auto 0; }
+  .index .directions-block .content {
+    margin-left: 3vw;
+    margin-top: 5vh;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap; }
+    .index .directions-block .content .image {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      max-width: 625px;
+      width: 100%; }
+      .index .directions-block .content .image img {
+        max-width: 625px;
+        width: 100%; }
+    .index .directions-block .content .info {
+      width: 100%;
+      max-width: 525px; }
+      .index .directions-block .content .info .title {
+        font-size: 3rem;
+        text-transform: uppercase;
+        color: white;
+        font-weight: 700; }
+      .index .directions-block .content .info hr {
+        width: 75%;
+        float: left; }
+      .index .directions-block .content .info .clear {
+        clear: both; }
+      .index .directions-block .content .info .description {
+        font-weight: 700;
+        text-transform: uppercase;
+        font-size: 1.6rem;
+        color: white; }
+      .index .directions-block .content .info .link {
+        margin-top: 5vh; }
+        .index .directions-block .content .info .link a {
+          font-size: 2rem;
+          padding: 10px 20px;
+          background-color: #913030;
+          border-radius: 15px;
+          -webkit-box-shadow: 0 2px 5px 1px #2B2B2B;
+          box-shadow: 0 2px 5px 1px #2B2B2B;
+          color: white;
+          text-transform: uppercase;
+          text-decoration: none;
+          font-weight: 700; }
+  .index .directions-block .direction-nav {
+    position: absolute;
+    bottom: 15px;
+    left: 5vw; }
+    .index .directions-block .direction-nav ul {
+      list-style-type: none;
+      display: flex; }
+      .index .directions-block .direction-nav ul li {
+        margin: 0 35px; }
+        .index .directions-block .direction-nav ul li a {
+          font-size: 4rem;
+          color: white;
+          text-transform: uppercase;
+          font-weight: 700;
+          transition: .2s linear;
+          text-decoration: none; }
+          .index .directions-block .direction-nav ul li a:hover {
+            color: #F7E85C;
+            transition: .2s linear; }
 
 @media screen and (max-width: 1366px) {
   .index .navigation .text {
@@ -907,7 +993,9 @@ body {
         font-size: .5rem;
         padding: 8px 20px; }
   .index .prices-block .left-title .text {
-    font-size: 3.6rem; } }
+    font-size: 3.6rem; }
+  .index .directions-block .left-title .text {
+    font-size: 3.3rem; } }
 @media screen and (max-width: 1024px) {
   .index .navigation {
     display: none; }
@@ -1098,7 +1186,42 @@ body {
   .index .prices-block .content .bottom .link a {
     font-size: 1.4rem; }
   .index .prices-block .content .bottom .link .line {
-    display: none; } }
+    display: none; }
+  .index .directions-block .left-title {
+    display: none; }
+  .index .directions-block .content {
+    margin: 0; }
+    .index .directions-block .content .info {
+      order: 2; }
+      .index .directions-block .content .info .title {
+        padding: 0 3vw;
+        font-size: 1.1rem;
+        text-align: center; }
+      .index .directions-block .content .info hr {
+        width: 100%; }
+      .index .directions-block .content .info .description {
+        padding: 0 1vw;
+        font-size: .7rem; }
+      .index .directions-block .content .info .link {
+        text-align: center; }
+        .index .directions-block .content .info .link a {
+          width: 65%;
+          margin: 0 auto;
+          font-size: .8rem; }
+    .index .directions-block .content .image img {
+      position: relative;
+      right: 25px;
+      width: 65%; }
+  .index .directions-block .direction-nav {
+    left: 0;
+    bottom: 10px; }
+    .index .directions-block .direction-nav ul {
+      justify-content: start;
+      padding: 0; }
+      .index .directions-block .direction-nav ul li {
+        margin: 0 15px; }
+        .index .directions-block .direction-nav ul li a {
+          font-size: 1.4rem; } }
 @media screen and (max-width: 768px) {
   .index .navigation {
     display: none; }
@@ -1289,7 +1412,42 @@ body {
   .index .prices-block .content .bottom .link a {
     font-size: 1.4rem; }
   .index .prices-block .content .bottom .link .line {
-    display: none; } }
+    display: none; }
+  .index .directions-block .left-title {
+    display: none; }
+  .index .directions-block .content {
+    margin: 0; }
+    .index .directions-block .content .info {
+      order: 2; }
+      .index .directions-block .content .info .title {
+        padding: 0 3vw;
+        font-size: 1.1rem;
+        text-align: center; }
+      .index .directions-block .content .info hr {
+        width: 100%; }
+      .index .directions-block .content .info .description {
+        padding: 0 1vw;
+        font-size: .7rem; }
+      .index .directions-block .content .info .link {
+        text-align: center; }
+        .index .directions-block .content .info .link a {
+          width: 65%;
+          margin: 0 auto;
+          font-size: .8rem; }
+    .index .directions-block .content .image img {
+      position: relative;
+      right: 25px;
+      width: 65%; }
+  .index .directions-block .direction-nav {
+    left: 0;
+    bottom: 10px; }
+    .index .directions-block .direction-nav ul {
+      justify-content: start;
+      padding: 0; }
+      .index .directions-block .direction-nav ul li {
+        margin: 0 15px; }
+        .index .directions-block .direction-nav ul li a {
+          font-size: 1.4rem; } }
 @media screen and (max-width: 720px) {
   .index .navigation {
     display: none; }
@@ -1479,7 +1637,42 @@ body {
   .index .prices-block .content .bottom .link a {
     font-size: 1.4rem; }
   .index .prices-block .content .bottom .link .line {
-    display: none; } }
+    display: none; }
+  .index .directions-block .left-title {
+    display: none; }
+  .index .directions-block .content {
+    margin: 0; }
+    .index .directions-block .content .info {
+      order: 2; }
+      .index .directions-block .content .info .title {
+        padding: 0 3vw;
+        font-size: 1.1rem;
+        text-align: center; }
+      .index .directions-block .content .info hr {
+        width: 100%; }
+      .index .directions-block .content .info .description {
+        padding: 0 1vw;
+        font-size: .7rem; }
+      .index .directions-block .content .info .link {
+        text-align: center; }
+        .index .directions-block .content .info .link a {
+          width: 65%;
+          margin: 0 auto;
+          font-size: .8rem; }
+    .index .directions-block .content .image img {
+      position: relative;
+      right: 25px;
+      width: 65%; }
+  .index .directions-block .direction-nav {
+    left: 0;
+    bottom: 10px; }
+    .index .directions-block .direction-nav ul {
+      justify-content: start;
+      padding: 0; }
+      .index .directions-block .direction-nav ul li {
+        margin: 0 15px; }
+        .index .directions-block .direction-nav ul li a {
+          font-size: 1.4rem; } }
 @media screen and (max-width: 480px) {
   .index .navigation {
     display: none; }
@@ -1671,7 +1864,42 @@ body {
   .index .prices-block .content .bottom .link a {
     font-size: 1.4rem; }
   .index .prices-block .content .bottom .link .line {
-    display: none; } }
+    display: none; }
+  .index .directions-block .left-title {
+    display: none; }
+  .index .directions-block .content {
+    margin: 0; }
+    .index .directions-block .content .info {
+      order: 2; }
+      .index .directions-block .content .info .title {
+        padding: 0 3vw;
+        font-size: 1.1rem;
+        text-align: center; }
+      .index .directions-block .content .info hr {
+        width: 100%; }
+      .index .directions-block .content .info .description {
+        padding: 0 1vw;
+        font-size: .7rem; }
+      .index .directions-block .content .info .link {
+        text-align: center; }
+        .index .directions-block .content .info .link a {
+          width: 65%;
+          margin: 0 auto;
+          font-size: .8rem; }
+    .index .directions-block .content .image img {
+      position: relative;
+      right: 25px;
+      width: 65%; }
+  .index .directions-block .direction-nav {
+    left: 0;
+    bottom: 10px; }
+    .index .directions-block .direction-nav ul {
+      justify-content: start;
+      padding: 0; }
+      .index .directions-block .direction-nav ul li {
+        margin: 0 15px; }
+        .index .directions-block .direction-nav ul li a {
+          font-size: 1.4rem; } }
 @media screen and (max-width: 375px) {
   .index .navigation {
     display: none; }
@@ -1858,7 +2086,42 @@ body {
   .index .prices-block .content .bottom .link a {
     font-size: 1.4rem; }
   .index .prices-block .content .bottom .link .line {
-    display: none; } }
+    display: none; }
+  .index .directions-block .left-title {
+    display: none; }
+  .index .directions-block .content {
+    margin: 0; }
+    .index .directions-block .content .info {
+      order: 2; }
+      .index .directions-block .content .info .title {
+        padding: 0 3vw;
+        font-size: 1.1rem;
+        text-align: center; }
+      .index .directions-block .content .info hr {
+        width: 100%; }
+      .index .directions-block .content .info .description {
+        padding: 0 1vw;
+        font-size: .7rem; }
+      .index .directions-block .content .info .link {
+        text-align: center; }
+        .index .directions-block .content .info .link a {
+          width: 65%;
+          margin: 0 auto;
+          font-size: .8rem; }
+    .index .directions-block .content .image img {
+      position: relative;
+      right: 25px;
+      width: 65%; }
+  .index .directions-block .direction-nav {
+    left: 0;
+    bottom: 10px; }
+    .index .directions-block .direction-nav ul {
+      justify-content: start;
+      padding: 0; }
+      .index .directions-block .direction-nav ul li {
+        margin: 0 15px; }
+        .index .directions-block .direction-nav ul li a {
+          font-size: 1.4rem; } }
 @media screen and (max-width: 320px) {
   .index .navigation {
     display: none; }
@@ -2047,6 +2310,41 @@ body {
   .index .prices-block .content .bottom .link a {
     font-size: 1.4rem; }
   .index .prices-block .content .bottom .link .line {
-    display: none; } }
+    display: none; }
+  .index .directions-block .left-title {
+    display: none; }
+  .index .directions-block .content {
+    margin: 0; }
+    .index .directions-block .content .info {
+      order: 2; }
+      .index .directions-block .content .info .title {
+        padding: 0 3vw;
+        font-size: 1.1rem;
+        text-align: center; }
+      .index .directions-block .content .info hr {
+        width: 100%; }
+      .index .directions-block .content .info .description {
+        padding: 0 1vw;
+        font-size: .7rem; }
+      .index .directions-block .content .info .link {
+        text-align: center; }
+        .index .directions-block .content .info .link a {
+          width: 65%;
+          margin: 0 auto;
+          font-size: .8rem; }
+    .index .directions-block .content .image img {
+      position: relative;
+      right: 25px;
+      width: 65%; }
+  .index .directions-block .direction-nav {
+    left: 0;
+    bottom: 10px; }
+    .index .directions-block .direction-nav ul {
+      justify-content: start;
+      padding: 0; }
+      .index .directions-block .direction-nav ul li {
+        margin: 0 15px; }
+        .index .directions-block .direction-nav ul li a {
+          font-size: 1.4rem; } }
 
 /*# sourceMappingURL=main.css.map */

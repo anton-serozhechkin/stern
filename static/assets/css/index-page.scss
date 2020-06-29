@@ -989,4 +989,109 @@
       }
     }
   }
+  .directions-block {
+    height: 100vh;
+    position: relative;
+    display: flex;
+    background-color: $darkRed;
+    .left-title {
+      background-image: url('../images/left.svg');
+      background-size: cover;
+      background-repeat: no-repeat;
+      font-size: 4.5rem;
+      height: 100vh;
+      width: 110px;
+      color: white;
+      background-color: $darkRed;
+      text-align: center;
+
+      .text {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        margin: auto 0;
+      }
+    }
+    .content {
+      margin-left: 3vw;
+      margin-top: 5vh;
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      .image {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        max-width: 625px;
+        width: 100%;
+        img {
+          max-width: 625px;
+          width: 100%;
+        }
+      }
+      .info {
+        width: 100%;
+        max-width: 525px;
+        .title {
+          font-size: 3rem;
+          text-transform: uppercase;
+          color:white;
+          font-weight: 700;
+        }
+        hr {
+          width: 75%;
+          float: left;
+        }
+        .clear {
+          clear: both;
+        }
+        .description {
+          font-weight: 700;
+          text-transform: uppercase;
+          font-size: 1.6rem;
+          color:white;
+        }
+        .link {
+          margin-top: 5vh;
+          a {
+            font-size: 2rem;
+            padding: 10px 20px;
+            background-color: #913030;
+            border-radius: 15px;
+            -webkit-box-shadow: 0 2px 5px 1px #2B2B2B;
+            box-shadow: 0 2px 5px 1px #2B2B2B;
+            color:white;
+            text-transform: uppercase;
+            text-decoration: none;
+            font-weight: 700;
+          }
+        }
+      }
+    }
+    .direction-nav {
+      position: absolute;
+      bottom: 15px;
+      left: 5vw;
+      ul {
+        list-style-type: none;
+        display: flex;
+        li {
+          margin: 0 35px;
+          a {
+            font-size:4rem;
+            color:white;
+            text-transform: uppercase;
+            font-weight: 700;
+            transition: .2s linear;
+            text-decoration: none;
+            &:hover {
+              color:$yellow;
+              transition: .2s linear;
+            }
+          }
+        }
+      }
+    }
+  }
 }
