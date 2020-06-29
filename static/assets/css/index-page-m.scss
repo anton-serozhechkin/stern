@@ -178,6 +178,85 @@
         }
       }
     }
+    .contacts-block {
+      .content {
+        .top {
+          .social-list {
+            ul {
+              right: 0;
+              padding: 0;
+              li {
+                a {
+                  img {
+                    height: 65px;
+                    width: 65px;
+                    padding: 12px;
+                  }
+                }
+              }
+            }
+          }
+        }
+        .middle {
+          .left {
+            display: flex;
+            justify-content: center;
+            .mail {
+              img {
+                width: 55%;
+              }
+              .mail-text {
+                width: 50%;
+                padding-right: 75px;
+                padding-top: 75px;
+                .heading {
+                  font-size: 1rem;
+                  margin-bottom: 10px;
+                }
+                form {
+                  width: 75%;
+                  input {
+                    margin: 4px 0;
+                    font-size: .5rem;
+
+                  }
+                  button {
+                    font-size: .6rem;
+                  }
+                }
+                .footer {
+                  top: 300px;
+                  right: 50px;
+                  a {
+                    font-size: .5rem;
+                  }
+                }
+              }
+            }
+          }
+          .right {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            position: absolute;
+            top: 35px;
+            right: 135px;
+            .map {
+              margin: 50px 15px;
+              position: relative;
+              font-size: .75rem;
+              button {
+                position: absolute;
+                top: 85%;
+                font-size: .5rem;
+                padding: 8px 20px;
+              }
+            }
+          }
+        }
+      }
+    }
+
   }
 }
 
@@ -363,6 +442,88 @@
         }
       }
     }
+    .reviews-block {
+      display: none;
+    }
+    .contacts-block {
+      .left-title {
+        display: none;
+      }
+      .content {
+        .top {
+          .social-list {
+            ul {
+              right: 0;
+              padding: 0;
+              li {
+                a {
+                  img {
+                    height: 65px;
+                    width: 65px;
+                    padding: 12px;
+                  }
+                }
+              }
+            }
+          }
+        }
+        .middle {
+          .left {
+            .mail {
+              img {
+                width: 55%;
+              }
+              .mail-text {
+                width: 50%;
+                padding-right: 75px;
+                padding-top: 75px;
+                .heading {
+                  font-size: 1rem;
+                  margin-bottom: 10px;
+                }
+                form {
+                  width: 75%;
+                  input {
+                    margin: 4px 0;
+                    font-size: .5rem;
+
+                  }
+                  button {
+                    font-size: .6rem;
+                  }
+                }
+                .footer {
+                  top: 300px;
+                  right: 50px;
+                  a {
+                    font-size: .5rem;
+                  }
+                }
+              }
+            }
+          }
+          .right {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            position: absolute;
+            top: 35px;
+            right: 135px;
+            .map {
+              margin: 50px 15px;
+              position: relative;
+              font-size: .75rem;
+              button {
+                position: absolute;
+                top: 85%;
+                font-size: .5rem;
+                padding: 8px 20px;
+              }
+            }
+          }
+        }
+      }
+    }
 
   }
 }
@@ -541,6 +702,88 @@
                     font-size: 1.7rem;
                   }
                 }
+              }
+            }
+          }
+        }
+      }
+    }
+    .reviews-block {
+      display: none;
+    }
+    .contacts-block {
+      .left-title {
+        display: none;
+      }
+      .content {
+        .top {
+          .social-list {
+            ul {
+              right: 0;
+              padding: 0;
+              li {
+                a {
+                  img {
+                    height: 65px;
+                    width: 65px;
+                    padding: 12px;
+                  }
+                }
+              }
+            }
+          }
+        }
+        .middle {
+          .left {
+            .mail {
+              img {
+                width: 55%;
+              }
+              .mail-text {
+                width: 50%;
+                padding-right: 75px;
+                padding-top: 75px;
+                .heading {
+                  font-size: 1rem;
+                  margin-bottom: 10px;
+                }
+                form {
+                  width: 75%;
+                  input {
+                    margin: 4px 0;
+                    font-size: .5rem;
+
+                  }
+                  button {
+                    font-size: .6rem;
+                  }
+                }
+                .footer {
+                  top: 300px;
+                  right: 50px;
+                  a {
+                    font-size: .5rem;
+                  }
+                }
+              }
+            }
+          }
+          .right {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            position: absolute;
+            top: 35px;
+            right: 135px;
+            .map {
+              margin: 50px 15px;
+              position: relative;
+              font-size: .75rem;
+              button {
+                position: absolute;
+                top: 85%;
+                font-size: .5rem;
+                padding: 8px 20px;
               }
             }
           }
@@ -732,6 +975,85 @@
         }
       }
     }
+    .reviews-block {
+      display: none;
+    }
+    .contacts-block {
+      .left-title {
+        display: none;
+      }
+      .content {
+        .top {
+          .social-list {
+            ul {
+              right: 0;
+              padding: 0;
+              li {
+                a {
+                  img {
+                    height: 65px;
+                    width: 65px;
+                    padding: 12px;
+                  }
+                }
+              }
+            }
+          }
+        }
+        .middle {
+          .left {
+            .mail {
+              .mail-text {
+                padding-right: 50px;
+                padding-top: 150px;
+                .heading {
+                  font-size: 1rem;
+                  margin-bottom: 10px;
+                }
+                form {
+                  width: 75%;
+                  padding-left: 15px;
+                  input {
+                    margin: 4px 0;
+                    font-size: .5rem;
+
+                  }
+                  button {
+                    font-size: .6rem;
+                  }
+                }
+                .footer {
+                  top: 400px;
+                  right: 30px;
+                  a {
+                    font-size: .7rem;
+                  }
+                }
+              }
+            }
+          }
+          .right {
+            position: static;
+            flex-direction: row;
+            right: 0;
+            width: 100%;
+            margin-top: 100px;
+            justify-content: space-around;
+            .map {
+              margin: 0 15px;
+              position: relative;
+              font-size: .5rem;
+              button {
+                position: absolute;
+                top: 85%;
+                font-size: .5rem;
+                padding: 8px 20px;
+              }
+            }
+          }
+        }
+      }
+    }
 
   }
 }
@@ -900,7 +1222,7 @@
           }
           .bottom {
             .links-list {
-              top: 65%;
+              top: 50%;
               ul {
                 padding-left: 0;
                 text-align: center;
@@ -913,6 +1235,85 @@
                     font-size: 1.7rem;
                   }
                 }
+              }
+            }
+          }
+        }
+      }
+    }
+    .reviews-block {
+      display: none;
+    }
+    .contacts-block {
+      .left-title {
+        display: none;
+      }
+      .content {
+        .top {
+          .social-list {
+            ul {
+              right: 0;
+              padding: 0;
+              li {
+                a {
+                  img {
+                    height: 65px;
+                    width: 65px;
+                    padding: 12px;
+                  }
+                }
+              }
+            }
+          }
+        }
+        .middle {
+          .left {
+            .mail {
+              .mail-text {
+                padding-right: 50px;
+                padding-top: 60px;
+                .heading {
+                  font-size: 1rem;
+                  margin-bottom: 10px;
+                }
+                form {
+                  width: 75%;
+                  padding-left: 15px;
+                  input {
+                    margin: 4px 0;
+                    font-size: .5rem;
+
+                  }
+                  button {
+                    font-size: .6rem;
+                  }
+                }
+                .footer {
+                  top: 300px;
+                  right: 20px;
+                  a {
+                    font-size: .4rem;
+                  }
+                }
+              }
+            }
+          }
+          .right {
+            position: static;
+            flex-direction: row;
+            right: 0;
+            width: 100%;
+            margin-top: 100px;
+            justify-content: space-around;
+            .map {
+              margin: 0 15px;
+              position: relative;
+              font-size: .5rem;
+              button {
+                position: absolute;
+                top: 85%;
+                font-size: .5rem;
+                padding: 8px 20px;
               }
             }
           }
@@ -1079,7 +1480,7 @@
           }
           .bottom {
             .links-list {
-              top: 65%;
+              top: 50%;
               ul {
                 padding-left: 0;
                 text-align: center;
@@ -1092,6 +1493,85 @@
                     font-size: 1.7rem;
                   }
                 }
+              }
+            }
+          }
+        }
+      }
+    }
+    .reviews-block {
+      display: none;
+    }
+    .contacts-block {
+      .left-title {
+        display: none;
+      }
+      .content {
+        .top {
+          .social-list {
+            ul {
+              right: 0;
+              padding: 0;
+              li {
+                a {
+                  img {
+                    height: 65px;
+                    width: 65px;
+                    padding: 12px;
+                  }
+                }
+              }
+            }
+          }
+        }
+        .middle {
+          .left {
+            .mail {
+              .mail-text {
+                padding-right: 50px;
+                padding-top: 60px;
+                .heading {
+                  font-size: 1rem;
+                  margin-bottom: 10px;
+                }
+                form {
+                  width: 75%;
+                  padding-left: 15px;
+                  input {
+                    margin: 4px 0;
+                    font-size: .5rem;
+
+                  }
+                  button {
+                    font-size: .6rem;
+                  }
+                }
+                .footer {
+                  top: 200px;
+                  right: 20px;
+                  a {
+                    font-size: .4rem;
+                  }
+                }
+              }
+            }
+          }
+          .right {
+            position: static;
+            flex-direction: row;
+            right: 0;
+            width: 100%;
+            margin-top: 100px;
+            justify-content: space-around;
+            .map {
+              margin: 0 15px;
+              position: relative;
+              font-size: .5rem;
+              button {
+                position: absolute;
+                top: 85%;
+                font-size: .5rem;
+                padding: 8px 20px;
               }
             }
           }
@@ -1269,9 +1749,88 @@
                   width: 100%;
                   a {
                     font-weight: 700;
-                    font-size: 1.7rem;
+                    font-size: 1.2rem;
                   }
                 }
+              }
+            }
+          }
+        }
+      }
+    }
+    .reviews-block {
+      display: none;
+    }
+    .contacts-block {
+        .left-title {
+          display: none;
+        }
+      .content {
+        .top {
+          .social-list {
+            ul {
+              right: 0;
+              padding: 0;
+              li {
+                a {
+                  img {
+                    height: 65px;
+                    width: 65px;
+                    padding: 12px;
+                  }
+                }
+              }
+            }
+          }
+        }
+        .middle {
+          .left {
+            .mail {
+              .mail-text {
+                padding-right: 50px;
+                padding-top: 60px;
+                .heading {
+                  font-size: 1rem;
+                  margin-bottom: 10px;
+                }
+                form {
+                  width: 75%;
+                  padding-left: 15px;
+                  input {
+                    margin: 4px 0;
+                    font-size: .5rem;
+
+                  }
+                  button {
+                    font-size: .6rem;
+                  }
+                }
+                .footer {
+                  top: 200px;
+                  right: 20px;
+                  a {
+                    font-size: .4rem;
+                  }
+                }
+              }
+            }
+          }
+          .right {
+            position: static;
+            flex-direction: row;
+            right: 0;
+            width: 100%;
+            margin-top: 100px;
+            justify-content: space-around;
+            .map {
+              margin: 0 15px;
+              position: relative;
+              font-size: .5rem;
+              button {
+                position: absolute;
+                top: 85%;
+                font-size: .5rem;
+                padding: 8px 20px;
               }
             }
           }
