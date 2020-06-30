@@ -7,7 +7,6 @@ function indexNav() {
             $('.nav-link').toggleClass('active')
     })
 }
-
 function reviewsSlider() {
     $('.reviews-slider').slick({
         slidesToShow: 1,
@@ -48,6 +47,21 @@ function showMap() {
         })
     }
 }
+function slideSign() {
+    $('#signUp-btn').click(function () {
+        $('#signUp').removeClass('form-disable')
+        $('#signUp').addClass('form-active')
+        $('#signIn').removeClass('form-active');
+        $('#signIn').addClass('form-disable');
+    })
+    $('#signIn-btn').click(function () {
+        $('#signUp').removeClass('form-active')
+        $('#signUp').addClass('form-disable')
+        $('#signIn').removeClass('form-disable');
+        $('#signIn').addClass('form-active');
+    })
+}
 reviewsSlider();
 indexNav();
 showMap();
+slideSign();
