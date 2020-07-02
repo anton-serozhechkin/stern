@@ -27,9 +27,6 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
-
-AUTH_USER_MODEL = 'user.User'
-
 # Application definition
 
 INSTALLED_APPS = [
@@ -42,7 +39,8 @@ INSTALLED_APPS = [
     'tinymce',
     'event',
     'user',
-    'courses'
+    'courses',
+    'main'
 ]
 
 MIDDLEWARE = [

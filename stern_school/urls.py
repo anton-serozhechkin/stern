@@ -21,6 +21,7 @@ urlpatterns = [
     path('courses/', include('courses.urls')),
     path('event/', include('event.urls')),
     path('user/', include('user.urls')),
+    path('', include('main.urls')),
     path('tinymce/', include('tinymce.urls')),
 
 ]

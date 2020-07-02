@@ -12,9 +12,7 @@ class ClassNumber(models.Model):
         verbose_name_plural = 'Номера классов'
 
 
-class User(AbstractUser):
-    username = None
-    email = models.EmailField(verbose_name='email address', unique=True)
+class Student(models.Model):
     middle_name = models.CharField('Отчество', max_length=50)
     telephone_number = models.CharField('Телефонный номер', max_length=12)
     class_number = models.ForeignKey(ClassNumber, on_delete=models.CASCADE, verbose_name='Номер класса')
@@ -22,13 +20,16 @@ class User(AbstractUser):
     date_birthday = models.DateField(verbose_name='День рождения')
     is_parent = models.BooleanField('Родитель', default=False, blank=True, null=True)
     children_telephone_number = models.CharField('Телефонный номер', max_length=12, blank=True, null=True)
+    
+    class Meta:
+        verbose_name = 'Пользователь'
+        verbose_name_plural = 'Пользователи'
+
+class Teachers(models.Model):
     short_info = models.CharField('Краткая информация', max_length=100, blank=True, null=True)
     full_info = models.CharField('Полная информация', max_length=2000, blank=True, null=True)
     image = models.ImageField('Фото преподавателя', upload_to='pictures/teachers/', blank=True, null=True)
 
-    USERNAME_FIELD = 'email'
-    REQUIRED_FIELDS = []
-
     class Meta:
-        verbose_name = 'Пользователь'
-        verbose_name_plural = 'Пользователи'
+        verbose_name = 'Преподаватель'
+        verbose_name_plural = 'Преподаватели'
