@@ -234,30 +234,16 @@
                     </div>
 
                     <div class="reviews-slider">
+                        {% for review in reviews %}
                         <div class="review">
                             <div class="author">
-                                михаил столяров
+                                {{ review.user }}
                             </div>
                             <div class="text">
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet doloribus eius facere illum ipsa iure libero maiores necessitatibus nihil perferendis provident quasi reiciendis similique, voluptates.
+                                {{ review.review }}
                             </div>
                         </div>
-                        <div class="review">
-                            <div class="author">
-                                михаил столяров
-                            </div>
-                            <div class="text">
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet doloribus eius facere illum ipsa iure libero maiores necessitatibus nihil perferendis provident quasi reiciendis similique, voluptates.
-                            </div>
-                        </div>
-                        <div class="review">
-                            <div class="author">
-                                михаил столяров
-                            </div>
-                            <div class="text">
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet doloribus eius facere illum ipsa iure libero maiores necessitatibus nihil perferendis provident quasi reiciendis similique, voluptates.
-                            </div>
-                        </div>
+                        {% endfor %}
                     </div>
 
                     <div class="right">

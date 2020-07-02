@@ -1,3 +1,9 @@
 from django.contrib import admin
+from .models import *
 
-# Register your models here.
+class ReviewAdmin(admin.ModelAdmin):
+    search_fields = ('review', 'user', )
+
+
+admin.site.register(VideoReview)
+admin.site.register(Review, ReviewAdmin)
