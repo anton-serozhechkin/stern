@@ -940,6 +940,54 @@ body {
         .index .sign-block .content .middle .rules a {
           color: black; }
 
+.error-content {
+  background-color: #4A8C92;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column; }
+  .error-content .title {
+    margin-bottom: 30px;
+    font-size: 2.8rem;
+    color: white;
+    text-transform: uppercase;
+    font-weight: 700; }
+  .error-content img {
+    width: 50vw; }
+  .error-content .return {
+    width: 100%; }
+    .error-content .return .link {
+      width: 100%;
+      max-width: 400px;
+      margin: 0 auto; }
+      .error-content .return .link a {
+        padding: 10px 0;
+        color: white;
+        text-align: center;
+        text-transform: uppercase;
+        font-size: 2.8rem;
+        text-decoration: none;
+        border-radius: 15px;
+        border: solid 6px #C94545;
+        display: block;
+        font-weight: 700;
+        width: 100%;
+        transition: .2s linear; }
+        .error-content .return .link a:hover {
+          transition: .2s linear;
+          background-color: #C94545;
+          color: white; }
+
+.angry_error img {
+  width: 40vw; }
+.angry_error .title {
+  position: relative;
+  top: 3%;
+  font-size: 2.3rem;
+  transform: rotate(-15deg); }
+
 @media screen and (max-width: 1366px) {
   .index .navigation .text {
     font-size: 1.6rem; }
