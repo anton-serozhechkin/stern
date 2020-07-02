@@ -940,6 +940,116 @@ body {
         .index .sign-block .content .middle .rules a {
           color: black; }
 
+.error-content {
+  background-color: #4A8C92;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column; }
+  .error-content .title {
+    margin-bottom: 30px;
+    font-size: 2.8rem;
+    color: white;
+    text-transform: uppercase;
+    font-weight: 700; }
+  .error-content img {
+    width: 50vw; }
+  .error-content .return {
+    width: 100%; }
+    .error-content .return .link {
+      width: 100%;
+      max-width: 400px;
+      margin: 0 auto; }
+      .error-content .return .link a {
+        padding: 10px 0;
+        color: white;
+        text-align: center;
+        text-transform: uppercase;
+        font-size: 2.8rem;
+        text-decoration: none;
+        border-radius: 15px;
+        border: solid 6px #C94545;
+        display: block;
+        font-weight: 700;
+        width: 100%;
+        transition: .2s linear; }
+        .error-content .return .link a:hover {
+          transition: .2s linear;
+          background-color: #C94545;
+          color: white; }
+
+.angry_error img {
+  width: 40vw; }
+.angry_error .title {
+  position: relative;
+  top: 3%;
+  font-size: 2.3rem;
+  transform: rotate(-15deg); }
+
+.payment-content {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column; }
+  .payment-content img {
+    width: 100%;
+    max-width: 550px; }
+  .payment-content .title {
+    margin-top: 30px;
+    color: white;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 3.4rem;
+    width: 100%;
+    max-width: 550px;
+    text-align: center; }
+  .payment-content .subtitle {
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 1.4rem;
+    color: white;
+    width: 100%;
+    max-width: 550px;
+    text-align: center; }
+  .payment-content .return {
+    margin-top: 30px;
+    width: 100%; }
+    .payment-content .return .link {
+      width: 100%;
+      max-width: 400px;
+      margin: 0 auto; }
+      .payment-content .return .link a {
+        padding: 10px 0;
+        color: white;
+        text-align: center;
+        text-transform: uppercase;
+        font-size: 2.8rem;
+        text-decoration: none;
+        border-radius: 15px;
+        border: solid 6px #C94545;
+        display: block;
+        font-weight: 700;
+        width: 100%;
+        transition: .2s linear; }
+        .payment-content .return .link a:hover {
+          transition: .2s linear;
+          background-color: #C94545;
+          color: white; }
+
+.payment-content-bad {
+  background-color: #4A8C92; }
+
+.payment-content-suc {
+  background-color: #67CCF4; }
+  .payment-content-suc .title {
+    max-width: 750px; }
+  .payment-content-suc .return .link a {
+    border: solid 6px #63A45f; }
+
 @media screen and (max-width: 1366px) {
   .index .navigation .text {
     font-size: 1.6rem; }
