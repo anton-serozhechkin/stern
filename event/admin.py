@@ -12,13 +12,14 @@ class EventAdmin(admin.ModelAdmin):
                 'slug',
                 'short_description',
                 'content',
-                'category'
+                'category',
+                'teacher'
             )
         }),
         ('Дополнительные опции',
             {
             'classes': ('collapse', ),
-            'fields': ('price', 'main_image', 'is_active', 'data_created', 'data_modifed', 'data_event')
+            'fields': ('price', 'main_image', 'is_active', 'data_created', 'data_event')
             }
             )
     )
@@ -35,12 +36,13 @@ class NewsAdmin(admin.ModelAdmin):
                 'slug',
                 'short_description',
                 'content',
+                'teacher'
             )
         }),
         ('Дополнительные опции',
             {
             'classes': ('collapse', ),
-            'fields': ('main_image', 'is_active', 'data_created', 'data_modifed', )
+            'fields': ('main_image', 'is_active', 'data_created', )
             }
             )
     )

@@ -3,6 +3,7 @@ from tinymce.models import HTMLField
 from django.urls import reverse
 from django.conf import settings
 from user.models import *
+from django.utils import timezone
 
 class CategoryEvent(models.Model):
     title = models.CharField(verbose_name='Название', primary_key=True, max_length=30)
@@ -22,8 +23,7 @@ class Event(models.Model):
     main_image = models.ImageField(verbose_name='Заставка', upload_to='events/%Y/%m/%h/', blank=True, null=True)
     content = HTMLField(verbose_name='Контент', blank=True, null=True)
     short_description = HTMLField(verbose_name='Краткое описание', blank=True, null=True)
-    data_created = models.DateTimeField(verbose_name='Дата создания', auto_now_add=True)
-    data_modifed = models.DateTimeField(verbose_name='Дата изменения', auto_now=True)
+    data_created = models.DateTimeField(verbose_name='Дата создания', default=timezone.now)
     data_event = models.DateTimeField(verbose_name='Дата мероприятия')
     #classes = models.ManyToManyField(Classes, verbose_name='Принимающие участие классы')
     is_active = models.BooleanField(default=True, verbose_name='Активность мероприятия')
@@ -49,8 +49,7 @@ class News(models.Model):
     main_image = models.ImageField(verbose_name='Заставка', upload_to='events/%Y/%m/%h/', blank=True, null=True )
     content = HTMLField(verbose_name='Контент', blank=True, null=True)
     short_description = HTMLField(verbose_name='Краткое описание', blank=True, null=True)
-    data_created = models.DateTimeField(verbose_name='Дата создания', auto_now_add=True)
-    data_modifed = models.DateTimeField(verbose_name='Дата изменения', auto_now=True)
+    data_created = models.DateTimeField(verbose_name='Дата создания', default=timezone.now)
     is_active = models.BooleanField(default=True, verbose_name='Активность мероприятия')
     teacher = models.ForeignKey(Teachers, on_delete=models.DO_NOTHING, verbose_name='Преподаватель')
 
@@ -59,7 +58,7 @@ class News(models.Model):
         verbose_name_plural = 'Новости'
     
     def __str__(self):
-        return '{}. Категория: {}. Дата создания: {}.'.format(self.title, self.data_created)
+        return '{}. Дата создания: {}.'.format(self.title, self.data_created)
     
     def get_absolute_url(self):
         return reverse('news_detail', kwargs={'slug': self.slug})

@@ -3,11 +3,12 @@ from tinymce.models import HTMLField
 from django.urls import reverse
 from django.conf import settings
 from user.models import *
+from django.utils import timezone
 
 class FrequentQuestion(models.Model):
     ask = models.CharField(verbose_name='Вопрос', primary_key=True, max_length=100)
     answer = models.CharField(verbose_name='Ответ', max_length=400)
-    data_created = models.DateTimeField(verbose_name='Дата создания', auto_now_add=True)
+    data_created = models.DateTimeField(verbose_name='Дата создания', default=timezone.now)
     is_active = models.BooleanField(default=True, verbose_name='Активность вопроса')
 
     def __str__(self):
@@ -24,7 +25,7 @@ class FrequentQuestion(models.Model):
 class Test(models.Model):
     title = models.CharField(verbose_name='Название', primary_key=True, max_length=50)
     teachers = models.ForeignKey(Teachers, on_delete=models.DO_NOTHING, verbose_name='Преподаватель')
-    data_created = models.DateTimeField(verbose_name='Дата создания', auto_now_add=True)
+    data_created = models.DateTimeField(verbose_name='Дата создания', default=timezone.now)
     is_active = models.BooleanField(default=True, verbose_name='Активность вопроса')
     #classes = models.ManyToManyField(Classes, verbose_name='Принимающие участие классы')
 

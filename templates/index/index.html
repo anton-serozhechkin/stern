@@ -99,13 +99,13 @@
             <div class="banner">
                 <div class="banner-text">
                     <div class="banner-title">
-                        новая олимпиада
+                        {{ event.title }}
                     </div>
                     <div class="banner-description">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. A, accusantium asperiores doloremque ex sequi tempora tempore ullam? Adipisci, non, porro.
+                        {{ event.short_description|safe }}
                     </div>
                     <div class="banner-link">
-                        <a href="">подробнее</a>
+                        <a href="{% comment %}{% url '' category_slug=event.category.slug slug=event.slug %} {% endcomment %}">подробнее</a>
                     </div>
                     <div class="banner-anchor-link">
                         <a href="">
@@ -129,10 +129,35 @@
                 <a href="">события</a>
             </div>
             <div class="middle">
+                {% for event in last_events %}
                 <div class="element">
-                    <img src="
-                    https://images.unsplash.com/photo-1593296697008-195d0e40ddd6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80
-                        " alt="">
+                    {% if event.image %}
+                    <img src="{{ event.image.url }}" alt="">
+                    {% endif %}
+                    <div class="element-info">
+                        <div class="category">
+                            <a href="">
+                                Мероприятие
+                            </a>
+                        </div>
+                        <span>|</span>
+                        <div class="date">
+                            {{ event.data_created|date:"d M Y"}}
+                        </div>
+                    </div>
+                    <div class="element-title">
+                        {{ event.title }}
+                    </div>
+                    <div class="element-description">
+                        {{ event.short_description|safe }}    
+                    </div>
+                </div>
+                {% endfor %}
+                {% for news in last_news %}
+                <div class="element">
+                    {% if news.image %}
+                    <img src="{{ news.image.url }}" alt="">
+                    {% endif %}
                     <div class="element-info">
                         <div class="category">
                             <a href="">
@@ -141,60 +166,17 @@
                         </div>
                         <span>|</span>
                         <div class="date">
-                            01.05.2020
+                            {{ news.data_created|date:"d M Y"}}
                         </div>
                     </div>
                     <div class="element-title">
-                        Lorem ipsum dolor sit amet, consectetur
+                        {{ news.title }}
                     </div>
                     <div class="element-description">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus, reprehenderit!
+                        {{ news.short_description|safe }}
                     </div>
                 </div>
-                <div class="element">
-                    <img src="
-                    https://images.unsplash.com/photo-1593296697008-195d0e40ddd6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80
-                        " alt="">
-                    <div class="element-info">
-                        <div class="category">
-                            <a href="">
-                                новость
-                            </a>
-                        </div>
-                        <span>|</span>
-                        <div class="date">
-                            01.05.2020
-                        </div>
-                    </div>
-                    <div class="element-title">
-                        Lorem ipsum dolor sit amet, consectetur
-                    </div>
-                    <div class="element-description">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus, reprehenderit!
-                    </div>
-                </div>
-                <div class="element">
-                    <img src="
-                    https://images.unsplash.com/photo-1593296697008-195d0e40ddd6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80
-                        " alt="">
-                    <div class="element-info">
-                        <div class="category">
-                            <a href="">
-                                новость
-                            </a>
-                        </div>
-                        <span>|</span>
-                        <div class="date">
-                            01.05.2020
-                        </div>
-                    </div>
-                    <div class="element-title">
-                        Lorem ipsum dolor sit amet, consectetur
-                    </div>
-                    <div class="element-description">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus, reprehenderit!
-                    </div>
-                </div>
+                {% endfor %}
             </div>
             <div class="bottom">
                 <div class="news-link">
